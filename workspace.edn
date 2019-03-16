@@ -1,0 +1,13 @@
+{:current-tab 0
+ :manifest 
+{:dependencies 
+{}
+ :description "Bandlimited oscillators and nonlinear filters."
+ :license "https://www.eclipse.org/legal/epl-v10.html"
+ :name "Virtual-Analog"
+ :version "0.1"}
+ :origin 
+{:parents ["0"]
+ :service "bitbucket"
+ :slug "kronoslang/Virtual-Analog"}
+ :tabs ("tabs/draft.initial.edn")}

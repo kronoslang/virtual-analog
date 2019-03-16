@@ -1,0 +1,7 @@
+{
+  "description": "Bandlimited oscillators and nonlinear filters.",
+  "dependencies": {},
+  "version": "0.1",
+  "license": "https://www.eclipse.org/legal/epl-v10.html",
+  "name": "Virtual-Analog"
+}
