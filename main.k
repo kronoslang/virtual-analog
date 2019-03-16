@@ -23,21 +23,20 @@ na4p9ysyp1p3iir-0
 
 Poly-BLEP(freq) {
 ;; Bandlimited Sawtooth oscillator based on a 2nd degree polynomial bandlimited step.
+(n2ixhbn599k56mn7-0) = (ny5wywjmrvvcf8ga-0 / nzfahwz7dfrtr427-0)
 (nj8vcah7cjxjrmpp-0) = 0
 (nm3ulwyap7xrtwd8-0) = Interval-of(np79pabx5zd4ypmt-0)
 (ngayf2l17h7k2515-0) = (nbyf33av3f3sk9v0-0 + #0.5)
 (nbaj8l05ere58s6x-0) = arg
-(nbxvr7mll4mzmcp-0) = (#1 / nzfahwz7dfrtr427-0)
 (nbbgnatmwgf4797v-0) = Ternary-Select(n1fwn9p1krkws8vy-0 nyanol2vfruwmpwm-0 nb8c6dmhvpcvoavn-0)
 (nzfahwz7dfrtr427-0) = (nbaj8l05ere58s6x-0 * nm3ulwyap7xrtwd8-0)
-(n5wscwn905xh99ki-0) = (ncnpp4wqm24vd3qi-0 + ncnpp4wqm24vd3qi-0 + nbbgnatmwgf4797v-0)
-(nl1bnau1qjefu84w-0) = (nbxvr7mll4mzmcp-0 * ny5wywjmrvvcf8ga-0)
-(nowgs09qvfhym158-0) = Max(#-1 nl1bnau1qjefu84w-0)
+(n5wscwn905xh99ki-0) = (nbbgnatmwgf4797v-0 + ncnpp4wqm24vd3qi-0 + ncnpp4wqm24vd3qi-0)
+(nowgs09qvfhym158-0) = Max(#-1 n2ixhbn599k56mn7-0)
 (nb8c6dmhvpcvoavn-0) = Neg(nyanol2vfruwmpwm-0)
 (nl450041zb4ergf6-0) = #1
 (n34f4st3vf5vqdp1-0) = (ncnpp4wqm24vd3qi-0 * ncnpp4wqm24vd3qi-0)
 (nbyf33av3f3sk9v0-0) = phasor(nzfahwz7dfrtr427-0)
-(ntt4wmmar0ien1w6-0) = (nuk7qfxharohwf1l-0 - n5wscwn905xh99ki-0 - nl450041zb4ergf6-0)
+(ntt4wmmar0ien1w6-0) = (nuk7qfxharohwf1l-0 - nl450041zb4ergf6-0 - n5wscwn905xh99ki-0)
 (nyanol2vfruwmpwm-0) = (n34f4st3vf5vqdp1-0 + #1)
 (nuk7qfxharohwf1l-0) = (neljp3hu7j4528ht-0 * #2)
 (ny5wywjmrvvcf8ga-0) = (nbyf33av3f3sk9v0-0 - #0.5)
