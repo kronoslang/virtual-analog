@@ -1,0 +1,49 @@
+{:draft-argument "0.01"
+ :identifier "phasor"
+ :identity "6bfpogbbccsmarc"
+ :patch
+{:cables
+{["7vb6fqvvs9cv7lw" 0] [:fixed "xkcnemcw9cl3wd7" 0]
+ ["a4p9ysyp1p3iir" 0] [:fixed "sxdaza9jozk6emu" 0]
+ ["pziw4g5gb6lcalz" 0] [:fixed "jatak14u3x1t56r" 0]
+ ["sxdaza9jozk6emu" 0] [:fixed "7vb6fqvvs9cv7lw" 0]
+ ["xkcnemcw9cl3wd7" 0] [:fixed "pziw4g5gb6lcalz" 0]
+ ["xkcnemcw9cl3wd7" 1] [:fixed "sxdaza9jozk6emu" 0]}
+ :nodes
+{"7vb6fqvvs9cv7lw" 
+{:inputs ["sig~"]
+ :label "z-1($sig~)"
+ :outputs [""]
+ :parsed [:fn "z-1" [:tuple [:free-var "sig~"]]]
+ :pos [427 329]}
+ "a4p9ysyp1p3iir" 
+{:inputs ["out"]
+ :label "$out"
+ :outputs [""]
+ :parsed [:free-var "out"]
+ :pos [725 371]
+ :selected "a4p9ysyp1p3iir"}
+ "jatak14u3x1t56r" 
+{:inputs []
+ :label "inc = arg"
+ :outputs ["inc"]
+ :parsed "arg"
+ :pos [87 329]}
+ "pziw4g5gb6lcalz" 
+{:inputs ["sig"]
+ :label "Gen:Signal($sig)"
+ :outputs [""]
+ :parsed [:fn "Gen:Signal" [:tuple [:free-var "sig"]]]
+ :pos [200 329]}
+ "sxdaza9jozk6emu" 
+{:inputs ["x"]
+ :label "Fraction($x)"
+ :outputs [""]
+ :parsed [:fn "Fraction" [:tuple [:free-var "x"]]]
+ :pos [533 329]}
+ "xkcnemcw9cl3wd7" 
+{:inputs ["a" "b" "more..."]
+ :label "+"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
+ :pos [351 329]}}}}

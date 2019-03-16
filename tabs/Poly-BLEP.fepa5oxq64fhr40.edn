@@ -1,0 +1,107 @@
+{:draft-argument "440"
+ :identifier "Poly-BLEP"
+ :identity "fepa5oxq64fhr40"
+ :patch
+{:cables
+{["1fwn9p1krkws8vy" 0] [:fixed "y5wywjmrvvcf8ga" 0]
+ ["34f4st3vf5vqdp1" 0] [:fixed "cnpp4wqm24vd3qi" 0]
+ ["34f4st3vf5vqdp1" 1] [:fixed "cnpp4wqm24vd3qi" 0]
+ ["5wscwn905xh99ki" 0] [:fixed "cnpp4wqm24vd3qi" 0]
+ ["5wscwn905xh99ki" 1] [:fixed "cnpp4wqm24vd3qi" 0]
+ ["5wscwn905xh99ki" 2] [:fixed "bbgnatmwgf4797v" 0]
+ ["b8c6dmhvpcvoavn" 0] [:fixed "yanol2vfruwmpwm" 0]
+ ["bbgnatmwgf4797v" 0] [:fixed "1fwn9p1krkws8vy" 0]
+ ["bbgnatmwgf4797v" 1] [:fixed "b8c6dmhvpcvoavn" 0]
+ ["bbgnatmwgf4797v" 2] [:fixed "yanol2vfruwmpwm" 0]
+ ["bxvr7mll4mzmcp" 0] [:fixed "nklpuzn7q4jwwx" 0]
+ ["byf33av3f3sk9v0" 0] [:fixed "nklpuzn7q4jwwx" 0]
+ ["cnpp4wqm24vd3qi" 0] [:fixed "owgs09qvfhym158" 0]
+ ["l1bnau1qjefu84w" 0] [:fixed "bxvr7mll4mzmcp" 0]
+ ["l1bnau1qjefu84w" 1] [:fixed "y5wywjmrvvcf8ga" 0]
+ ["owgs09qvfhym158" 0] [:fixed "l1bnau1qjefu84w" 0]
+ ["y5wywjmrvvcf8ga" 0] [:fixed "byf33av3f3sk9v0" 0]
+ ["yanol2vfruwmpwm" 0] [:fixed "34f4st3vf5vqdp1" 0]}
+ :nodes
+{"1fwn9p1krkws8vy" 
+{:inputs ["a"]
+ :label "> #0"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] ">" [:invariant "0"]]
+ :pos [96 538]}
+ "34f4st3vf5vqdp1" 
+{:ephemeral-inputs #{}
+ :inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [286 448]}
+ "5wscwn905xh99ki" 
+{:ephemeral-inputs #{"more1"}
+ 
+ :inputs ["a" "b" "more1" "more..."]
+ :label "+"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more1"] [:free-var "more..."]]
+ :pos [504 524]
+ :selected "5wscwn905xh99ki"}
+ "b8c6dmhvpcvoavn" 
+{:inputs ["a"]
+ :label "Neg($a)"
+ :outputs [""]
+ :parsed [:fn "Neg" [:tuple [:free-var "a"]]]
+ :pos [269 590]}
+ "bbgnatmwgf4797v" 
+{:inputs ["cond" "t" "f"]
+ :label "Ternary-Select($cond $t $f)"
+ :outputs [""]
+ :parsed [:fn "Ternary-Select" [:tuple [:free-var "cond"] [:free-var "t"] [:free-var "f"]]]
+ :pos [302 684]}
+ "bxvr7mll4mzmcp" 
+{:inputs ["b"]
+ :label "#1 /"
+ :outputs [""]
+ :parsed [:infix [:invariant "1"] "/" [:free-var "b"]]
+ :pos [-230 285]}
+ "byf33av3f3sk9v0" 
+{:inputs ["inc"]
+ :label "phasor($inc)"
+ :outputs [""]
+ :parsed [:fn "phasor" [:tuple [:free-var "inc"]]]
+ :pos [-271 465]}
+ "cnpp4wqm24vd3qi" 
+{:inputs ["b"]
+ :label "Min(#1 $b)"
+ :outputs [""]
+ :parsed [:fn "Min" [:tuple [:invariant "1"] [:free-var "b"]]]
+ :pos [204 198]}
+ "l1bnau1qjefu84w" 
+{:flip-y true
+ :inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [-75 250]}
+ "nklpuzn7q4jwwx" 
+{:inputs []
+ :label "0.0001"
+ :outputs [""]
+ :parsed [:float "0.0001"]
+ :pos [-416 356]}
+ "owgs09qvfhym158" 
+{:inputs ["b"]
+ :label "Max(#-1 $b)"
+ :outputs [""]
+ :parsed [:fn "Max" [:tuple [:invariant "-1"] [:free-var "b"]]]
+ :pos [-16 198]}
+ "y5wywjmrvvcf8ga" 
+{:inputs ["a"]
+ :label "- #0.5"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "-" [:invariant "0.5"]]
+ :pos [-129 374]}
+ "yanol2vfruwmpwm" 
+{:inputs ["a"]
+ :label "+ #1"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "+" [:invariant "1"]]
+ :pos [355 476]}}}}

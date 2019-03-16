@@ -1,4 +1,5 @@
-{:current-tab 0
+{:current-tab 2
+ 
  :manifest 
 {:dependencies 
 {}
@@ -7,7 +8,8 @@
  :name "Virtual-Analog"
  :version "0.1"}
  :origin 
-{:parents ["0"]
+{:branch "default"
+ :parents ["4d30997d70260045730bca29f0116f8117e2de07"]
  :service "bitbucket"
- :slug "kronoslang/Virtual-Analog"}
- :tabs ("tabs/draft.initial.edn")}
+ :slug "kronoslang/virtual-analog"}
+ :tabs ("tabs/draft.initial.edn" "tabs/phasor.6bfpogbbccsmarc.edn" "tabs/Poly-BLEP.fepa5oxq64fhr40.edn")}

@@ -11,4 +11,31 @@ Brief() {
 }
 
 
+phasor(inc) {
+(njatak14u3x1t56r-0) = arg
+(npziw4g5gb6lcalz-0) = Gen:Signal(njatak14u3x1t56r-0)
+(n7vb6fqvvs9cv7lw-0) = z-1(nxkcnemcw9cl3wd7-0)
+(nsxdaza9jozk6emu-0) = Fraction(n7vb6fqvvs9cv7lw-0)
+(nxkcnemcw9cl3wd7-0) = (npziw4g5gb6lcalz-0 + nsxdaza9jozk6emu-0)
+(na4p9ysyp1p3iir-0) = nsxdaza9jozk6emu-0
+na4p9ysyp1p3iir-0
+}
+
+Poly-BLEP {
+(nbxvr7mll4mzmcp-0) = (#1 / nnklpuzn7q4jwwx-0)
+(nbbgnatmwgf4797v-0) = Ternary-Select(n1fwn9p1krkws8vy-0 nb8c6dmhvpcvoavn-0 nyanol2vfruwmpwm-0)
+(n5wscwn905xh99ki-0) = (ncnpp4wqm24vd3qi-0 + ncnpp4wqm24vd3qi-0 + nbbgnatmwgf4797v-0)
+(nl1bnau1qjefu84w-0) = (nbxvr7mll4mzmcp-0 * ny5wywjmrvvcf8ga-0)
+(nowgs09qvfhym158-0) = Max(#-1 nl1bnau1qjefu84w-0)
+(nb8c6dmhvpcvoavn-0) = Neg(nyanol2vfruwmpwm-0)
+(n34f4st3vf5vqdp1-0) = (ncnpp4wqm24vd3qi-0 * ncnpp4wqm24vd3qi-0)
+(nbyf33av3f3sk9v0-0) = phasor(nnklpuzn7q4jwwx-0)
+(nyanol2vfruwmpwm-0) = (n34f4st3vf5vqdp1-0 + #1)
+(ny5wywjmrvvcf8ga-0) = (nbyf33av3f3sk9v0-0 - #0.5)
+(ncnpp4wqm24vd3qi-0) = Min(#1 nowgs09qvfhym158-0)
+(n1fwn9p1krkws8vy-0) = (ny5wywjmrvvcf8ga-0 > #0)
+(nnklpuzn7q4jwwx-0) = 0.0001
+n5wscwn905xh99ki-0
+}
+
 }

@@ -1,5 +1,4 @@
-{
- :identity "initial"
+{:identity "initial"
  :patch
 {:cables
 {}
