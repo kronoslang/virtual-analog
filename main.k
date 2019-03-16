@@ -12,22 +12,23 @@ Brief() {
 
 
 phasor(inc) {
+(n7vb6fqvvs9cv7lw-0) = z-1(nxkcnemcw9cl3wd7-0)
+(na4p9ysyp1p3iir-0) = nsxdaza9jozk6emu-0
 (njatak14u3x1t56r-0) = arg
 (npziw4g5gb6lcalz-0) = Gen:Signal(njatak14u3x1t56r-0)
-(n7vb6fqvvs9cv7lw-0) = z-1(nxkcnemcw9cl3wd7-0)
 (nsxdaza9jozk6emu-0) = Fraction(n7vb6fqvvs9cv7lw-0)
 (nxkcnemcw9cl3wd7-0) = (npziw4g5gb6lcalz-0 + nsxdaza9jozk6emu-0)
-(na4p9ysyp1p3iir-0) = nsxdaza9jozk6emu-0
 na4p9ysyp1p3iir-0
 }
 
 Poly-BLEP(freq) {
+;; Bandlimited Sawtooth oscillator based on a 2nd degree polynomial bandlimited step.
 (nj8vcah7cjxjrmpp-0) = 0
 (nm3ulwyap7xrtwd8-0) = Interval-of(np79pabx5zd4ypmt-0)
 (ngayf2l17h7k2515-0) = (nbyf33av3f3sk9v0-0 + #0.5)
 (nbaj8l05ere58s6x-0) = arg
 (nbxvr7mll4mzmcp-0) = (#1 / nzfahwz7dfrtr427-0)
-(nbbgnatmwgf4797v-0) = Ternary-Select(n1fwn9p1krkws8vy-0 nb8c6dmhvpcvoavn-0 nyanol2vfruwmpwm-0)
+(nbbgnatmwgf4797v-0) = Ternary-Select(n1fwn9p1krkws8vy-0 nyanol2vfruwmpwm-0 nb8c6dmhvpcvoavn-0)
 (nzfahwz7dfrtr427-0) = (nbaj8l05ere58s6x-0 * nm3ulwyap7xrtwd8-0)
 (n5wscwn905xh99ki-0) = (ncnpp4wqm24vd3qi-0 + ncnpp4wqm24vd3qi-0 + nbbgnatmwgf4797v-0)
 (nl1bnau1qjefu84w-0) = (nbxvr7mll4mzmcp-0 * ny5wywjmrvvcf8ga-0)
@@ -42,7 +43,7 @@ Poly-BLEP(freq) {
 (ny5wywjmrvvcf8ga-0) = (nbyf33av3f3sk9v0-0 - #0.5)
 (neljp3hu7j4528ht-0) = Fraction(ngayf2l17h7k2515-0)
 (ncnpp4wqm24vd3qi-0) = Min(#1 nowgs09qvfhym158-0)
-(n1fwn9p1krkws8vy-0) = (ny5wywjmrvvcf8ga-0 > #0)
+(n1fwn9p1krkws8vy-0) = (ny5wywjmrvvcf8ga-0 < #0)
 (np79pabx5zd4ypmt-0) = Gen:Signal(nj8vcah7cjxjrmpp-0)
 ntt4wmmar0ien1w6-0
 }

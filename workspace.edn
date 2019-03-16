@@ -1,5 +1,5 @@
 {:current-tab 2
- 
+ :file "tmp.veneer"
  :manifest 
 {:dependencies 
 {}
@@ -9,7 +9,7 @@
  :version "0.1"}
  :origin 
 {:branch "default"
- :parents ["806b49cd8f5ed2b5b3f382c3526a6ea0068e2fca"]
+ :parents ["a5d53fc3a7db333fbaf25d12fe88a66d1af79c52"]
  :service "bitbucket"
  :slug "kronoslang/virtual-analog"}
  :tabs ("tabs/draft.initial.edn" "tabs/phasor.6bfpogbbccsmarc.edn" "tabs/Poly-BLEP.fepa5oxq64fhr40.edn")}
