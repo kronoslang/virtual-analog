@@ -13,28 +13,40 @@
  ["bbgnatmwgf4797v" 0] [:fixed "1fwn9p1krkws8vy" 0]
  ["bbgnatmwgf4797v" 1] [:fixed "b8c6dmhvpcvoavn" 0]
  ["bbgnatmwgf4797v" 2] [:fixed "yanol2vfruwmpwm" 0]
- ["bxvr7mll4mzmcp" 0] [:fixed "nklpuzn7q4jwwx" 0]
- ["byf33av3f3sk9v0" 0] [:fixed "nklpuzn7q4jwwx" 0]
+ ["bxvr7mll4mzmcp" 0] [:fixed "zfahwz7dfrtr427" 0]
+ ["byf33av3f3sk9v0" 0] [:fixed "zfahwz7dfrtr427" 0]
  ["cnpp4wqm24vd3qi" 0] [:fixed "owgs09qvfhym158" 0]
+ ["eljp3hu7j4528ht" 0] [:fixed "gayf2l17h7k2515" 0]
+ ["gayf2l17h7k2515" 0] [:fixed "byf33av3f3sk9v0" 0]
  ["l1bnau1qjefu84w" 0] [:fixed "bxvr7mll4mzmcp" 0]
  ["l1bnau1qjefu84w" 1] [:fixed "y5wywjmrvvcf8ga" 0]
+ ["m3ulwyap7xrtwd8" 0] [:fixed "p79pabx5zd4ypmt" 0]
  ["owgs09qvfhym158" 0] [:fixed "l1bnau1qjefu84w" 0]
+ ["p79pabx5zd4ypmt" 0] [:fixed "j8vcah7cjxjrmpp" 0]
+ ["tt4wmmar0ien1w6" 0] [:fixed "uk7qfxharohwf1l" 0]
+ ["tt4wmmar0ien1w6" 1] [:fixed "5wscwn905xh99ki" 0]
+ ["tt4wmmar0ien1w6" 2] [:fixed "l450041zb4ergf6" 0]
+ ["uk7qfxharohwf1l" 0] [:fixed "eljp3hu7j4528ht" 0]
  ["y5wywjmrvvcf8ga" 0] [:fixed "byf33av3f3sk9v0" 0]
- ["yanol2vfruwmpwm" 0] [:fixed "34f4st3vf5vqdp1" 0]}
+ ["yanol2vfruwmpwm" 0] [:fixed "34f4st3vf5vqdp1" 0]
+ ["zfahwz7dfrtr427" 0] [:fixed "baj8l05ere58s6x" 0]
+ ["zfahwz7dfrtr427" 1] [:fixed "m3ulwyap7xrtwd8" 0]}
  :nodes
 {"1fwn9p1krkws8vy" 
 {:inputs ["a"]
  :label "> #0"
  :outputs [""]
  :parsed [:infix [:free-var "a"] ">" [:invariant "0"]]
- :pos [96 538]}
+ :pos [633 548]
+ }
  "34f4st3vf5vqdp1" 
 {:ephemeral-inputs #{}
  :inputs ["a" "b" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [286 448]}
+ :pos [823 458]
+ }
  "5wscwn905xh99ki" 
 {:ephemeral-inputs #{"more1"}
  
@@ -42,66 +54,140 @@
  :label "+"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more1"] [:free-var "more..."]]
- :pos [504 524]
- :selected "5wscwn905xh99ki"}
+ :pos [906 826]
+ }
  "b8c6dmhvpcvoavn" 
 {:inputs ["a"]
  :label "Neg($a)"
  :outputs [""]
  :parsed [:fn "Neg" [:tuple [:free-var "a"]]]
- :pos [269 590]}
+ :pos [806 600]
+ }
+ "baj8l05ere58s6x" 
+{:inputs []
+ :label "freq = arg"
+ :outputs ["freq"]
+ :parsed "arg"
+ :pos [34 371]
+ }
  "bbgnatmwgf4797v" 
 {:inputs ["cond" "t" "f"]
  :label "Ternary-Select($cond $t $f)"
  :outputs [""]
  :parsed [:fn "Ternary-Select" [:tuple [:free-var "cond"] [:free-var "t"] [:free-var "f"]]]
- :pos [302 684]}
+ :pos [839 694]
+ }
  "bxvr7mll4mzmcp" 
 {:inputs ["b"]
  :label "#1 /"
  :outputs [""]
  :parsed [:infix [:invariant "1"] "/" [:free-var "b"]]
- :pos [-230 285]}
+ :pos [307 295]
+ }
  "byf33av3f3sk9v0" 
 {:inputs ["inc"]
  :label "phasor($inc)"
  :outputs [""]
  :parsed [:fn "phasor" [:tuple [:free-var "inc"]]]
- :pos [-271 465]}
+ :pos [266 475]
+ }
  "cnpp4wqm24vd3qi" 
 {:inputs ["b"]
  :label "Min(#1 $b)"
  :outputs [""]
  :parsed [:fn "Min" [:tuple [:invariant "1"] [:free-var "b"]]]
- :pos [204 198]}
+ :pos [741 208]
+ }
+ "eljp3hu7j4528ht" 
+{:inputs ["x"]
+ :label "Fraction($x)"
+ :outputs [""]
+ :parsed [:fn "Fraction" [:tuple [:free-var "x"]]]
+ :pos [464 680]
+ }
+ "gayf2l17h7k2515" 
+{:inputs ["a"]
+ :label "+ #0.5"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "+" [:invariant "0.5"]]
+ :pos [326 680]
+ }
+ "j8vcah7cjxjrmpp" 
+{:inputs []
+ :label "0"
+ :outputs [""]
+ :parsed [:float "0"]
+ :pos [8 131]
+ }
  "l1bnau1qjefu84w" 
 {:flip-y true
  :inputs ["a" "b" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [-75 250]}
- "nklpuzn7q4jwwx" 
+ :pos [462 260]
+ }
+ "l450041zb4ergf6" 
 {:inputs []
- :label "0.0001"
+ :label "#1"
  :outputs [""]
- :parsed [:float "0.0001"]
- :pos [-416 356]}
+ :parsed [:invariant "1"]
+ :pos [777 913]
+ }
+ "m3ulwyap7xrtwd8" 
+{:inputs ["sig"]
+ :label "Interval-of($sig)"
+ :outputs [""]
+ :parsed [:fn "Interval-of" [:tuple [:free-var "sig"]]]
+ :pos [261 129]
+ }
  "owgs09qvfhym158" 
 {:inputs ["b"]
  :label "Max(#-1 $b)"
  :outputs [""]
  :parsed [:fn "Max" [:tuple [:invariant "-1"] [:free-var "b"]]]
- :pos [-16 198]}
+ :pos [521 208]
+ }
+ "p79pabx5zd4ypmt" 
+{:inputs ["sig"]
+ :label "Gen:Signal($sig)"
+ :outputs [""]
+ :parsed [:fn "Gen:Signal" [:tuple [:free-var "sig"]]]
+ :pos [96 131]
+ }
+ "tt4wmmar0ien1w6" 
+{:ephemeral-inputs #{"more1"}
+ :inputs ["a" "b" "more1" "more..."]
+ :label "-"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "-" [:free-var "b"] [:free-var "more1"] [:free-var "more..."]]
+ :pos [849 1007]
+ :selected true}
+ "uk7qfxharohwf1l" 
+{:inputs ["a"]
+ :label "* #2"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:invariant "2"]]
+ :pos [583 842]
+ }
  "y5wywjmrvvcf8ga" 
 {:inputs ["a"]
  :label "- #0.5"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "-" [:invariant "0.5"]]
- :pos [-129 374]}
+ :pos [408 384]
+ }
  "yanol2vfruwmpwm" 
 {:inputs ["a"]
  :label "+ #1"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:invariant "1"]]
- :pos [355 476]}}}}
+ :pos [892 486]
+ }
+ "zfahwz7dfrtr427" 
+{:inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [194 341]
+ }}}}
