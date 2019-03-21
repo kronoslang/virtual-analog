@@ -37,21 +37,21 @@
  :label "; Combine for a bandlimited waveform"
  :outputs []
  :parsed [:comment "Combine for a bandlimited waveform"]
- :pos [1411 839]}
+ :pos [1264 914]}
  "1fwn9p1krkws8vy" 
 {:color 2
  :inputs ["a"]
  :label "< #0"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "<" [:invariant "0"]]
- :pos [1055 561]}
+ :pos [908 636]}
  "2ixhbn599k56mn7" 
 {:color 2
  :inputs ["a" "b" "more..."]
  :label "/"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
- :pos [683 217]}
+ :pos [536 292]}
  "34f4st3vf5vqdp1" 
 {:color 2
  :ephemeral-inputs #{}
@@ -59,19 +59,19 @@
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [1196 330]}
+ :pos [1049 405]}
  "3fc7455vgm7k3di" 
 {:inputs []
  :label "; Compute a polynomial ripple at waveform discontinuity points"
  :outputs []
  :parsed [:comment "Compute a polynomial ripple at waveform discontinuity points"]
- :pos [1068 211]}
+ :pos [921 286]}
  "3v5nif7a88izarf" 
 {:inputs []
  :label "; Compute a naive sawtooth"
  :outputs []
  :parsed [:comment "Compute a naive sawtooth"]
- :pos [502 599]}
+ :pos [355 674]}
  "5wscwn905xh99ki" 
 {:color 2
  :ephemeral-inputs #{"more1"}
@@ -79,116 +79,116 @@
  :label "+"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more1"] [:free-var "more..."]]
- :pos [1461 592]}
+ :pos [1314 667]}
  "b8c6dmhvpcvoavn" 
 {:color 2
  :inputs ["a"]
  :label "Neg($a)"
  :outputs [""]
  :parsed [:fn "Neg" [:tuple [:free-var "a"]]]
- :pos [1274 458]}
+ :pos [1127 533]}
  "baj8l05ere58s6x" 
 {:inputs []
  :label "freq = arg"
  :outputs ["freq"]
  :parsed "arg"
- :pos [207 271]}
+ :pos [60 346]}
  "bbgnatmwgf4797v" 
 {:color 2
  :inputs ["cond" "t" "f"]
  :label "Ternary-Select($cond $t $f)"
  :outputs [""]
  :parsed [:fn "Ternary-Select" [:tuple [:free-var "cond"] [:free-var "t"] [:free-var "f"]]]
- :pos [1200 593]}
+ :pos [1053 668]}
  "byf33av3f3sk9v0" 
 {:inputs ["inc"]
  :label "phasor($inc)"
  :outputs [""]
  :parsed [:fn "phasor" [:tuple [:free-var "inc"]]]
- :pos [489 405]}
+ :pos [342 480]}
  "cnpp4wqm24vd3qi" 
 {:color 2
  :inputs ["b"]
  :label "Min(#1 $b)"
  :outputs [""]
  :parsed [:fn "Min" [:tuple [:invariant "1"] [:free-var "b"]]]
- :pos [964 138]}
+ :pos [817 213]}
  "eljp3hu7j4528ht" 
 {:inputs ["x"]
  :label "Fraction($x)"
  :outputs [""]
  :parsed [:fn "Fraction" [:tuple [:free-var "x"]]]
- :pos [822 617]}
+ :pos [675 692]}
  "gayf2l17h7k2515" 
 {:inputs ["a"]
  :label "+ #0.5"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:invariant "0.5"]]
- :pos [649 514]}
+ :pos [502 589]}
  "j8vcah7cjxjrmpp" 
 {:color 3
  :inputs []
  :label "0"
  :outputs [""]
  :parsed [:float "0"]
- :pos [39 125]}
+ :pos [-108 200]}
  "l450041zb4ergf6" 
 {:inputs []
  :label "#1"
  :outputs [""]
  :parsed [:invariant "1"]
- :pos [1354 680]}
+ :pos [1207 755]}
  "m3ulwyap7xrtwd8" 
 {:color 3
  :inputs ["sig"]
  :label "Interval-of($sig)"
  :outputs [""]
  :parsed [:fn "Interval-of" [:tuple [:free-var "sig"]]]
- :pos [273 125]}
+ :pos [126 200]}
  "owgs09qvfhym158" 
 {:color 2
  :inputs ["b"]
  :label "Max(#-1 $b)"
  :outputs [""]
  :parsed [:fn "Max" [:tuple [:invariant "-1"] [:free-var "b"]]]
- :pos [744 138]}
+ :pos [597 213]}
  "p79pabx5zd4ypmt" 
 {:color 3
  :inputs ["sig"]
  :label "Gen:Signal($sig)"
  :outputs [""]
  :parsed [:fn "Gen:Signal" [:tuple [:free-var "sig"]]]
- :pos [127 125]}
+ :pos [-20 200]}
  "tt4wmmar0ien1w6" 
 {:ephemeral-inputs #{"more1"}
  :inputs ["a" "b" "more1" "more..."]
  :label "-"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "-" [:free-var "b"] [:free-var "more1"] [:free-var "more..."]]
- :pos [1545 761]}
+ :pos [1398 836]}
  "uk7qfxharohwf1l" 
 {:inputs ["a"]
  :label "* #2"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:invariant "2"]]
- :pos [1121 699]}
+ :pos [974 774]}
  "y5wywjmrvvcf8ga" 
 {:color 2
  :inputs ["a"]
  :label "- #0.5"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "-" [:invariant "0.5"]]
- :pos [701 405]}
+ :pos [554 480]}
  "yanol2vfruwmpwm" 
 {:color 2
  :inputs ["a"]
  :label "+ #1"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:invariant "1"]]
- :pos [1163 456]}
+ :pos [1016 531]}
  "zfahwz7dfrtr427" 
 {:inputs ["a" "b" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [492 239]}}}}
+ :pos [345 314]}}}}

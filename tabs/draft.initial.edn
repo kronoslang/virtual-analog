@@ -17,54 +17,54 @@
  :label "Algorithm:Reduce($func $set...)"
  :outputs [""]
  :parsed [:fn "Algorithm:Reduce" [:tuple [:free-var "func"] [:free-var "set1"] [:free-var "set..."]]]
- :pos [913 574]}
+ :pos [588 544]}
  "5uxar3ckl3pdh0o" 
 {:inputs []
  :label "0.5"
  :outputs [""]
  :parsed [:number-widget :float "kccipq04adg17y1" "0.1657" ""]
- :pos [265 269]}
+ :pos [-60 239]}
  "bymekxwc9dgo6t2" 
 {:inputs ["a" "b" "more..."]
  :label "/"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
- :pos [1142 644]
+ :pos [817 614]
  :selected "bymekxwc9dgo6t2"}
  "dlx4g56l61qh6n8" 
 {:inputs ["tuple"]
  :label "Arity($tuple)"
  :outputs [""]
  :parsed [:fn "Arity" [:tuple [:free-var "tuple"]]]
- :pos [1097 393]}
+ :pos [772 363]}
  "ewtbg0shed3bsjk" 
 {:inputs ["freq" "detune" "offset"]
  :label "Poly-BLEP($freq + $detune * $offset)"
  :outputs [""]
  :parsed [:fn "Poly-BLEP" [:tuple [:infix [:free-var "freq"] "+" [:infix [:free-var "detune"] "*" [:free-var "offset"]]]]]
- :pos [156 410]}
+ :pos [-169 380]}
  "exh05ca9ggi7vpv" 
 {:inputs []
  :label "220"
  :outputs [""]
- :parsed [:number-widget :float "upczimsvx6vqw2e" "51" ""]
- :pos [261 98]}
+ :parsed [:number-widget :float "upczimsvx6vqw2e" "32" ""]
+ :pos [-64 68]}
  "kk4bk4dzy1jmax" 
 {:inputs ["a" "b" "more..."]
  :label "+"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
- :pos [839 574]}
+ :pos [514 544]}
  "kle1zwbv0hehdi4" 
 {:ephemeral-inputs #{"set1"}
  :inputs ["fn" "set1" "set..."]
  :label "Algorithm:Map($fn $set...)"
  :outputs [""]
  :parsed [:fn "Algorithm:Map" [:tuple [:free-var "fn"] [:free-var "set1"] [:free-var "set..."]]]
- :pos [676 430]}
+ :pos [351 400]}
  "w87mvz4tv54a879" 
 {:inputs []
  :label "[-6 -4 -2 2 4 6]"
  :outputs [""]
  :parsed [:list [:float "-6"] [:float "-4"] [:float "-2"] [:float "2"] [:float "4"] [:float "6"]]
- :pos [520 216]}}}}
+ :pos [195 186]}}}}
