@@ -1,18 +1,19 @@
 {:identity "initial"
  :patch
 {:cables
-{["lqi4vwdw4p4tynr" 0] [:fixed "79jx5pbn5c2i22u" 0]}
+{["lqi4vwdw4p4tynr" 0] [:fixed "gcgpau135qs5uu" 0]}
  :nodes
-{"79jx5pbn5c2i22u" 
+{"gcgpau135qs5uu" 
 {:inputs []
- :label "80"
+ :label "20 ---o--- 2000"
  :outputs [""]
- :parsed [:number-widget :float "9gb8foh4lvzi4f4" "606" ""]
- :pos [179 248]}
+ :parsed [:slider [:float "20"] [:float "2000"] "3geelo" :linear 7 0.6463084056472846]
+ :pos [199 199]
+ }
  "lqi4vwdw4p4tynr" 
 {:inputs ["freq"]
  :label "Poly-BLEP($freq)"
  :outputs [""]
  :parsed [:fn "Poly-BLEP" [:tuple [:free-var "freq"]]]
- :pos [346 301]
- :selected "lqi4vwdw4p4tynr"}}}}
+ :pos [392 326]
+ :selected true}}}}

@@ -33,16 +33,14 @@
  :label "; Combine for a bandlimited waveform"
  :outputs []
  :parsed [:comment "Combine for a bandlimited waveform"]
- :pos [1232 819]
- :selected true}
+ :pos [1232 819]}
  "2ixhbn599k56mn7" 
 {:color 2
  :inputs ["a" "b" "more..."]
  :label "/"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
- :pos [711 293]
- }
+ :pos [711 293]}
  "34f4st3vf5vqdp1" 
 {:color 2
  :ephemeral-inputs #{}
@@ -50,22 +48,19 @@
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [1064 386]
- }
+ :pos [1064 386]}
  "3fc7455vgm7k3di" 
 {:inputs []
  :label "; Compute a polynomial ripple at waveform discontinuity points"
  :outputs []
  :parsed [:comment "Compute a polynomial ripple at waveform discontinuity points"]
- :pos [719 453]
- }
+ :pos [719 453]}
  "3v5nif7a88izarf" 
 {:inputs []
  :label "; Compute a naive sawtooth"
  :outputs []
  :parsed [:comment "Compute a naive sawtooth"]
- :pos [397 728]
- }
+ :pos [326 634]}
  "5wscwn905xh99ki" 
 {:color 2
  :ephemeral-inputs #{"more1"}
@@ -73,91 +68,79 @@
  :label "+"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more1"] [:free-var "more..."]]
- :pos [1320 573]
- }
+ :pos [1320 573]}
  "67gzklu5eeaa5w" 
 {:color 2
  :inputs ["sig"]
  :label "clamp($sig -1 1)"
  :outputs [""]
  :parsed [:fn "clamp" [:tuple [:free-var "sig"] [:float "-1"] [:float "1"]]]
- :pos [782 292]
- }
+ :pos [782 292]}
  "a4rlm23qxqfgng6" 
 {:color 2
  :inputs ["a" "b" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [1244 573]
- }
+ :pos [1244 573]}
  "baj8l05ere58s6x" 
 {:inputs []
  :label "freq = arg"
  :outputs ["freq"]
  :parsed "arg"
- :pos [115 374]
- }
+ :pos [115 374]}
  "byf33av3f3sk9v0" 
 {:inputs ["inc"]
  :label "phasor($inc)"
  :outputs [""]
  :parsed [:fn "phasor" [:tuple [:free-var "inc"]]]
- :pos [397 573]
- }
+ :pos [397 573]}
  "dhc5rhldd3je1t" 
 {:color 2
  :inputs ["a"]
  :label "sign($a)"
  :outputs [""]
  :parsed [:fn "sign" [:tuple [:free-var "a"]]]
- :pos [904 573]
- }
+ :pos [904 573]}
  "eljp3hu7j4528ht" 
 {:inputs ["x"]
  :label "Fraction($x)"
  :outputs [""]
  :parsed [:fn "Fraction" [:tuple [:free-var "x"]]]
- :pos [725 666]
- }
+ :pos [725 666]}
  "j8vcah7cjxjrmpp" 
 {:color 3
  :inputs []
  :label "0"
  :outputs [""]
  :parsed [:float "0"]
- :pos [92 279]
- }
+ :pos [92 279]}
  "l450041zb4ergf6" 
 {:inputs []
  :label "1"
  :outputs [""]
  :parsed [:float "1"]
- :pos [1217 651]
- }
+ :pos [1217 651]}
  "m3ulwyap7xrtwd8" 
 {:color 3
  :inputs ["sig"]
  :label "Interval-of($sig)"
  :outputs [""]
  :parsed [:fn "Interval-of" [:tuple [:free-var "sig"]]]
- :pos [326 279]
- }
+ :pos [326 279]}
  "o29cp40axtc1q9g" 
 {:inputs []
  :label "; compute sampling interval"
  :outputs []
  :parsed [:comment "compute sampling interval"]
- :pos [154 196]
- }
+ :pos [154 196]}
  "p79pabx5zd4ypmt" 
 {:color 3
  :inputs ["sig"]
  :label "Gen:Signal($sig)"
  :outputs [""]
  :parsed [:fn "Gen:Signal" [:tuple [:free-var "sig"]]]
- :pos [180 279]
- }
+ :pos [180 279]}
  "tt4wmmar0ien1w6" 
 {:ephemeral-inputs #{"more1"}
  :inputs ["a" "b" "more1" "more..."]
@@ -165,33 +148,29 @@
  :outputs [""]
  :parsed [:infix [:free-var "a"] "-" [:free-var "b"] [:free-var "more1"] [:free-var "more..."]]
  :pos [1357 747]
- }
+ :selected "tt4wmmar0ien1w6"}
  "uk7qfxharohwf1l" 
 {:inputs ["a"]
  :label "* 2"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:float "2"]]
- :pos [959 747]
- }
+ :pos [959 747]}
  "y5wywjmrvvcf8ga" 
 {:inputs ["a"]
  :label "- 0.5"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "-" [:float "0.5"]]
- :pos [556 573]
- }
+ :pos [556 573]}
  "yanol2vfruwmpwm" 
 {:color 2
  :inputs ["b"]
  :label "-1 -"
  :outputs [""]
  :parsed [:infix [:float "-1"] "-" [:free-var "b"]]
- :pos [1155 490]
- }
+ :pos [1155 490]}
  "zfahwz7dfrtr427" 
 {:inputs ["a" "b" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [400 371]
- }}}}
+ :pos [400 371]}}}}
