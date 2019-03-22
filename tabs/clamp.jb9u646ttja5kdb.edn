@@ -1,0 +1,29 @@
+{:draft-argument "3 -1 1"
+ :identifier "clamp"
+ :identity "jb9u646ttja5kdb"
+ :patch
+{:cables
+{["6sz5yn9dxjr94zj" 0] [:fixed "csgkzy2vqtji1fl" 0]
+ ["6sz5yn9dxjr94zj" 1] [:fixed "jkb3fzfo05b614q" 2]
+ ["csgkzy2vqtji1fl" 0] [:fixed "jkb3fzfo05b614q" 0]
+ ["csgkzy2vqtji1fl" 1] [:fixed "jkb3fzfo05b614q" 1]}
+ :nodes
+{"6sz5yn9dxjr94zj" 
+{:inputs ["a" "b"]
+ :label "Min($a $b)"
+ :outputs [""]
+ :parsed [:fn "Min" [:tuple [:free-var "a"] [:free-var "b"]]]
+ :pos [352 325]
+ :selected "6sz5yn9dxjr94zj"}
+ "csgkzy2vqtji1fl" 
+{:inputs ["a" "b"]
+ :label "Max($a $b)"
+ :outputs [""]
+ :parsed [:fn "Max" [:tuple [:free-var "a"] [:free-var "b"]]]
+ :pos [240 325]}
+ "jkb3fzfo05b614q" 
+{:inputs []
+ :label "(sig min max) = arg"
+ :outputs ["sig" "min" "max"]
+ :parsed "arg"
+ :pos [96 280]}}}}

@@ -26,25 +26,39 @@ Poly-BLEP(freq) {
 (n2ixhbn599k56mn7-0) = (ny5wywjmrvvcf8ga-0 / nzfahwz7dfrtr427-0)
 (nj8vcah7cjxjrmpp-0) = 0
 (nm3ulwyap7xrtwd8-0) = Interval-of(np79pabx5zd4ypmt-0)
-(ngayf2l17h7k2515-0) = (nbyf33av3f3sk9v0-0 + #0.5)
+(ngayf2l17h7k2515-0) = (nbyf33av3f3sk9v0-0 + 0.5)
 (nbaj8l05ere58s6x-0) = arg
-(nbbgnatmwgf4797v-0) = Ternary-Select(n1fwn9p1krkws8vy-0 nyanol2vfruwmpwm-0 nb8c6dmhvpcvoavn-0)
 (nzfahwz7dfrtr427-0) = (nbaj8l05ere58s6x-0 * nm3ulwyap7xrtwd8-0)
-(n5wscwn905xh99ki-0) = (nbbgnatmwgf4797v-0 + ncnpp4wqm24vd3qi-0 + ncnpp4wqm24vd3qi-0)
-(nowgs09qvfhym158-0) = Max(#-1 n2ixhbn599k56mn7-0)
-(nb8c6dmhvpcvoavn-0) = Neg(nyanol2vfruwmpwm-0)
-(nl450041zb4ergf6-0) = #1
-(n34f4st3vf5vqdp1-0) = (ncnpp4wqm24vd3qi-0 * ncnpp4wqm24vd3qi-0)
+(n5wscwn905xh99ki-0) = (na4rlm23qxqfgng6-0 + n67gzklu5eeaa5w-0 + n67gzklu5eeaa5w-0)
+(ndhc5rhldd3je1t-0) = sign(ny5wywjmrvvcf8ga-0)
+(nl450041zb4ergf6-0) = 1
+(na4rlm23qxqfgng6-0) = (ndhc5rhldd3je1t-0 * nyanol2vfruwmpwm-0)
+(n34f4st3vf5vqdp1-0) = (n67gzklu5eeaa5w-0 * n67gzklu5eeaa5w-0)
 (nbyf33av3f3sk9v0-0) = phasor(nzfahwz7dfrtr427-0)
 (ntt4wmmar0ien1w6-0) = (nuk7qfxharohwf1l-0 - nl450041zb4ergf6-0 - n5wscwn905xh99ki-0)
-(nyanol2vfruwmpwm-0) = (n34f4st3vf5vqdp1-0 + #1)
-(nuk7qfxharohwf1l-0) = (neljp3hu7j4528ht-0 * #2)
-(ny5wywjmrvvcf8ga-0) = (nbyf33av3f3sk9v0-0 - #0.5)
+(n67gzklu5eeaa5w-0) = clamp(n2ixhbn599k56mn7-0 -1 1)
+(nyanol2vfruwmpwm-0) = (-1 - n34f4st3vf5vqdp1-0)
+(nuk7qfxharohwf1l-0) = (neljp3hu7j4528ht-0 * 2)
+(ny5wywjmrvvcf8ga-0) = (nbyf33av3f3sk9v0-0 - 0.5)
 (neljp3hu7j4528ht-0) = Fraction(ngayf2l17h7k2515-0)
-(ncnpp4wqm24vd3qi-0) = Min(#1 nowgs09qvfhym158-0)
-(n1fwn9p1krkws8vy-0) = (ny5wywjmrvvcf8ga-0 < #0)
 (np79pabx5zd4ypmt-0) = Gen:Signal(nj8vcah7cjxjrmpp-0)
 ntt4wmmar0ien1w6-0
+}
+
+sign() {
+(n8eb5umbmd1b4b20-0) = arg
+(nhsoqrykco9o77ln-0) = (n8eb5umbmd1b4b20-0 < #0)
+(nbyzrvnw8k9oz3un-0) = Ternary-Select(nhsoqrykco9o77ln-0 nha3zqc0n8s6gklr-0 necabc5fxm1wu4yl-0)
+(nha3zqc0n8s6gklr-0) = -1
+(necabc5fxm1wu4yl-0) = 1
+nbyzrvnw8k9oz3un-0
+}
+
+clamp(sig min max) {
+(njkb3fzfo05b614q-0 njkb3fzfo05b614q-1 njkb3fzfo05b614q-2) = arg
+(ncsgkzy2vqtji1fl-0) = Max(njkb3fzfo05b614q-0 njkb3fzfo05b614q-1)
+(n6sz5yn9dxjr94zj-0) = Min(ncsgkzy2vqtji1fl-0 njkb3fzfo05b614q-2)
+n6sz5yn9dxjr94zj-0
 }
 
 }
