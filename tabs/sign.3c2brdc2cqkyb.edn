@@ -13,33 +13,28 @@
  :label "arg"
  :outputs [""]
  :parsed "arg"
- :pos [110 274]
- }
+ :pos [110 274]}
  "byzrvnw8k9oz3un" 
 {:inputs ["cond" "t" "f"]
  :label "Ternary-Select($cond $t $f)"
  :outputs [""]
  :parsed [:fn "Ternary-Select" [:tuple [:free-var "cond"] [:free-var "t"] [:free-var "f"]]]
- :pos [334 274]
- }
+ :pos [334 274]}
  "ecabc5fxm1wu4yl" 
 {:inputs []
  :label "1"
  :outputs [""]
  :parsed [:float "1"]
- :pos [421 155]
- :selected true}
+ :pos [421 155]}
  "ha3zqc0n8s6gklr" 
 {:inputs []
  :label "-1"
  :outputs [""]
  :parsed [:float "-1"]
- :pos [306 160]
- }
+ :pos [306 160]}
  "hsoqrykco9o77ln" 
 {:inputs ["a"]
  :label "< #0"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "<" [:invariant "0"]]
- :pos [222 274]
- }}}}
+ :pos [222 274]}}}}

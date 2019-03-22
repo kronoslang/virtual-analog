@@ -1,4 +1,4 @@
-{:current-tab 0
+{:current-tab 1
  
  :manifest 
 {:dependencies 
@@ -9,7 +9,7 @@
  :version "0.1"}
  :origin 
 {:branch "default"
- :parents ["6f2eb9a38636d941f3fe9c1e6bda4fc41ed6ad30"]
+ :parents ["e460ff02bae9c028f1d7b9896eed4d00c397addb"]
  :service "bitbucket"
  :slug "kronoslang/virtual-analog"}
- :tabs ("tabs/draft.initial.edn" "tabs/phasor.6bfpogbbccsmarc.edn" "tabs/Poly-BLEP.fepa5oxq64fhr40.edn" "tabs/sign.3c2brdc2cqkyb.edn" "tabs/clamp.jb9u646ttja5kdb.edn")}
+ :tabs ("tabs/draft.initial.edn" "tabs/Poly-BLEP.fepa5oxq64fhr40.edn" "tabs/phasor.6bfpogbbccsmarc.edn" "tabs/sign.3c2brdc2cqkyb.edn" "tabs/clamp.jb9u646ttja5kdb.edn")}

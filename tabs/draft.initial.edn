@@ -7,11 +7,12 @@
 {:inputs []
  :label "80"
  :outputs [""]
- :parsed [:number-widget :float "9gb8foh4lvzi4f4" "1059" ""]
+ :parsed [:number-widget :float "9gb8foh4lvzi4f4" "81" ""]
  :pos [179 248]}
  "lqi4vwdw4p4tynr" 
 {:inputs ["freq"]
  :label "Poly-BLEP($freq)"
  :outputs [""]
  :parsed [:fn "Poly-BLEP" [:tuple [:free-var "freq"]]]
- :pos [361 267]}}}}
+ :pos [346 301]
+ :selected "lqi4vwdw4p4tynr"}}}}
