@@ -16,7 +16,6 @@ Poly-BLEP(freq) {
 (n2ixhbn599k56mn7-0) = (ny5wywjmrvvcf8ga-0 / nzfahwz7dfrtr427-0)
 (nj8vcah7cjxjrmpp-0) = 0
 (nm3ulwyap7xrtwd8-0) = Interval-of(np79pabx5zd4ypmt-0)
-(ngayf2l17h7k2515-0) = (nbyf33av3f3sk9v0-0 + 0.5)
 (nbaj8l05ere58s6x-0) = arg
 (nzfahwz7dfrtr427-0) = (nbaj8l05ere58s6x-0 * nm3ulwyap7xrtwd8-0)
 (n5wscwn905xh99ki-0) = (na4rlm23qxqfgng6-0 + n67gzklu5eeaa5w-0 + n67gzklu5eeaa5w-0)
@@ -30,7 +29,7 @@ Poly-BLEP(freq) {
 (nyanol2vfruwmpwm-0) = (-1 - n34f4st3vf5vqdp1-0)
 (nuk7qfxharohwf1l-0) = (neljp3hu7j4528ht-0 * 2)
 (ny5wywjmrvvcf8ga-0) = (nbyf33av3f3sk9v0-0 - 0.5)
-(neljp3hu7j4528ht-0) = Fraction(ngayf2l17h7k2515-0)
+(neljp3hu7j4528ht-0) = Fraction(ny5wywjmrvvcf8ga-0)
 (np79pabx5zd4ypmt-0) = Gen:Signal(nj8vcah7cjxjrmpp-0)
 ntt4wmmar0ien1w6-0
 }

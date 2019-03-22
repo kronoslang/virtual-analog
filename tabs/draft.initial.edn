@@ -7,7 +7,7 @@
 {:inputs []
  :label "80"
  :outputs [""]
- :parsed [:number-widget :float "9gb8foh4lvzi4f4" "81" ""]
+ :parsed [:number-widget :float "9gb8foh4lvzi4f4" "606" ""]
  :pos [179 248]}
  "lqi4vwdw4p4tynr" 
 {:inputs ["freq"]
