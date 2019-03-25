@@ -60,4 +60,20 @@ clamp(sig min max) {
 n6sz5yn9dxjr94zj-0
 }
 
+
+
+Saturation(sig) {
+;; Soft-saturates 'sig'nal to the range of [-1,1]
+(najjukyd3xch3og6-0) = (nb2brlkpj8ng3343-0 * n1tu9qyo8rah2ohf-0 * n1tu9qyo8rah2ohf-0)
+(nwq8ape7is7yx21n-0) = (najjukyd3xch3og6-0 / nxyfz3uoimh5o3gv-0)
+(nkdk6o4d7wk0mrlw-0) = arg
+(nb2brlkpj8ng3343-0) = (n9z13nlg0bjvtqie-0 + #6)
+(nxyfz3uoimh5o3gv-0) = (najjukyd3xch3og6-0 + #12)
+(nhzp7hs97za4q5a1-0) = Math:Copy-Sign(nwq8ape7is7yx21n-0 nkdk6o4d7wk0mrlw-0)
+(n9z13nlg0bjvtqie-0) = (n1ddu675f0ov2mgm-0 * n1tu9qyo8rah2ohf-0)
+(n1tu9qyo8rah2ohf-0) = Abs(nkdk6o4d7wk0mrlw-0)
+(n1ddu675f0ov2mgm-0) = (n1tu9qyo8rah2ohf-0 + #3)
+nhzp7hs97za4q5a1-0
+}
+
 }

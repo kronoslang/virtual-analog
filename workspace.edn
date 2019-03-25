@@ -9,7 +9,7 @@
  :version "0.1"}
  :origin 
 {:branch "default"
- :parents ["6b826bac4cc708f6255ffc6e37bf3f15350ab7b7"]
+ :parents ["8d9ee3516d7c82c3602dfa15a1d0ba9ab784c3e8"]
  :service "bitbucket"
  :slug "kronoslang/virtual-analog"}
- :tabs ("tabs/draft.initial.edn" "tabs/Poly-BLEP.fepa5oxq64fhr40.edn" "tabs/phasor.6bfpogbbccsmarc.edn" "tabs/sign.3c2brdc2cqkyb.edn" "tabs/clamp.jb9u646ttja5kdb.edn")}
+ :tabs ("tabs/draft.initial.edn" "tabs/Poly-BLEP.fepa5oxq64fhr40.edn" "tabs/phasor.6bfpogbbccsmarc.edn" "tabs/sign.3c2brdc2cqkyb.edn" "tabs/clamp.jb9u646ttja5kdb.edn" "tabs/draft.6289p9xp76q2z6.edn" "tabs/Saturation.eudndfav1n2ap6m.edn")}

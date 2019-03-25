@@ -1,19 +1,85 @@
 {:identity "initial"
  :patch
 {:cables
-{["lqi4vwdw4p4tynr" 0] [:fixed "gcgpau135qs5uu" 0]}
+{["7layzc479sh7jw" 0] [:fixed "wrab7dfgqg5bdx4" 0]
+ ["7layzc479sh7jw" 1] [:fixed "gcgpau135qs5uu" 0]
+ ["cksg7qc8l2rvcr1" 0] [:fixed "7layzc479sh7jw" 0]
+ ["m6wbqiej72qboyg" 1] [:fixed "l4najvhhmrazdqq" 0]
+ ["m6wbqiej72qboyg" 2] [:fixed "wtxb9jotdkh7gee" 0]
+ ["wrab7dfgqg5bdx4" 0] [:fixed "lqi4vwdw4p4tynr" 0]
+ ["wrab7dfgqg5bdx4" 1] [:fixed "m6wbqiej72qboyg" 0]
+ ["wrab7dfgqg5bdx4" 2] [:fixed "cw14vk9c29xb3bt" 0]
+ ["wrab7dfgqg5bdx4" 3] [:fixed "00ips4xkeok0ont" 0]}
  :nodes
-{"gcgpau135qs5uu" 
+{"00ips4xkeok0ont" 
+{:inputs ["sig"]
+ :label "Saturation($sig)"
+ :outputs [""]
+ :parsed [:fn "Saturation" [:tuple [:free-var "sig"]]]
+ :pos [598 308]
+ }
+ "7layzc479sh7jw" 
+{:ephemeral-inputs #{"args1"}
+ :inputs ["fn" "args1" "args..."]
+ :label "Gen:Oversample(#3 $fn $args...)"
+ :outputs [""]
+ :parsed [:fn "Gen:Oversample" [:tuple [:invariant "3"] [:free-var "fn"] [:free-var "args1"] [:free-var "args..."]]]
+ :pos [278 592]
+ :selected true}
+ "cksg7qc8l2rvcr1" 
+{:inputs ["a"]
+ :label "* 0.9"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:float "0.9"]]
+ :pos [828 371]
+ }
+ "cw14vk9c29xb3bt" 
+{:inputs ["a"]
+ :label "* 100"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:number-widget :float "5q029x4l64cj7ol" "24" ""]]
+ :pos [460 308]
+ }
+ "gcgpau135qs5uu" 
 {:inputs []
  :label "20 ---o--- 2000"
  :outputs [""]
- :parsed [:slider [:float "20"] [:float "2000"] "3geelo" :linear 7 0.6463084056472846]
- :pos [199 199]
+ :parsed [:slider [:float "20"] [:number-widget :float "4ttxz3fgdxpabae" "727" ""] "3geelo" :linear 7 0.05589740459735577]
+ :pos [7 227]
+ }
+ "l4najvhhmrazdqq" 
+{:inputs []
+ :label "40 + 400 * Gen:Phasor(1)"
+ :outputs [""]
+ :parsed [:infix [:number-widget :float "26f49k8ux97fy1l" "1486" ""] "+" [:infix [:number-widget :float "3s145ae4n9nppnm" "-1316" ""] "*" [:fn "Gen:Phasor" [:tuple [:number-widget :float "qjw6ypfb701xtkc" "2" ""]]]]]
+ :pos [139 104]
  }
  "lqi4vwdw4p4tynr" 
 {:inputs ["freq"]
  :label "Poly-BLEP($freq)"
  :outputs [""]
  :parsed [:fn "Poly-BLEP" [:tuple [:free-var "freq"]]]
- :pos [392 326]
- :selected true}}}}
+ :pos [175 339]
+ }
+ "m6wbqiej72qboyg" 
+{:inputs ["sig" "freq" "bw"]
+ :label "Filter:Resonator($sig $freq $bw)"
+ :outputs [""]
+ :parsed [:fn "Filter:Resonator" [:tuple [:free-var "sig"] [:free-var "freq"] [:free-var "bw"]]]
+ :pos [342 229]
+ }
+ "wrab7dfgqg5bdx4" 
+{:ephemeral-inputs #{"fn-list1" "fn-list2" "fn-list3" "fn-list4"}
+ :inputs ["fn-list1" "fn-list2" "fn-list3" "fn-list4" "fn-list..."]
+ :label "Compose($fn-list...)"
+ :outputs [""]
+ :parsed [:fn "Compose" [:tuple [:free-var "fn-list1"] [:free-var "fn-list2"] [:free-var "fn-list3"] [:free-var "fn-list4"] [:free-var "fn-list..."]]]
+ :pos [499 422]
+ }
+ "wtxb9jotdkh7gee" 
+{:inputs []
+ :label "100"
+ :outputs [""]
+ :parsed [:number-widget :float "oog4au7sdlr1fmy" "416" ""]
+ :pos [538 125]
+ }}}}
