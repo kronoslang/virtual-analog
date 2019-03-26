@@ -29,6 +29,30 @@ Dual-Saw(freq width waveform) {
 naxhdgwv7vgqmh2t-0
 }
 
+Moog-LPF(sig cutoff resonance) {
+(n1r968qv2ggq9rkx-0) = Interval-of(nerbxwcj26xlolq6-0)
+(nk2kwzz5q4bh4bgs-0) = (sig) => ( lpf6(sig nbu8r276nwyk6z84-0 na4cbjkbqobmlncz-0) ) 
+(nhu84w1g03wa6jw-0) = (n4v5uga9jw3ga194-0 * n27tprolhji5jd69-0 * nhx1hptparqe2z56-0)
+(n4v5uga9jw3ga194-0) = (nlya3fy55bb294sj-1 * naoywrtwzrb4bn2b-0 * n1r968qv2ggq9rkx-0)
+(n2v7x8n4ug9ridmh-0) = (naxh9k61kzy7x0tr-0 * n6abv5jw7waf831v-0)
+(nw4mhv29rbyt0hm-0) = (nlya3fy55bb294sj-0 - n2v7x8n4ug9ridmh-0)
+(n5hs1ijqc97ru3g9-0) = #-1
+(n6abv5jw7waf831v-0) = (nlya3fy55bb294sj-2 * ((#1 + ((#0.5 * n27tprolhji5jd69-0) * (((#1 - n27tprolhji5jd69-0) + ((#5.6 * n27tprolhji5jd69-0) * n27tprolhji5jd69-0)))))))
+(nerbxwcj26xlolq6-0) = Gen:Signal(nfx39txpejhurs0u-0)
+(n6huj40f1z1vvdjy-0) = Saturation(nbxp197t3v0gpoy9-0)
+(niqvgfrkhf3axite-0) = Saturation(nw4mhv29rbyt0hm-0)
+(n27tprolhji5jd69-0) = (#1 - n4v5uga9jw3ga194-0)
+(na4cbjkbqobmlncz-0) = (nbu8r276nwyk6z84-0 + nbu8r276nwyk6z84-0 + n5hs1ijqc97ru3g9-0)
+(naoywrtwzrb4bn2b-0) = #2
+(naxh9k61kzy7x0tr-0) = z-1(nbxp197t3v0gpoy9-0)
+(nbxp197t3v0gpoy9-0) = Algorithm:Iterate(#4 nk2kwzz5q4bh4bgs-0 niqvgfrkhf3axite-0)
+(nbu8r276nwyk6z84-0) = (n4v5uga9jw3ga194-0 + nhu84w1g03wa6jw-0)
+(nlya3fy55bb294sj-0 nlya3fy55bb294sj-1 nlya3fy55bb294sj-2) = arg
+(nfx39txpejhurs0u-0) = 0
+(nhx1hptparqe2z56-0) = #0.8
+n6huj40f1z1vvdjy-0
+}
+
 Poly-BLEP(phase rate) {
 ;; Bandlimited Sawtooth oscillator based on a 2nd degree polynomial bandlimited step.
 (n2ixhbn599k56mn7-0) = (ny5wywjmrvvcf8ga-0 / no3u0kjdgxlqx2ue-1)
@@ -85,6 +109,18 @@ clamp(sig min max) {
 (ncsgkzy2vqtji1fl-0) = Max(njkb3fzfo05b614q-0 njkb3fzfo05b614q-1)
 (njkb3fzfo05b614q-0 njkb3fzfo05b614q-1 njkb3fzfo05b614q-2) = arg
 n6sz5yn9dxjr94zj-0
+}
+
+lpf6(sig p f) {
+(nzj277e8hvupkiu2-0) = (n7iv2bprm6qo8953-2 * ngrc4zy4mc53gsmz-0)
+(ngrc4zy4mc53gsmz-0) = z-1(no2x33yaur7kk0e9-0)
+(no2x33yaur7kk0e9-0) = (ncnzz0t1ja3gsngv-0 - nzj277e8hvupkiu2-0)
+(n7iv2bprm6qo8953-0 n7iv2bprm6qo8953-1 n7iv2bprm6qo8953-2) = arg
+(ncnzz0t1ja3gsngv-0) = (n7iv2bprm6qo8953-1 * nw70hc814kxs956-0)
+(nw70hc814kxs956-0) = (nu2lfwq28fd20ty0-0 + n7iv2bprm6qo8953-0)
+(ne34h556bsohm27i-0) = no2x33yaur7kk0e9-0
+(nu2lfwq28fd20ty0-0) = z-1(n7iv2bprm6qo8953-0)
+ne34h556bsohm27i-0
 }
 
 
