@@ -11,26 +11,21 @@ Brief() {
 }
 
 
-Poly-BLEP(freq) {
+Poly-BLEP(phase rate) {
 ;; Bandlimited Sawtooth oscillator based on a 2nd degree polynomial bandlimited step.
-(n2ixhbn599k56mn7-0) = (ny5wywjmrvvcf8ga-0 / nzfahwz7dfrtr427-0)
-(nj8vcah7cjxjrmpp-0) = 0
-(nm3ulwyap7xrtwd8-0) = Interval-of(np79pabx5zd4ypmt-0)
-(nbaj8l05ere58s6x-0) = arg
-(nzfahwz7dfrtr427-0) = (nbaj8l05ere58s6x-0 * nm3ulwyap7xrtwd8-0)
+(n2ixhbn599k56mn7-0) = (ny5wywjmrvvcf8ga-0 / no3u0kjdgxlqx2ue-1)
 (n5wscwn905xh99ki-0) = (na4rlm23qxqfgng6-0 + n67gzklu5eeaa5w-0 + n67gzklu5eeaa5w-0)
 (ndhc5rhldd3je1t-0) = sign(ny5wywjmrvvcf8ga-0)
 (nl450041zb4ergf6-0) = 1
 (na4rlm23qxqfgng6-0) = (ndhc5rhldd3je1t-0 * nyanol2vfruwmpwm-0)
 (n34f4st3vf5vqdp1-0) = (n67gzklu5eeaa5w-0 * n67gzklu5eeaa5w-0)
-(nbyf33av3f3sk9v0-0) = phasor(nzfahwz7dfrtr427-0)
 (ntt4wmmar0ien1w6-0) = (nuk7qfxharohwf1l-0 - nl450041zb4ergf6-0 - n5wscwn905xh99ki-0)
 (n67gzklu5eeaa5w-0) = clamp(n2ixhbn599k56mn7-0 -1 1)
 (nyanol2vfruwmpwm-0) = (-1 - n34f4st3vf5vqdp1-0)
 (nuk7qfxharohwf1l-0) = (neljp3hu7j4528ht-0 * 2)
-(ny5wywjmrvvcf8ga-0) = (nbyf33av3f3sk9v0-0 - 0.5)
+(ny5wywjmrvvcf8ga-0) = (no3u0kjdgxlqx2ue-0 - 0.5)
 (neljp3hu7j4528ht-0) = Fraction(ny5wywjmrvvcf8ga-0)
-(np79pabx5zd4ypmt-0) = Gen:Signal(nj8vcah7cjxjrmpp-0)
+(no3u0kjdgxlqx2ue-0 no3u0kjdgxlqx2ue-1) = arg
 ntt4wmmar0ien1w6-0
 }
 

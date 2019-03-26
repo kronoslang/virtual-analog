@@ -5,7 +5,7 @@
  :patch
 {:cables
 {["2ixhbn599k56mn7" 0] [:fixed "y5wywjmrvvcf8ga" 0]
- ["2ixhbn599k56mn7" 1] [:fixed "zfahwz7dfrtr427" 0]
+ ["2ixhbn599k56mn7" 1] [:fixed "o3u0kjdgxlqx2ue" 1]
  ["34f4st3vf5vqdp1" 0] [:fixed "67gzklu5eeaa5w" 0]
  ["34f4st3vf5vqdp1" 1] [:fixed "67gzklu5eeaa5w" 0]
  ["5wscwn905xh99ki" 0] [:fixed "a4rlm23qxqfgng6" 0]
@@ -14,33 +14,28 @@
  ["67gzklu5eeaa5w" 0] [:fixed "2ixhbn599k56mn7" 0]
  ["a4rlm23qxqfgng6" 0] [:fixed "dhc5rhldd3je1t" 0]
  ["a4rlm23qxqfgng6" 1] [:fixed "yanol2vfruwmpwm" 0]
- ["byf33av3f3sk9v0" 0] [:fixed "zfahwz7dfrtr427" 0]
  ["dhc5rhldd3je1t" 0] [:fixed "y5wywjmrvvcf8ga" 0]
  ["eljp3hu7j4528ht" 0] [:fixed "y5wywjmrvvcf8ga" 0]
- ["m3ulwyap7xrtwd8" 0] [:fixed "p79pabx5zd4ypmt" 0]
- ["p79pabx5zd4ypmt" 0] [:fixed "j8vcah7cjxjrmpp" 0]
  ["tt4wmmar0ien1w6" 0] [:fixed "uk7qfxharohwf1l" 0]
  ["tt4wmmar0ien1w6" 1] [:fixed "l450041zb4ergf6" 0]
  ["tt4wmmar0ien1w6" 2] [:fixed "5wscwn905xh99ki" 0]
  ["uk7qfxharohwf1l" 0] [:fixed "eljp3hu7j4528ht" 0]
- ["y5wywjmrvvcf8ga" 0] [:fixed "byf33av3f3sk9v0" 0]
- ["yanol2vfruwmpwm" 0] [:fixed "34f4st3vf5vqdp1" 0]
- ["zfahwz7dfrtr427" 0] [:fixed "baj8l05ere58s6x" 0]
- ["zfahwz7dfrtr427" 1] [:fixed "m3ulwyap7xrtwd8" 0]}
+ ["y5wywjmrvvcf8ga" 0] [:fixed "o3u0kjdgxlqx2ue" 0]
+ ["yanol2vfruwmpwm" 0] [:fixed "34f4st3vf5vqdp1" 0]}
  :nodes
 {"0kpagf7bsv0grz4" 
 {:inputs []
  :label "; Combine for a bandlimited waveform"
  :outputs []
  :parsed [:comment "Combine for a bandlimited waveform"]
- :pos [889 562]}
+ :pos [920 772]}
  "2ixhbn599k56mn7" 
 {:color 2
  :inputs ["a" "b" "more..."]
  :label "/"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
- :pos [368 36]}
+ :pos [399 246]}
  "34f4st3vf5vqdp1" 
 {:color 2
  :ephemeral-inputs #{}
@@ -48,19 +43,13 @@
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [721 129]}
+ :pos [752 339]}
  "3fc7455vgm7k3di" 
 {:inputs []
  :label "; Compute a polynomial ripple at waveform discontinuity points"
  :outputs []
  :parsed [:comment "Compute a polynomial ripple at waveform discontinuity points"]
- :pos [376 196]}
- "3v5nif7a88izarf" 
-{:inputs []
- :label "; Compute a naive sawtooth"
- :outputs []
- :parsed [:comment "Compute a naive sawtooth"]
- :pos [-17 377]}
+ :pos [407 406]}
  "5wscwn905xh99ki" 
 {:color 2
  :ephemeral-inputs #{"more1"}
@@ -68,109 +57,69 @@
  :label "+"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more1"] [:free-var "more..."]]
- :pos [977 316]}
+ :pos [1008 526]}
  "67gzklu5eeaa5w" 
 {:color 2
  :inputs ["sig"]
  :label "clamp($sig -1 1)"
  :outputs [""]
  :parsed [:fn "clamp" [:tuple [:free-var "sig"] [:float "-1"] [:float "1"]]]
- :pos [439 35]}
+ :pos [470 245]}
  "a4rlm23qxqfgng6" 
 {:color 2
  :inputs ["a" "b" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [901 316]}
- "baj8l05ere58s6x" 
-{:inputs []
- :label "freq = arg"
- :outputs ["freq"]
- :parsed "arg"
- :pos [-228 117]}
- "byf33av3f3sk9v0" 
-{:inputs ["inc"]
- :label "phasor($inc)"
- :outputs [""]
- :parsed [:fn "phasor" [:tuple [:free-var "inc"]]]
- :pos [54 316]}
+ :pos [932 526]}
  "dhc5rhldd3je1t" 
 {:color 2
  :inputs ["a"]
  :label "sign($a)"
  :outputs [""]
  :parsed [:fn "sign" [:tuple [:free-var "a"]]]
- :pos [561 316]}
+ :pos [592 526]}
  "eljp3hu7j4528ht" 
 {:inputs ["x"]
  :label "Fraction($x)"
  :outputs [""]
  :parsed [:fn "Fraction" [:tuple [:free-var "x"]]]
- :pos [382 409]}
- "j8vcah7cjxjrmpp" 
-{:color 3
- :inputs []
- :label "0"
- :outputs [""]
- :parsed [:float "0"]
- :pos [-251 22]}
+ :pos [413 619]}
  "l450041zb4ergf6" 
 {:inputs []
  :label "1"
  :outputs [""]
  :parsed [:float "1"]
- :pos [874 394]}
- "m3ulwyap7xrtwd8" 
-{:color 3
- :inputs ["sig"]
- :label "Interval-of($sig)"
- :outputs [""]
- :parsed [:fn "Interval-of" [:tuple [:free-var "sig"]]]
- :pos [-17 22]}
- "o29cp40axtc1q9g" 
+ :pos [905 604]}
+ "o3u0kjdgxlqx2ue" 
 {:inputs []
- :label "; compute sampling interval"
- :outputs []
- :parsed [:comment "compute sampling interval"]
- :pos [-189 -61]}
- "p79pabx5zd4ypmt" 
-{:color 3
- :inputs ["sig"]
- :label "Gen:Signal($sig)"
- :outputs [""]
- :parsed [:fn "Gen:Signal" [:tuple [:free-var "sig"]]]
- :pos [-163 22]}
+ :label "(phase rate) = arg"
+ :outputs ["phase" "rate"]
+ :parsed "arg"
+ :pos [149 164]}
  "tt4wmmar0ien1w6" 
 {:ephemeral-inputs #{"more1"}
  :inputs ["a" "b" "more1" "more..."]
  :label "-"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "-" [:free-var "b"] [:free-var "more1"] [:free-var "more..."]]
- :pos [1014 490]
- :selected "tt4wmmar0ien1w6"}
+ :pos [1045 700]}
  "uk7qfxharohwf1l" 
 {:inputs ["a"]
  :label "* 2"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:float "2"]]
- :pos [616 490]}
+ :pos [647 700]}
  "y5wywjmrvvcf8ga" 
 {:inputs ["a"]
  :label "- 0.5"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "-" [:float "0.5"]]
- :pos [213 316]}
+ :pos [244 526]}
  "yanol2vfruwmpwm" 
 {:color 2
  :inputs ["b"]
  :label "-1 -"
  :outputs [""]
  :parsed [:infix [:float "-1"] "-" [:free-var "b"]]
- :pos [812 233]}
- "zfahwz7dfrtr427" 
-{:inputs ["a" "b" "more..."]
- :label "*"
- :outputs [""]
- :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [57 114]}}}}
+ :pos [843 443]}}}}

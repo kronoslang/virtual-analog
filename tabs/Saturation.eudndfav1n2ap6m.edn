@@ -62,8 +62,7 @@
  :parsed "arg"
  :pos [13 62]}
  "wq8ape7is7yx21n" 
-{
- :inputs ["a" "b" "more..."]
+{:inputs ["a" "b" "more..."]
  :label "/"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
