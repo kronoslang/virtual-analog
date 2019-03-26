@@ -9,7 +9,7 @@
  :version "0.2"}
  :origin 
 {:branch "moog"
- :parents ["75b15f03f1c62275e2cc89e52ffa56ce4e348a73"]
+ :parents ["b0ac84eeb911176efc2e0f629f1fb0e97285d63d"]
  :service "bitbucket"
  :slug "kronoslang/virtual-analog"}
  :tabs ("tabs/draft.initial.edn" "tabs/Dual-Saw.seuv3n1sz1xedc4.edn" "tabs/Ladder-LPF.300dveum957ocsc.edn" "tabs/Poly-BLEP.fepa5oxq64fhr40.edn" "tabs/Saturation.eudndfav1n2ap6m.edn" "tabs/phasor.6bfpogbbccsmarc.edn" "tabs/sign.3c2brdc2cqkyb.edn" "tabs/clamp.jb9u646ttja5kdb.edn" "tabs/lpf6.6289p9xp76q2z6.edn" "tabs/draft.zgq2yhoksryqcyp.edn")}

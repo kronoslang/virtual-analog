@@ -5,6 +5,7 @@
  ["1wvcyu54dmrmbzt" 0] [:fixed "ih4rf75dvptnn43" 0]
  ["2s7siulpyugsbca" 0] [:fixed "go785kdhx41a304" 0]
  ["2s7siulpyugsbca" 1] [:fixed "i1ggyvea2sfxb65" 0]
+ ["2s7siulpyugsbca" 2] [:fixed "b0ui51nd7x12f5" 0]
  ["3v8bqd8nd5nma4k" 0] [:fixed "ee2im5xn5r65ap" 0]
  ["aq2ltli316a0v2u" 0] [:fixed "d89eqq35d7a6s7n" 0]
  ["aq2ltli316a0v2u" 1] [:fixed "6c2q1mbjc1ka1hj" 0]
@@ -46,14 +47,15 @@
  :inputs ["a"]
  :label "* 4"
  :outputs [""]
- :parsed [:infix [:free-var "a"] "*" [:number-widget :float "lwnf65xcm4v7ky2" "9" ""]]
+ :parsed [:infix [:free-var "a"] "*" [:number-widget :float "lwnf65xcm4v7ky2" "10" ""]]
  :pos [835 636]}
  "2s7siulpyugsbca" 
 {:color 3
- :inputs ["a" "b" "more..."]
+ :ephemeral-inputs #{"more1"}
+ :inputs ["a" "b" "more1" "more..."]
  :label "*"
  :outputs [""]
- :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more1"] [:free-var "more..."]]
  :pos [554 810]}
  "3t0asla159gtbfm" 
 {:inputs []
@@ -119,6 +121,13 @@
  :outputs [""]
  :parsed [:fn "Compose" [:tuple [:free-var "fn-list1"] [:free-var "fn-list2"] [:free-var "fn-list3"] [:free-var "fn-list4"] [:free-var "fn-list5"] [:free-var "fn-list..."]]]
  :pos [1051 1209]}
+ "b0ui51nd7x12f5" 
+{:color 3
+ :inputs []
+ :label "2"
+ :outputs [""]
+ :parsed [:float "2"]
+ :pos [493 617]}
  "b5f61a2ylq1wp32" 
 {:inputs []
  :label "Gen:Phasor(0.05)"
@@ -186,13 +195,13 @@
  :label "Gen:Phasor(0.07)"
  :outputs [""]
  :parsed [:fn "Gen:Phasor" [:tuple [:float "0.07"]]]
- :pos [318 783]}
+ :pos [222 762]}
  "gy3wu40v9q9q6cw" 
 {:color 3
  :inputs ["a"]
  :label "* 5000"
  :outputs [""]
- :parsed [:infix [:free-var "a"] "*" [:number-widget :float "2ub4chubq39ybui" "829" ""]]
+ :parsed [:infix [:free-var "a"] "*" [:number-widget :float "2ub4chubq39ybui" "1803" ""]]
  :pos [640 902]}
  "i1ggyvea2sfxb65" 
 {:color 3
@@ -214,8 +223,7 @@
  :label "Gen:Oversample(#2 $fn $args...)"
  :outputs [""]
  :parsed [:fn "Gen:Oversample" [:tuple [:invariant "2"] [:free-var "fn"] [:free-var "args1"] [:free-var "args..."]]]
- :pos [1297 1186]
- :selected "k2jq824bcc7awnb"}
+ :pos [1297 1186]}
  "li4a5ddj17md84y" 
 {:ephemeral-inputs #{"more1" "more2" "more3"}
  :inputs ["a" "b" "more1" "more2" "more3" "more..."]
@@ -239,7 +247,7 @@
 {:inputs []
  :label "Gen:Phasor(0.25)"
  :outputs [""]
- :parsed [:fn "Gen:Phasor" [:tuple [:number-widget :float "bah5l43oz629djx" "0.4815" ""]]]
+ :parsed [:fn "Gen:Phasor" [:tuple [:number-widget :float "bah5l43oz629djx" "0.43335" ""]]]
  :pos [262 360]}
  "oivt99ihhd7e4og" 
 {:inputs []
@@ -251,7 +259,7 @@
 {:inputs []
  :label "10"
  :outputs [""]
- :parsed [:number-widget :float "3zw4gsaqa2mnkbo" "3" ""]
+ :parsed [:number-widget :float "3zw4gsaqa2mnkbo" "2" ""]
  :pos [930 846]}
  "uuh7ef7lhogb5m" 
 {:inputs []
