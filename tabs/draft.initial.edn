@@ -22,8 +22,7 @@
  :label "Dual-Saw($freq $width 1)"
  :outputs [""]
  :parsed [:fn "Dual-Saw" [:tuple [:free-var "freq"] [:free-var "width"] [:float "1"]]]
- :pos [268 416]
- :selected "vr3pz9q6plh3j2"}
+ :pos [268 416]}
  "z5g6omrswabswqq" 
 {:inputs ["freq"]
  :label "Gen:Sin($freq)"
