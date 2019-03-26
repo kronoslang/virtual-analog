@@ -11,6 +11,24 @@ Brief() {
 }
 
 
+Dual-Saw(freq width waveform) {
+;; Synthesizes two phase-offset, band-limited sawtooth waves from a shared phasor with 'freq'uency. The 'width' determines the phase offset relative to the waveform period. 'waveform' is the gain coefficient for the offset sawtooth; use 1 for dual saw and -1 for variable width pulse.
+(ny0c95fs5kvyc2z-0) = (nrclehe8v73xu2fe-1 + n5a2g4mefw9grck4-0)
+(n6hckv72d7518pb-0) = Poly-BLEP(n4d37na6pkdfv6rd-0 ntp7d2o7fq8xs6fe-0)
+(nj56jgd6wqnjs5z9-0) = 0
+(n5a2g4mefw9grck4-0) = phasor(ntp7d2o7fq8xs6fe-0)
+(nkif86s3f6v203vv-0) = (n3x3lc37gk4ztydv-0 + ngas72blv8g40vr-0)
+(n3x3lc37gk4ztydv-0) = (n6hckv72d7518pb-0 * nrclehe8v73xu2fe-2)
+(ntp7d2o7fq8xs6fe-0) = (nrclehe8v73xu2fe-0 * nilwf1ougu3jz56e-0)
+(nuoohopd8it403h2-0) = Gen:Signal(nj56jgd6wqnjs5z9-0)
+(nilwf1ougu3jz56e-0) = Interval-of(nuoohopd8it403h2-0)
+(n4d37na6pkdfv6rd-0) = Fraction(ny0c95fs5kvyc2z-0)
+(naxhdgwv7vgqmh2t-0) = (nkif86s3f6v203vv-0 * #0.5)
+(nrclehe8v73xu2fe-0 nrclehe8v73xu2fe-1 nrclehe8v73xu2fe-2) = arg
+(ngas72blv8g40vr-0) = Poly-BLEP(n5a2g4mefw9grck4-0 ntp7d2o7fq8xs6fe-0)
+naxhdgwv7vgqmh2t-0
+}
+
 Poly-BLEP(phase rate) {
 ;; Bandlimited Sawtooth oscillator based on a 2nd degree polynomial bandlimited step.
 (n2ixhbn599k56mn7-0) = (ny5wywjmrvvcf8ga-0 / no3u0kjdgxlqx2ue-1)
@@ -27,6 +45,20 @@ Poly-BLEP(phase rate) {
 (neljp3hu7j4528ht-0) = Fraction(ny5wywjmrvvcf8ga-0)
 (no3u0kjdgxlqx2ue-0 no3u0kjdgxlqx2ue-1) = arg
 ntt4wmmar0ien1w6-0
+}
+
+Saturation(sig) {
+;; Soft-saturates 'sig'nal to the range of [-1,1]
+(najjukyd3xch3og6-0) = (nb2brlkpj8ng3343-0 * n1tu9qyo8rah2ohf-0 * n1tu9qyo8rah2ohf-0)
+(nwq8ape7is7yx21n-0) = (najjukyd3xch3og6-0 / nxyfz3uoimh5o3gv-0)
+(nkdk6o4d7wk0mrlw-0) = arg
+(nb2brlkpj8ng3343-0) = (n9z13nlg0bjvtqie-0 + #6)
+(nxyfz3uoimh5o3gv-0) = (najjukyd3xch3og6-0 + #12)
+(nhzp7hs97za4q5a1-0) = Math:Copy-Sign(nwq8ape7is7yx21n-0 nkdk6o4d7wk0mrlw-0)
+(n9z13nlg0bjvtqie-0) = (n1ddu675f0ov2mgm-0 * n1tu9qyo8rah2ohf-0)
+(n1tu9qyo8rah2ohf-0) = Abs(nkdk6o4d7wk0mrlw-0)
+(n1ddu675f0ov2mgm-0) = (n1tu9qyo8rah2ohf-0 + #3)
+nhzp7hs97za4q5a1-0
 }
 
 phasor(inc) {
@@ -56,19 +88,5 @@ n6sz5yn9dxjr94zj-0
 }
 
 
-
-Saturation(sig) {
-;; Soft-saturates 'sig'nal to the range of [-1,1]
-(najjukyd3xch3og6-0) = (nb2brlkpj8ng3343-0 * n1tu9qyo8rah2ohf-0 * n1tu9qyo8rah2ohf-0)
-(nwq8ape7is7yx21n-0) = (najjukyd3xch3og6-0 / nxyfz3uoimh5o3gv-0)
-(nkdk6o4d7wk0mrlw-0) = arg
-(nb2brlkpj8ng3343-0) = (n9z13nlg0bjvtqie-0 + #6)
-(nxyfz3uoimh5o3gv-0) = (najjukyd3xch3og6-0 + #12)
-(nhzp7hs97za4q5a1-0) = Math:Copy-Sign(nwq8ape7is7yx21n-0 nkdk6o4d7wk0mrlw-0)
-(n9z13nlg0bjvtqie-0) = (n1ddu675f0ov2mgm-0 * n1tu9qyo8rah2ohf-0)
-(n1tu9qyo8rah2ohf-0) = Abs(nkdk6o4d7wk0mrlw-0)
-(n1ddu675f0ov2mgm-0) = (n1tu9qyo8rah2ohf-0 + #3)
-nhzp7hs97za4q5a1-0
-}
 
 }

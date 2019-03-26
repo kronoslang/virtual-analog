@@ -1,0 +1,103 @@
+{:documentation "Synthesizes two phase-offset, band-limited sawtooth waves from a shared phasor with 'freq'uency. The 'width' determines the phase offset relative to the waveform period. 'waveform' is the gain coefficient for the offset sawtooth; use 1 for dual saw and -1 for variable width pulse."
+ :draft-argument "440 Gen:Sin(0.5) -1"
+ :identifier "Dual-Saw"
+ :identity "seuv3n1sz1xedc4"
+ :patch
+{:cables
+{["3x3lc37gk4ztydv" 0] [:fixed "6hckv72d7518pb" 0]
+ ["3x3lc37gk4ztydv" 1] [:fixed "rclehe8v73xu2fe" 2]
+ ["4d37na6pkdfv6rd" 0] [:fixed "y0c95fs5kvyc2z" 0]
+ ["5a2g4mefw9grck4" 0] [:fixed "tp7d2o7fq8xs6fe" 0]
+ ["6hckv72d7518pb" 0] [:fixed "4d37na6pkdfv6rd" 0]
+ ["6hckv72d7518pb" 1] [:fixed "tp7d2o7fq8xs6fe" 0]
+ ["axhdgwv7vgqmh2t" 0] [:fixed "kif86s3f6v203vv" 0]
+ ["gas72blv8g40vr" 0] [:fixed "5a2g4mefw9grck4" 0]
+ ["gas72blv8g40vr" 1] [:fixed "tp7d2o7fq8xs6fe" 0]
+ ["ilwf1ougu3jz56e" 0] [:fixed "uoohopd8it403h2" 0]
+ ["kif86s3f6v203vv" 0] [:fixed "3x3lc37gk4ztydv" 0]
+ ["kif86s3f6v203vv" 1] [:fixed "gas72blv8g40vr" 0]
+ ["tp7d2o7fq8xs6fe" 0] [:fixed "rclehe8v73xu2fe" 0]
+ ["tp7d2o7fq8xs6fe" 1] [:fixed "ilwf1ougu3jz56e" 0]
+ ["uoohopd8it403h2" 0] [:fixed "j56jgd6wqnjs5z9" 0]
+ ["y0c95fs5kvyc2z" 0] [:fixed "rclehe8v73xu2fe" 1]
+ ["y0c95fs5kvyc2z" 1] [:fixed "5a2g4mefw9grck4" 0]}
+ :nodes
+{"3x3lc37gk4ztydv" 
+{:inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [819 564]}
+ "4d37na6pkdfv6rd" 
+{:inputs ["x"]
+ :label "Fraction($x)"
+ :outputs [""]
+ :parsed [:fn "Fraction" [:tuple [:free-var "x"]]]
+ :pos [377 558]}
+ "5a2g4mefw9grck4" 
+{:inputs ["inc"]
+ :label "phasor($inc)"
+ :outputs [""]
+ :parsed [:fn "phasor" [:tuple [:free-var "inc"]]]
+ :pos [299 400]}
+ "6hckv72d7518pb" 
+{:inputs ["phase" "rate"]
+ :label "Poly-BLEP($phase $rate)"
+ :outputs [""]
+ :parsed [:fn "Poly-BLEP" [:tuple [:free-var "phase"] [:free-var "rate"]]]
+ :pos [592 564]}
+ "axhdgwv7vgqmh2t" 
+{:inputs ["a"]
+ :label "* #0.5"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:invariant "0.5"]]
+ :pos [1008 489]}
+ "gas72blv8g40vr" 
+{:inputs ["phase" "rate"]
+ :label "Poly-BLEP($phase $rate)"
+ :outputs [""]
+ :parsed [:fn "Poly-BLEP" [:tuple [:free-var "phase"] [:free-var "rate"]]]
+ :pos [582 321]}
+ "ilwf1ougu3jz56e" 
+{:inputs ["sig"]
+ :label "Interval-of($sig)"
+ :outputs [""]
+ :parsed [:fn "Interval-of" [:tuple [:free-var "sig"]]]
+ :pos [254 162]}
+ "j56jgd6wqnjs5z9" 
+{:inputs []
+ :label "0"
+ :outputs [""]
+ :parsed [:float "0"]
+ :pos [43 162]}
+ "kif86s3f6v203vv" 
+{:inputs ["a" "b" "more..."]
+ :label "+"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
+ :pos [907 464]
+ :selected "kif86s3f6v203vv"}
+ "rclehe8v73xu2fe" 
+{:inputs []
+ :label "(freq width waveform) = arg"
+ :outputs ["freq" "width" "waveform"]
+ :parsed "arg"
+ :pos [52 288]}
+ "tp7d2o7fq8xs6fe" 
+{:inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [260 296]}
+ "uoohopd8it403h2" 
+{:inputs ["sig"]
+ :label "Gen:Signal($sig)"
+ :outputs [""]
+ :parsed [:fn "Gen:Signal" [:tuple [:free-var "sig"]]]
+ :pos [129 162]}
+ "y0c95fs5kvyc2z" 
+{:inputs ["a" "b" "more..."]
+ :label "+"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
+ :pos [310 558]}}}}

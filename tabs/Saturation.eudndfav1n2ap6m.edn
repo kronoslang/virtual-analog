@@ -23,53 +23,69 @@
  :label "+ #3"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:invariant "3"]]
- :pos [173 340]}
+ :pos [173 340]
+ }
  "1tu9qyo8rah2ohf" 
 {:inputs ["a"]
  :label "Abs($a)"
  :outputs [""]
  :parsed [:fn "Abs" [:tuple [:free-var "a"]]]
- :pos [60 218]}
+ :pos [60 218]
+ }
  "9z13nlg0bjvtqie" 
 {:inputs ["a" "b" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [286 340]}
+ :pos [286 340]
+ }
  "ajjukyd3xch3og6" 
 {:ephemeral-inputs #{"more1"}
  :inputs ["a" "b" "more1" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more1"] [:free-var "more..."]]
- :pos [475 340]}
+ :pos [475 340]
+ }
  "b2brlkpj8ng3343" 
 {:inputs ["a"]
  :label "+ #6"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:invariant "6"]]
- :pos [362 340]}
+ :pos [362 340]
+ }
  "hzp7hs97za4q5a1" 
 {:inputs ["value" "sign"]
  :label "Math:Copy-Sign($value $sign)"
  :outputs [""]
  :parsed [:fn "Math:Copy-Sign" [:tuple [:free-var "value"] [:free-var "sign"]]]
- :pos [728 388]}
+ :pos [728 388]
+ }
  "kdk6o4d7wk0mrlw" 
 {:inputs []
  :label "sig = arg"
  :outputs ["sig"]
  :parsed "arg"
- :pos [13 62]}
+ :pos [13 62]
+ }
+ "w0p7413ut19u8k5" 
+{:inputs []
+ :label ";tanh approximation via dividing two polynomials"
+ :outputs []
+ :parsed [:comment "tanh approximation via dividing two polynomials"]
+ :pos [184 111]
+ :selected true}
  "wq8ape7is7yx21n" 
 {:inputs ["a" "b" "more..."]
  :label "/"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
- :pos [644 390]}
+ :pos [644 390]
+ }
  "xyfz3uoimh5o3gv" 
 {:inputs ["a"]
  :label "+ #12"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:invariant "12"]]
- :pos [550 281]}}}}
+ :pos [550 281]
+ }}}}

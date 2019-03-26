@@ -1,98 +1,32 @@
 {:identity "initial"
  :patch
 {:cables
-{["32o8aiaj4cdi96q" 0] [:fixed "y5dbx0swwytrbzc" 0]
- ["32o8aiaj4cdi96q" 1] [:fixed "kk77x3ly2cvya91" 0]
- ["e4yb8rdpr0rhrvz" 0] [:fixed "0te510y3vv34yfp" 0]
- ["exwhvzpnd4dmuot" 0] [:fixed "kk77x3ly2cvya91" 0]
- ["exwhvzpnd4dmuot" 1] [:fixed "xqqx4qzmocf4ze2" 0]
- ["kk77x3ly2cvya91" 0] [:fixed "xqqx4qzmocf4ze2" 0]
- ["ljbmwaaiv6x0bk3" 0] [:fixed "m9hljl822mzxl70" 0]
- ["ljbmwaaiv6x0bk3" 1] [:fixed "exwhvzpnd4dmuot" 0]
- ["m9hljl822mzxl70" 0] [:fixed "qgvq3j43ua0fz5k" 0]
- ["m9hljl822mzxl70" 1] [:fixed "xqqx4qzmocf4ze2" 0]
- ["qgvq3j43ua0fz5k" 0] [:fixed "32o8aiaj4cdi96q" 0]
- ["r6ufu0ee3dslees" 0] [:fixed "e4yb8rdpr0rhrvz" 0]
- ["xqqx4qzmocf4ze2" 0] [:fixed "gcgpau135qs5uu" 0]
- ["xqqx4qzmocf4ze2" 1] [:fixed "r6ufu0ee3dslees" 0]
- ["y5dbx0swwytrbzc" 0] [:fixed "rosbjglac92obxy" 0]}
+{["vr3pz9q6plh3j2" 0] [:fixed "gcgpau135qs5uu" 0]
+ ["vr3pz9q6plh3j2" 1] [:fixed "z5g6omrswabswqq" 0]
+ ["z5g6omrswabswqq" 0] [:fixed "8yrg9pyto6t8b88" 0]}
  :nodes
-{"0te510y3vv34yfp" 
-{:inputs []
- :label "0"
- :outputs [""]
- :parsed [:float "0"]
- :pos [19 235]}
- "32o8aiaj4cdi96q" 
-{:inputs ["a" "b" "more..."]
- :label "+"
- :outputs [""]
- :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
- :pos [546 826]}
- "e4yb8rdpr0rhrvz" 
-{:inputs ["sig"]
- :label "Gen:Signal($sig)"
- :outputs [""]
- :parsed [:fn "Gen:Signal" [:tuple [:free-var "sig"]]]
- :pos [105 235]}
- "exwhvzpnd4dmuot" 
-{:inputs ["phase" "rate"]
- :label "Poly-BLEP($phase $rate)"
- :outputs [""]
- :parsed [:fn "Poly-BLEP" [:tuple [:free-var "phase"] [:free-var "rate"]]]
- :pos [714 578]
- :selected "exwhvzpnd4dmuot"}
- "gcgpau135qs5uu" 
-{:inputs []
- :label "20 ---o--- 2000"
- :outputs [""]
- :parsed [:slider [:float "20"] [:number-widget :float "4ttxz3fgdxpabae" "5721" ""] "3geelo" :linear 7 0.33514272447451415]
- :pos [11 329]}
- "kk77x3ly2cvya91" 
-{:inputs ["inc"]
- :label "phasor($inc)"
- :outputs [""]
- :parsed [:fn "phasor" [:tuple [:free-var "inc"]]]
- :pos [517 579]}
- "ljbmwaaiv6x0bk3" 
-{:inputs ["a" "b" "more..."]
- :label "-"
- :outputs [""]
- :parsed [:infix [:free-var "a"] "-" [:free-var "b"] [:free-var "more..."]]
- :pos [976 714]}
- "m9hljl822mzxl70" 
-{:inputs ["phase" "rate"]
- :label "Poly-BLEP($phase $rate)"
- :outputs [""]
- :parsed [:fn "Poly-BLEP" [:tuple [:free-var "phase"] [:free-var "rate"]]]
- :pos [758 826]}
- "qgvq3j43ua0fz5k" 
-{:inputs ["x"]
- :label "Fraction($x)"
- :outputs [""]
- :parsed [:fn "Fraction" [:tuple [:free-var "x"]]]
- :pos [613 826]}
- "r6ufu0ee3dslees" 
-{:inputs ["sig"]
- :label "Interval-of($sig)"
- :outputs [""]
- :parsed [:fn "Interval-of" [:tuple [:free-var "sig"]]]
- :pos [236 235]}
- "rosbjglac92obxy" 
+{"8yrg9pyto6t8b88" 
 {:inputs []
  :label "0.1"
  :outputs [""]
  :parsed [:float "0.1"]
- :pos [187 740]}
- "xqqx4qzmocf4ze2" 
-{:inputs ["a" "b" "more..."]
- :label "*"
+ :pos [52 163]}
+ "gcgpau135qs5uu" 
+{:inputs []
+ :label "20 ---o--- 2000"
  :outputs [""]
- :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [434 339]}
- "y5dbx0swwytrbzc" 
+ :parsed [:slider [:float "20"] [:number-widget :float "4ttxz3fgdxpabae" "1259" ""] "3geelo" :linear 7 0.08459988037129704]
+ :pos [11 329]}
+ "vr3pz9q6plh3j2" 
+{:inputs ["freq" "width"]
+ :label "Dual-Saw($freq $width 1)"
+ :outputs [""]
+ :parsed [:fn "Dual-Saw" [:tuple [:free-var "freq"] [:free-var "width"] [:float "1"]]]
+ :pos [268 416]
+ :selected "vr3pz9q6plh3j2"}
+ "z5g6omrswabswqq" 
 {:inputs ["freq"]
- :label "Gen:Tri($freq)"
+ :label "Gen:Sin($freq)"
  :outputs [""]
- :parsed [:fn "Gen:Tri" [:tuple [:free-var "freq"]]]
- :pos [399 826]}}}}
+ :parsed [:fn "Gen:Sin" [:tuple [:free-var "freq"]]]
+ :pos [220 181]}}}}
