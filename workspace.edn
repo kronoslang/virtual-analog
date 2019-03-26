@@ -1,5 +1,5 @@
 {:current-tab 0
- :file "temp.veneer"
+ :file "temp.veneer.zip"
  :manifest 
 {:dependencies 
 {}
@@ -9,7 +9,7 @@
  :version "0.2"}
  :origin 
 {:branch "moog"
- :parents ["dcfb08495de5625d7539f1fb4653ed66ea0d226c"]
+ :parents ["1d53a5629d350cec84ddaafa12a46cab9c0d962a"]
  :service "bitbucket"
  :slug "kronoslang/virtual-analog"}
  :tabs ("tabs/draft.initial.edn" "tabs/Dual-Saw.seuv3n1sz1xedc4.edn" "tabs/Ladder-LPF.300dveum957ocsc.edn" "tabs/Poly-BLEP.fepa5oxq64fhr40.edn" "tabs/Saturation.eudndfav1n2ap6m.edn" "tabs/phasor.6bfpogbbccsmarc.edn" "tabs/sign.3c2brdc2cqkyb.edn" "tabs/clamp.jb9u646ttja5kdb.edn" "tabs/lpf6.6289p9xp76q2z6.edn" "tabs/draft.zgq2yhoksryqcyp.edn")}

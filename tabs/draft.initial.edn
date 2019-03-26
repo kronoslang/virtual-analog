@@ -1,62 +1,279 @@
 {:identity "initial"
  :patch
 {:cables
-{["aq2ltli316a0v2u" 0] [:fixed "d89eqq35d7a6s7n" 0]
+{["1gzn0xjc4dipfgy" 0] [:fixed "ea1ak2ec276uccq" 0]
+ ["1wvcyu54dmrmbzt" 0] [:fixed "ih4rf75dvptnn43" 0]
+ ["2s7siulpyugsbca" 0] [:fixed "go785kdhx41a304" 0]
+ ["2s7siulpyugsbca" 1] [:fixed "i1ggyvea2sfxb65" 0]
+ ["3v8bqd8nd5nma4k" 0] [:fixed "ee2im5xn5r65ap" 0]
+ ["aq2ltli316a0v2u" 0] [:fixed "d89eqq35d7a6s7n" 0]
  ["aq2ltli316a0v2u" 1] [:fixed "6c2q1mbjc1ka1hj" 0]
  ["aq2ltli316a0v2u" 2] [:fixed "djunzngllglp456" 0]
- ["djunzngllglp456" 1] [:fixed "5nao89poxld0e3s" 0]
- ["djunzngllglp456" 2] [:fixed "r1qg01dhgede6se" 0]
+ ["aq2ltli316a0v2u" 3] [:fixed "li4a5ddj17md84y" 0]
+ ["aq2ltli316a0v2u" 4] [:fixed "5hnel84rmi86fki" 0]
+ ["djunzngllglp456" 1] [:fixed "gy3wu40v9q9q6cw" 0]
+ ["djunzngllglp456" 2] [:fixed "1wvcyu54dmrmbzt" 0]
+ ["dz5eivjsj9yqcs9" 0] [:fixed "5zpefqm6p3kqhff" 0]
+ ["dz5eivjsj9yqcs9" 1] [:fixed "2s7siulpyugsbca" 0]
+ ["dz5eivjsj9yqcs9" 2] [:fixed "984xrijdrq7ieg" 0]
+ ["ea1ak2ec276uccq" 0] [:fixed "myayzhcki9z1cbz" 0]
+ ["ea1ak2ec276uccq" 1] [:fixed "fb04cc6v4x3wqen" 0]
+ ["ed5lr0zxsvclrq" 0] [:fixed "vuifsi9erwry82g" 0]
+ ["ee2im5xn5r65ap" 0] [:fixed "ed5lr0zxsvclrq" 0]
+ ["fb04cc6v4x3wqen" 0] [:fixed "dsbgwcsbb2au696" 0]
+ ["gy3wu40v9q9q6cw" 0] [:fixed "dz5eivjsj9yqcs9" 0]
+ ["i1ggyvea2sfxb65" 0] [:fixed "1gzn0xjc4dipfgy" 0]
  ["k2jq824bcc7awnb" 0] [:fixed "aq2ltli316a0v2u" 0]
- ["k2jq824bcc7awnb" 1] [:fixed "gcgpau135qs5uu" 0]}
+ ["k2jq824bcc7awnb" 1] [:fixed "x6kbs1cyc3gu2dx" 0]
+ ["li4a5ddj17md84y" 0] [:fixed "xn6k2fbpj4gkfb" 0]
+ ["li4a5ddj17md84y" 2] [:fixed "s2h7ch2xpi5rjw" 0]
+ ["li4a5ddj17md84y" 3] [:fixed "xn6k2fbpj4gkfb" 0]
+ ["vuifsi9erwry82g" 0] [:fixed "dsbgwcsbb2au696" 0]
+ ["vuifsi9erwry82g" 1] [:fixed "ea1ak2ec276uccq" 0]
+ ["x6kbs1cyc3gu2dx" 0] [:fixed "3v8bqd8nd5nma4k" 0]
+ ["xn6k2fbpj4gkfb" 0] [:fixed "b5f61a2ylq1wp32" 0]}
  :nodes
-{"5nao89poxld0e3s" 
-{:inputs []
- :label "0 -o- 1"
+{"1gzn0xjc4dipfgy" 
+{:color 3
+ :inputs ["x"]
+ :label "Fraction($x)"
  :outputs [""]
- :parsed [:slider [:number-widget :float "w7yeatn104h0yk7" "47" ""] [:number-widget :float "0xijak415eguc42" "8176" ""] "w12je3" :linear 3 0.7109523228236607]
- :pos [381 243]}
+ :parsed [:fn "Fraction" [:tuple [:free-var "x"]]]
+ :pos [321 629]}
+ "1wvcyu54dmrmbzt" 
+{:color 4
+ :inputs ["a"]
+ :label "* 4"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:number-widget :float "lwnf65xcm4v7ky2" "9" ""]]
+ :pos [835 636]}
+ "2s7siulpyugsbca" 
+{:color 3
+ :inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [554 810]}
+ "3t0asla159gtbfm" 
+{:inputs []
+ :label "; drive and post-saturation"
+ :outputs []
+ :parsed [:comment "drive and post-saturation"]
+ :pos [1152 954]}
+ "3v8bqd8nd5nma4k" 
+{:color 2
+ :inputs ["a"]
+ :label "* 27.5"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:float "27.5"]]
+ :pos [1141 450]}
+ "4jyl801957bx6h1" 
+{:inputs []
+ :label "; and run it in an oversampler"
+ :outputs []
+ :parsed [:comment "and run it in an oversampler"]
+ :pos [1378 1253]}
+ "4ofdgyawn9vc2zh" 
+{:inputs []
+ :label "; pattern clock"
+ :outputs []
+ :parsed [:comment "pattern clock"]
+ :pos [311 278]}
+ "5hnel84rmi86fki" 
+{:inputs ["sig"]
+ :label "Saturation($sig)"
+ :outputs [""]
+ :parsed [:fn "Saturation" [:tuple [:free-var "sig"]]]
+ :pos [1203 1045]}
+ "5zpefqm6p3kqhff" 
+{:color 3
+ :inputs []
+ :label "Gen:Tri(0.1)"
+ :outputs [""]
+ :parsed [:fn "Gen:Tri" [:tuple [:float "0.1"]]]
+ :pos [355 875]}
  "6c2q1mbjc1ka1hj" 
 {:inputs ["a"]
  :label "* 0.5"
  :outputs [""]
- :parsed [:infix [:free-var "a"] "*" [:float "0.5"]]
- :pos [434 604]}
+ :parsed [:infix [:free-var "a"] "*" [:number-widget :float "65xsdfs54s87lqc" "6.381995871416" ""]]
+ :pos [657 1119]}
+ "82wwtbswbah5rfi" 
+{:inputs []
+ :label "; compose signal chain into a function"
+ :outputs []
+ :parsed [:comment "compose signal chain into a function"]
+ :pos [935 1281]}
+ "984xrijdrq7ieg" 
+{:color 3
+ :inputs []
+ :label "1"
+ :outputs [""]
+ :parsed [:float "1"]
+ :pos [587 738]}
  "aq2ltli316a0v2u" 
-{:ephemeral-inputs #{"fn-list1" "fn-list2" "fn-list3"}
- :inputs ["fn-list1" "fn-list2" "fn-list3" "fn-list..."]
+{:ephemeral-inputs #{"fn-list1" "fn-list2" "fn-list3" "fn-list4" "fn-list5"}
+ :inputs ["fn-list1" "fn-list2" "fn-list3" "fn-list4" "fn-list5" "fn-list..."]
  :label "Compose($fn-list...)"
  :outputs [""]
- :parsed [:fn "Compose" [:tuple [:free-var "fn-list1"] [:free-var "fn-list2"] [:free-var "fn-list3"] [:free-var "fn-list..."]]]
- :pos [246 744]}
+ :parsed [:fn "Compose" [:tuple [:free-var "fn-list1"] [:free-var "fn-list2"] [:free-var "fn-list3"] [:free-var "fn-list4"] [:free-var "fn-list5"] [:free-var "fn-list..."]]]
+ :pos [1051 1209]}
+ "b5f61a2ylq1wp32" 
+{:inputs []
+ :label "Gen:Phasor(0.05)"
+ :outputs [""]
+ :parsed [:fn "Gen:Phasor" [:tuple [:float "0.05"]]]
+ :pos [798 935]}
  "d89eqq35d7a6s7n" 
 {:inputs ["freq"]
  :label "Dual-Saw($freq 0 1)"
  :outputs [""]
  :parsed [:fn "Dual-Saw" [:tuple [:free-var "freq"] [:float "0"] [:float "1"]]]
- :pos [64 616]}
+ :pos [607 1190]}
  "djunzngllglp456" 
 {:inputs ["sig" "cutoff" "resonance"]
  :label "Ladder-LPF($sig $cutoff $resonance)"
  :outputs [""]
  :parsed [:fn "Ladder-LPF" [:tuple [:free-var "sig"] [:free-var "cutoff"] [:free-var "resonance"]]]
- :pos [669 589]}
- "gcgpau135qs5uu" 
-{:inputs []
- :label "20 ---o--- 2000"
+ :pos [726 1065]}
+ "dsbgwcsbb2au696" 
+{:color 2
+ :inputs []
+ :label "[9 21 28 33 38 40 43 45 40 43 21 33 28 9 21 -3]"
  :outputs [""]
- :parsed [:slider [:float "20"] [:number-widget :float "4ttxz3fgdxpabae" "1259" ""] "3geelo" :linear 7 0.048205096905048074]
- :pos [105 212]}
+ :parsed [:list [:float "9"] [:float "21"] [:float "28"] [:float "33"] [:float "38"] [:float "40"] [:float "43"] [:float "45"] [:float "40"] [:float "43"] [:float "21"] [:float "33"] [:float "28"] [:float "9"] [:float "21"] [:float "-3"]]
+ :pos [325 160]}
+ "dz5eivjsj9yqcs9" 
+{:color 3
+ :ephemeral-inputs #{"more1"}
+ :inputs ["a" "b" "more1" "more..."]
+ :label "+"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more1"] [:free-var "more..."]]
+ :pos [553 900]}
+ "ea1ak2ec276uccq" 
+{:color 3
+ :inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [534 423]}
+ "ed5lr0zxsvclrq" 
+{:color 2
+ :inputs ["a"]
+ :label "/ 12"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "/" [:float "12"]]
+ :pos [810 450]}
+ "ee2im5xn5r65ap" 
+{:color 2
+ :inputs ["b"]
+ :label "Math:Pow(2 $b)"
+ :outputs [""]
+ :parsed [:fn "Math:Pow" [:tuple [:float "2"] [:free-var "b"]]]
+ :pos [935 450]}
+ "fb04cc6v4x3wqen" 
+{:color 2
+ :inputs ["tuple"]
+ :label "Arity($tuple)"
+ :outputs [""]
+ :parsed [:fn "Arity" [:tuple [:free-var "tuple"]]]
+ :pos [715 267]}
+ "go785kdhx41a304" 
+{:color 3
+ :inputs []
+ :label "Gen:Phasor(0.07)"
+ :outputs [""]
+ :parsed [:fn "Gen:Phasor" [:tuple [:float "0.07"]]]
+ :pos [318 783]}
+ "gy3wu40v9q9q6cw" 
+{:color 3
+ :inputs ["a"]
+ :label "* 5000"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:number-widget :float "2ub4chubq39ybui" "2883" ""]]
+ :pos [640 902]}
+ "i1ggyvea2sfxb65" 
+{:color 3
+ :inputs ["b"]
+ :label "1 -"
+ :outputs [""]
+ :parsed [:infix [:float "1"] "-" [:free-var "b"]]
+ :pos [456 714]}
+ "ih4rf75dvptnn43" 
+{:color 4
+ :inputs []
+ :label "Gen:Phasor(0.09)"
+ :outputs [""]
+ :parsed [:fn "Gen:Phasor" [:tuple [:float "0.09"]]]
+ :pos [583 636]}
  "k2jq824bcc7awnb" 
 {:ephemeral-inputs #{"args1"}
  :inputs ["fn" "args1" "args..."]
  :label "Gen:Oversample(#2 $fn $args...)"
  :outputs [""]
  :parsed [:fn "Gen:Oversample" [:tuple [:invariant "2"] [:free-var "fn"] [:free-var "args1"] [:free-var "args..."]]]
- :pos [521 848]
- :selected "k2jq824bcc7awnb"}
- "r1qg01dhgede6se" 
-{:inputs []
- :label "0 -o- 1"
+ :pos [1297 1186]}
+ "li4a5ddj17md84y" 
+{:ephemeral-inputs #{"more1" "more2"}
+ :inputs ["a" "b" "more1" "more2" "more..."]
+ :label "*"
  :outputs [""]
- :parsed [:slider [:float "0"] [:number-widget :float "bd76jvtsj7j456y" "4" ""] "hens4f" :linear 3 0.35380946568080357]
- :pos [545 239]}}}}
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more1"] [:free-var "more2"] [:free-var "more..."]]
+ :pos [1063 1043]}
+ "lpjo93yqnvcntx7" 
+{:inputs []
+ :label "; midi note number step seq"
+ :outputs []
+ :parsed [:comment "midi note number step seq"]
+ :pos [843 348]}
+ "mnswg5sb67l3ac" 
+{:inputs []
+ :label "; filter envelope and lfo"
+ :outputs []
+ :parsed [:comment "filter envelope and lfo"]
+ :pos [355 969]}
+ "myayzhcki9z1cbz" 
+{:inputs []
+ :label "Gen:Phasor(0.25)"
+ :outputs [""]
+ :parsed [:fn "Gen:Phasor" [:tuple [:number-widget :float "bah5l43oz629djx" "0.4815" ""]]]
+ :pos [262 360]}
+ "oivt99ihhd7e4og" 
+{:inputs []
+ :label "; resonance lfo"
+ :outputs []
+ :parsed [:comment "resonance lfo"]
+ :pos [695 711]}
+ "s2h7ch2xpi5rjw" 
+{:inputs []
+ :label "10"
+ :outputs [""]
+ :parsed [:number-widget :float "3zw4gsaqa2mnkbo" "3" ""]
+ :pos [876 882]}
+ "uuh7ef7lhogb5m" 
+{:inputs []
+ :label "; portamento"
+ :outputs []
+ :parsed [:comment "portamento"]
+ :pos [1282 642]}
+ "vuifsi9erwry82g" 
+{:color 2
+ :inputs ["vector" "index"]
+ :label "Select($vector $index)"
+ :outputs [""]
+ :parsed [:fn "Select" [:tuple [:free-var "vector"] [:free-var "index"]]]
+ :pos [677 450]}
+ "x6kbs1cyc3gu2dx" 
+{:color 2
+ :inputs ["sig"]
+ :label "Filter:Tone($sig 0.001)"
+ :outputs [""]
+ :parsed [:fn "Filter:Tone" [:tuple [:free-var "sig"] [:number-widget :float "5tzo37kjz278ruw" "0.002026" ""]]]
+ :pos [1195 727]}
+ "xn6k2fbpj4gkfb" 
+{:inputs ["a"]
+ :label "+ 1"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "+" [:float "1"]]
+ :pos [1030 936]}}}}
