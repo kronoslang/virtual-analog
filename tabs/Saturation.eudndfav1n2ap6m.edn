@@ -4,88 +4,69 @@
  :identity "eudndfav1n2ap6m"
  :patch
 {:cables
-{["1ddu675f0ov2mgm" 0] [:fixed "1tu9qyo8rah2ohf" 0]
- ["1tu9qyo8rah2ohf" 0] [:fixed "kdk6o4d7wk0mrlw" 0]
- ["9z13nlg0bjvtqie" 0] [:fixed "1ddu675f0ov2mgm" 0]
- ["9z13nlg0bjvtqie" 1] [:fixed "1tu9qyo8rah2ohf" 0]
- ["ajjukyd3xch3og6" 0] [:fixed "b2brlkpj8ng3343" 0]
- ["ajjukyd3xch3og6" 1] [:fixed "1tu9qyo8rah2ohf" 0]
- ["ajjukyd3xch3og6" 2] [:fixed "1tu9qyo8rah2ohf" 0]
- ["b2brlkpj8ng3343" 0] [:fixed "9z13nlg0bjvtqie" 0]
- ["hzp7hs97za4q5a1" 0] [:fixed "wq8ape7is7yx21n" 0]
- ["hzp7hs97za4q5a1" 1] [:fixed "kdk6o4d7wk0mrlw" 0]
- ["wq8ape7is7yx21n" 0] [:fixed "ajjukyd3xch3og6" 0]
- ["wq8ape7is7yx21n" 1] [:fixed "xyfz3uoimh5o3gv" 0]
- ["xyfz3uoimh5o3gv" 0] [:fixed "ajjukyd3xch3og6" 0]}
+{["22q5krcen0zhm4w" 0] [:fixed "spf5haqeked7cte" 0]
+ ["aee7ujoo8cglo8t" 0] [:fixed "o8e540en6dj4a56" 0]
+ ["aee7ujoo8cglo8t" 1] [:fixed "dd8gqox79sj8bqf" 0]
+ ["dd8gqox79sj8bqf" 0] [:fixed "kdk6o4d7wk0mrlw" 0]
+ ["eodombotu8tbc6s" 0] [:fixed "dd8gqox79sj8bqf" 0]
+ ["eodombotu8tbc6s" 1] [:fixed "dd8gqox79sj8bqf" 0]
+ ["o8e540en6dj4a56" 0] [:fixed "eodombotu8tbc6s" 0]
+ ["spf5haqeked7cte" 0] [:fixed "eodombotu8tbc6s" 0]
+ ["ueo6manrd8p077l" 0] [:fixed "aee7ujoo8cglo8t" 0]
+ ["ueo6manrd8p077l" 1] [:fixed "22q5krcen0zhm4w" 0]}
  :nodes
-{"1ddu675f0ov2mgm" 
+{"22q5krcen0zhm4w" 
 {:inputs ["a"]
- :label "+ #3"
+ :label "+ #27"
  :outputs [""]
- :parsed [:infix [:free-var "a"] "+" [:invariant "3"]]
- :pos [173 340]
- }
- "1tu9qyo8rah2ohf" 
-{:inputs ["a"]
- :label "Abs($a)"
- :outputs [""]
- :parsed [:fn "Abs" [:tuple [:free-var "a"]]]
- :pos [60 218]
- }
- "9z13nlg0bjvtqie" 
+ :parsed [:infix [:free-var "a"] "+" [:invariant "27"]]
+ :pos [551 494]}
+ "aee7ujoo8cglo8t" 
 {:inputs ["a" "b" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [286 340]
- }
- "ajjukyd3xch3og6" 
-{:ephemeral-inputs #{"more1"}
- :inputs ["a" "b" "more1" "more..."]
+ :pos [552 348]}
+ "dd8gqox79sj8bqf" 
+{:inputs ["sig"]
+ :label "clamp($sig #-3 #3)"
+ :outputs [""]
+ :parsed [:fn "clamp" [:tuple [:free-var "sig"] [:invariant "-3"] [:invariant "3"]]]
+ :pos [79 213]}
+ "eodombotu8tbc6s" 
+{:inputs ["a" "b" "more..."]
  :label "*"
  :outputs [""]
- :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more1"] [:free-var "more..."]]
- :pos [475 340]
- }
- "b2brlkpj8ng3343" 
-{:inputs ["a"]
- :label "+ #6"
- :outputs [""]
- :parsed [:infix [:free-var "a"] "+" [:invariant "6"]]
- :pos [362 340]
- }
- "hzp7hs97za4q5a1" 
-{:inputs ["value" "sign"]
- :label "Math:Copy-Sign($value $sign)"
- :outputs [""]
- :parsed [:fn "Math:Copy-Sign" [:tuple [:free-var "value"] [:free-var "sign"]]]
- :pos [728 388]
- }
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [350 348]}
  "kdk6o4d7wk0mrlw" 
 {:inputs []
  :label "sig = arg"
  :outputs ["sig"]
  :parsed "arg"
- :pos [13 62]
- }
+ :pos [13 62]}
+ "o8e540en6dj4a56" 
+{:inputs ["a"]
+ :label "+ #27"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "+" [:invariant "27"]]
+ :pos [426 348]}
+ "spf5haqeked7cte" 
+{:inputs ["a"]
+ :label "* #9"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:invariant "9"]]
+ :pos [438 494]}
+ "ueo6manrd8p077l" 
+{:flip-y true
+ :inputs ["a" "b" "more..."]
+ :label "/"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
+ :pos [729 391]}
  "w0p7413ut19u8k5" 
 {:inputs []
  :label ";tanh approximation via dividing two polynomials"
  :outputs []
  :parsed [:comment "tanh approximation via dividing two polynomials"]
- :pos [184 111]
- :selected true}
- "wq8ape7is7yx21n" 
-{:inputs ["a" "b" "more..."]
- :label "/"
- :outputs [""]
- :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
- :pos [644 390]
- }
- "xyfz3uoimh5o3gv" 
-{:inputs ["a"]
- :label "+ #12"
- :outputs [""]
- :parsed [:infix [:free-var "a"] "+" [:invariant "12"]]
- :pos [550 281]
- }}}}
+ :pos [184 111]}}}}

@@ -29,28 +29,28 @@ Dual-Saw(freq width waveform) {
 naxhdgwv7vgqmh2t-0
 }
 
-Moog-LPF(sig cutoff resonance) {
+Ladder-LPF(sig cutoff resonance) {
 (n1r968qv2ggq9rkx-0) = Interval-of(nerbxwcj26xlolq6-0)
-(nk2kwzz5q4bh4bgs-0) = (sig) => ( lpf6(sig nbu8r276nwyk6z84-0 na4cbjkbqobmlncz-0) ) 
-(nhu84w1g03wa6jw-0) = (n4v5uga9jw3ga194-0 * n27tprolhji5jd69-0 * nhx1hptparqe2z56-0)
+(n0ympmd5m3attvvs-0) = #0.3
 (n4v5uga9jw3ga194-0) = (nlya3fy55bb294sj-1 * naoywrtwzrb4bn2b-0 * n1r968qv2ggq9rkx-0)
-(n2v7x8n4ug9ridmh-0) = (naxh9k61kzy7x0tr-0 * n6abv5jw7waf831v-0)
-(nw4mhv29rbyt0hm-0) = (nlya3fy55bb294sj-0 - n2v7x8n4ug9ridmh-0)
-(n5hs1ijqc97ru3g9-0) = #-1
-(n6abv5jw7waf831v-0) = (nlya3fy55bb294sj-2 * ((#1 + ((#0.5 * n27tprolhji5jd69-0) * (((#1 - n27tprolhji5jd69-0) + ((#5.6 * n27tprolhji5jd69-0) * n27tprolhji5jd69-0)))))))
+(nkcu4uxaa36k0gpa-0) = n6qz7uq109g25b9u-0
+(narxms41dilkeuka-0) = Saturation(ngff2jpd4js9f0ox-0)
+(n6qz7uq109g25b9u-0) = Algorithm:Iterate(#4 nswd5m252yef4x5f-0 need6bt36uees78v-0)
+(n689c5qk87hzvnz-0) = z-1(n6qz7uq109g25b9u-0)
+(nzj5r0q7h2c9n2cf-0) = #0.35013
 (nerbxwcj26xlolq6-0) = Gen:Signal(nfx39txpejhurs0u-0)
-(n6huj40f1z1vvdjy-0) = Saturation(nbxp197t3v0gpoy9-0)
-(niqvgfrkhf3axite-0) = Saturation(nw4mhv29rbyt0hm-0)
-(n27tprolhji5jd69-0) = (#1 - n4v5uga9jw3ga194-0)
-(na4cbjkbqobmlncz-0) = (nbu8r276nwyk6z84-0 + nbu8r276nwyk6z84-0 + n5hs1ijqc97ru3g9-0)
+(nswd5m252yef4x5f-0) = (sig) => ( lpf6(sig n0ympmd5m3attvvs-0 n2p68bz600as8dpl-0) ) 
+(nrfmqtviny4897dc-0) = (nzjdgjgzajoysytd-0 * n689c5qk87hzvnz-0)
+(n1nad3b41lb2q3fp-0) = (n4v5uga9jw3ga194-0 * #1.16)
+(ngff2jpd4js9f0ox-0) = (nlya3fy55bb294sj-0 - nrfmqtviny4897dc-0)
 (naoywrtwzrb4bn2b-0) = #2
-(naxh9k61kzy7x0tr-0) = z-1(nbxp197t3v0gpoy9-0)
-(nbxp197t3v0gpoy9-0) = Algorithm:Iterate(#4 nk2kwzz5q4bh4bgs-0 niqvgfrkhf3axite-0)
-(nbu8r276nwyk6z84-0) = (n4v5uga9jw3ga194-0 + nhu84w1g03wa6jw-0)
+(nzjdgjgzajoysytd-0) = (nlya3fy55bb294sj-2 * ((#1 - ((#0.15 * n1nad3b41lb2q3fp-0) * n1nad3b41lb2q3fp-0))))
+(nxn68henj8n7faqx-0) = (nzj5r0q7h2c9n2cf-0 * n1nad3b41lb2q3fp-0 * n1nad3b41lb2q3fp-0 * n1nad3b41lb2q3fp-0 * n1nad3b41lb2q3fp-0)
+(need6bt36uees78v-0) = (nxn68henj8n7faqx-0 * narxms41dilkeuka-0)
 (nlya3fy55bb294sj-0 nlya3fy55bb294sj-1 nlya3fy55bb294sj-2) = arg
-(nfx39txpejhurs0u-0) = 0
-(nhx1hptparqe2z56-0) = #0.8
-n6huj40f1z1vvdjy-0
+(n2p68bz600as8dpl-0) = (n1nad3b41lb2q3fp-0 - #1)
+(nfx39txpejhurs0u-0) = 1
+nkcu4uxaa36k0gpa-0
 }
 
 Poly-BLEP(phase rate) {
@@ -73,16 +73,15 @@ ntt4wmmar0ien1w6-0
 
 Saturation(sig) {
 ;; Soft-saturates 'sig'nal to the range of [-1,1]
-(najjukyd3xch3og6-0) = (nb2brlkpj8ng3343-0 * n1tu9qyo8rah2ohf-0 * n1tu9qyo8rah2ohf-0)
-(nwq8ape7is7yx21n-0) = (najjukyd3xch3og6-0 / nxyfz3uoimh5o3gv-0)
+(no8e540en6dj4a56-0) = (neodombotu8tbc6s-0 + #27)
+(neodombotu8tbc6s-0) = (ndd8gqox79sj8bqf-0 * ndd8gqox79sj8bqf-0)
 (nkdk6o4d7wk0mrlw-0) = arg
-(nb2brlkpj8ng3343-0) = (n9z13nlg0bjvtqie-0 + #6)
-(nxyfz3uoimh5o3gv-0) = (najjukyd3xch3og6-0 + #12)
-(nhzp7hs97za4q5a1-0) = Math:Copy-Sign(nwq8ape7is7yx21n-0 nkdk6o4d7wk0mrlw-0)
-(n9z13nlg0bjvtqie-0) = (n1ddu675f0ov2mgm-0 * n1tu9qyo8rah2ohf-0)
-(n1tu9qyo8rah2ohf-0) = Abs(nkdk6o4d7wk0mrlw-0)
-(n1ddu675f0ov2mgm-0) = (n1tu9qyo8rah2ohf-0 + #3)
-nhzp7hs97za4q5a1-0
+(n22q5krcen0zhm4w-0) = (nspf5haqeked7cte-0 + #27)
+(ndd8gqox79sj8bqf-0) = clamp(nkdk6o4d7wk0mrlw-0 #-3 #3)
+(naee7ujoo8cglo8t-0) = (no8e540en6dj4a56-0 * ndd8gqox79sj8bqf-0)
+(nspf5haqeked7cte-0) = (neodombotu8tbc6s-0 * #9)
+(nueo6manrd8p077l-0) = (naee7ujoo8cglo8t-0 / n22q5krcen0zhm4w-0)
+nueo6manrd8p077l-0
 }
 
 phasor(inc) {
@@ -111,16 +110,16 @@ clamp(sig min max) {
 n6sz5yn9dxjr94zj-0
 }
 
-lpf6(sig p f) {
-(nzj277e8hvupkiu2-0) = (n7iv2bprm6qo8953-2 * ngrc4zy4mc53gsmz-0)
-(ngrc4zy4mc53gsmz-0) = z-1(no2x33yaur7kk0e9-0)
-(no2x33yaur7kk0e9-0) = (ncnzz0t1ja3gsngv-0 - nzj277e8hvupkiu2-0)
+lpf6(sig z p) {
+(n1ynqky8h54jki3b-0) = z-1(n7iv2bprm6qo8953-0)
 (n7iv2bprm6qo8953-0 n7iv2bprm6qo8953-1 n7iv2bprm6qo8953-2) = arg
-(ncnzz0t1ja3gsngv-0) = (n7iv2bprm6qo8953-1 * nw70hc814kxs956-0)
-(nw70hc814kxs956-0) = (nu2lfwq28fd20ty0-0 + n7iv2bprm6qo8953-0)
-(ne34h556bsohm27i-0) = no2x33yaur7kk0e9-0
-(nu2lfwq28fd20ty0-0) = z-1(n7iv2bprm6qo8953-0)
-ne34h556bsohm27i-0
+(n8ig2z8fmp9vjntp-0) = z-1(nc76hjiklaj3piou-0)
+(nc76hjiklaj3piou-0) = (nmitlq6gsicfo2zh-0 - nd18p95a0v7opw65-0)
+(nd18p95a0v7opw65-0) = (n8ig2z8fmp9vjntp-0 * n7iv2bprm6qo8953-2)
+(nd6zv55qx55io9cy-0) = (n1ynqky8h54jki3b-0 * n7iv2bprm6qo8953-1)
+(ndboaqpo1nbv1yp7-0) = nc76hjiklaj3piou-0
+(nmitlq6gsicfo2zh-0) = (nd6zv55qx55io9cy-0 + n7iv2bprm6qo8953-0)
+ndboaqpo1nbv1yp7-0
 }
 
 

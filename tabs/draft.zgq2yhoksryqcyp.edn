@@ -1,7 +1,46 @@
-{
- :identity "zgq2yhoksryqcyp"
+{:identity "zgq2yhoksryqcyp"
  :patch
 {:cables
-{}
+{["2ulawr1q8qso6pq" 0] [:fixed "3azseipen18wq52" 0]
+ ["2ulawr1q8qso6pq" 1] [:fixed "0z5m0i1d4774ccp" 0]
+ ["2ulawr1q8qso6pq" 2] [:fixed "z85xta7vdn6e9f" 0]
+ ["ef9nxaskpbjizyr" 0] [:fixed "7no5y3tdr0vyjzf" 0]
+ ["z85xta7vdn6e9f" 0] [:fixed "ef9nxaskpbjizyr" 0]}
  :nodes
-{}}}
+{"0z5m0i1d4774ccp" 
+{:inputs []
+ :label "0.3"
+ :outputs [""]
+ :parsed [:float "0.3"]
+ :pos [140 329]}
+ "2ulawr1q8qso6pq" 
+{:inputs ["sig" "z" "p"]
+ :label "lpf6($sig $z $p)"
+ :outputs [""]
+ :parsed [:fn "lpf6" [:tuple [:free-var "sig"] [:free-var "z"] [:free-var "p"]]]
+ :pos [360 461]
+ :selected "2ulawr1q8qso6pq"}
+ "3azseipen18wq52" 
+{:inputs []
+ :label "Gen:Saw(80)"
+ :outputs [""]
+ :parsed [:fn "Gen:Saw" [:tuple [:float "80"]]]
+ :pos [49 526]}
+ "7no5y3tdr0vyjzf" 
+{:inputs []
+ :label "0.5"
+ :outputs [""]
+ :parsed [:number-widget :float "ccfe0sffakn08gq" "0.99773" ""]
+ :pos [45 119]}
+ "ef9nxaskpbjizyr" 
+{:inputs ["a"]
+ :label "* #1.16"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:invariant "1.16"]]
+ :pos [171 208]}
+ "z85xta7vdn6e9f" 
+{:inputs ["a"]
+ :label "- #1"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "-" [:invariant "1"]]
+ :pos [322 208]}}}}

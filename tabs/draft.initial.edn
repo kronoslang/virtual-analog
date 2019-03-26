@@ -1,32 +1,62 @@
 {:identity "initial"
  :patch
 {:cables
-{["vr3pz9q6plh3j2" 0] [:fixed "gcgpau135qs5uu" 0]
- ["vr3pz9q6plh3j2" 1] [:fixed "z5g6omrswabswqq" 0]
- ["z5g6omrswabswqq" 0] [:fixed "8yrg9pyto6t8b88" 0]}
+{["aq2ltli316a0v2u" 0] [:fixed "d89eqq35d7a6s7n" 0]
+ ["aq2ltli316a0v2u" 1] [:fixed "6c2q1mbjc1ka1hj" 0]
+ ["aq2ltli316a0v2u" 2] [:fixed "djunzngllglp456" 0]
+ ["djunzngllglp456" 1] [:fixed "5nao89poxld0e3s" 0]
+ ["djunzngllglp456" 2] [:fixed "r1qg01dhgede6se" 0]
+ ["k2jq824bcc7awnb" 0] [:fixed "aq2ltli316a0v2u" 0]
+ ["k2jq824bcc7awnb" 1] [:fixed "gcgpau135qs5uu" 0]}
  :nodes
-{"8yrg9pyto6t8b88" 
+{"5nao89poxld0e3s" 
 {:inputs []
- :label "0.1"
+ :label "0 -o- 1"
  :outputs [""]
- :parsed [:float "0.1"]
- :pos [52 163]}
+ :parsed [:slider [:number-widget :float "w7yeatn104h0yk7" "47" ""] [:number-widget :float "0xijak415eguc42" "8176" ""] "w12je3" :linear 3 0.7109523228236607]
+ :pos [381 243]}
+ "6c2q1mbjc1ka1hj" 
+{:inputs ["a"]
+ :label "* 0.5"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:float "0.5"]]
+ :pos [434 604]}
+ "aq2ltli316a0v2u" 
+{:ephemeral-inputs #{"fn-list1" "fn-list2" "fn-list3"}
+ :inputs ["fn-list1" "fn-list2" "fn-list3" "fn-list..."]
+ :label "Compose($fn-list...)"
+ :outputs [""]
+ :parsed [:fn "Compose" [:tuple [:free-var "fn-list1"] [:free-var "fn-list2"] [:free-var "fn-list3"] [:free-var "fn-list..."]]]
+ :pos [246 744]}
+ "d89eqq35d7a6s7n" 
+{:inputs ["freq"]
+ :label "Dual-Saw($freq 0 1)"
+ :outputs [""]
+ :parsed [:fn "Dual-Saw" [:tuple [:free-var "freq"] [:float "0"] [:float "1"]]]
+ :pos [64 616]}
+ "djunzngllglp456" 
+{:inputs ["sig" "cutoff" "resonance"]
+ :label "Ladder-LPF($sig $cutoff $resonance)"
+ :outputs [""]
+ :parsed [:fn "Ladder-LPF" [:tuple [:free-var "sig"] [:free-var "cutoff"] [:free-var "resonance"]]]
+ :pos [669 589]}
  "gcgpau135qs5uu" 
 {:inputs []
  :label "20 ---o--- 2000"
  :outputs [""]
- :parsed [:slider [:float "20"] [:number-widget :float "4ttxz3fgdxpabae" "1259" ""] "3geelo" :linear 7 0.08459988037129704]
- :pos [11 329]}
- "vr3pz9q6plh3j2" 
-{:inputs ["freq" "width"]
- :label "Dual-Saw($freq $width 1)"
+ :parsed [:slider [:float "20"] [:number-widget :float "4ttxz3fgdxpabae" "1259" ""] "3geelo" :linear 7 0.048205096905048074]
+ :pos [105 212]}
+ "k2jq824bcc7awnb" 
+{:ephemeral-inputs #{"args1"}
+ :inputs ["fn" "args1" "args..."]
+ :label "Gen:Oversample(#2 $fn $args...)"
  :outputs [""]
- :parsed [:fn "Dual-Saw" [:tuple [:free-var "freq"] [:free-var "width"] [:float "1"]]]
- :pos [268 416]
- :selected "vr3pz9q6plh3j2"}
- "z5g6omrswabswqq" 
-{:inputs ["freq"]
- :label "Gen:Sin($freq)"
+ :parsed [:fn "Gen:Oversample" [:tuple [:invariant "2"] [:free-var "fn"] [:free-var "args1"] [:free-var "args..."]]]
+ :pos [521 848]
+ :selected "k2jq824bcc7awnb"}
+ "r1qg01dhgede6se" 
+{:inputs []
+ :label "0 -o- 1"
  :outputs [""]
- :parsed [:fn "Gen:Sin" [:tuple [:free-var "freq"]]]
- :pos [220 181]}}}}
+ :parsed [:slider [:float "0"] [:number-widget :float "bd76jvtsj7j456y" "4" ""] "hens4f" :linear 3 0.35380946568080357]
+ :pos [545 239]}}}}
