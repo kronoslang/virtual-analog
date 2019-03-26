@@ -28,6 +28,7 @@
  ["li4a5ddj17md84y" 0] [:fixed "xn6k2fbpj4gkfb" 0]
  ["li4a5ddj17md84y" 2] [:fixed "s2h7ch2xpi5rjw" 0]
  ["li4a5ddj17md84y" 3] [:fixed "xn6k2fbpj4gkfb" 0]
+ ["li4a5ddj17md84y" 4] [:fixed "xn6k2fbpj4gkfb" 0]
  ["vuifsi9erwry82g" 0] [:fixed "dsbgwcsbb2au696" 0]
  ["vuifsi9erwry82g" 1] [:fixed "ea1ak2ec276uccq" 0]
  ["x6kbs1cyc3gu2dx" 0] [:fixed "3v8bqd8nd5nma4k" 0]
@@ -123,7 +124,7 @@
  :label "Gen:Phasor(0.05)"
  :outputs [""]
  :parsed [:fn "Gen:Phasor" [:tuple [:float "0.05"]]]
- :pos [798 935]}
+ :pos [781 938]}
  "d89eqq35d7a6s7n" 
 {:inputs ["freq"]
  :label "Dual-Saw($freq 0 1)"
@@ -191,7 +192,7 @@
  :inputs ["a"]
  :label "* 5000"
  :outputs [""]
- :parsed [:infix [:free-var "a"] "*" [:number-widget :float "2ub4chubq39ybui" "2883" ""]]
+ :parsed [:infix [:free-var "a"] "*" [:number-widget :float "2ub4chubq39ybui" "829" ""]]
  :pos [640 902]}
  "i1ggyvea2sfxb65" 
 {:color 3
@@ -213,13 +214,14 @@
  :label "Gen:Oversample(#2 $fn $args...)"
  :outputs [""]
  :parsed [:fn "Gen:Oversample" [:tuple [:invariant "2"] [:free-var "fn"] [:free-var "args1"] [:free-var "args..."]]]
- :pos [1297 1186]}
+ :pos [1297 1186]
+ :selected "k2jq824bcc7awnb"}
  "li4a5ddj17md84y" 
-{:ephemeral-inputs #{"more1" "more2"}
- :inputs ["a" "b" "more1" "more2" "more..."]
+{:ephemeral-inputs #{"more1" "more2" "more3"}
+ :inputs ["a" "b" "more1" "more2" "more3" "more..."]
  :label "*"
  :outputs [""]
- :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more1"] [:free-var "more2"] [:free-var "more..."]]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more1"] [:free-var "more2"] [:free-var "more3"] [:free-var "more..."]]
  :pos [1063 1043]}
  "lpjo93yqnvcntx7" 
 {:inputs []
@@ -250,7 +252,7 @@
  :label "10"
  :outputs [""]
  :parsed [:number-widget :float "3zw4gsaqa2mnkbo" "3" ""]
- :pos [876 882]}
+ :pos [930 846]}
  "uuh7ef7lhogb5m" 
 {:inputs []
  :label "; portamento"
