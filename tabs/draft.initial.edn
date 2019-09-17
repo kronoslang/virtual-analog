@@ -88,8 +88,8 @@
  :label "; pattern clock"
  :outputs []
  :parsed [:comment "pattern clock"]
- :pos [-338 159]
- }
+ :pos [-289 124]
+ :selected true}
  "5hnel84rmi86fki" 
 {:inputs ["sig"]
  :label "Saturation($sig)"
