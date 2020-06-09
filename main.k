@@ -30,35 +30,22 @@ naxhdgwv7vgqmh2t-0
 }
 
 Poly-BLEP(phase rate) {
-;; Bandlimited Sawtooth oscillator based on a 2nd degree polynomial bandlimited step.
+;; Bandlimited sawtooth waveshaping function based on a 2nd degree polynomial bandlimited step. Receives `phase` as a number between 0 and 1 and `rate` as the expected difference between consecutive phase values. `rate` is used to adjust BLEP smoothness.
 (n2ixhbn599k56mn7-0) = (ny5wywjmrvvcf8ga-0 / no3u0kjdgxlqx2ue-1)
+(npovwjjic9ws6yau-0) = 1
 (n5wscwn905xh99ki-0) = (na4rlm23qxqfgng6-0 + n67gzklu5eeaa5w-0 + n67gzklu5eeaa5w-0)
-(ndhc5rhldd3je1t-0) = sign(ny5wywjmrvvcf8ga-0)
 (nl450041zb4ergf6-0) = 1
-(na4rlm23qxqfgng6-0) = (ndhc5rhldd3je1t-0 * nyanol2vfruwmpwm-0)
+(na4rlm23qxqfgng6-0) = (n56v4sd0ma4mb2uw-0 * nyanol2vfruwmpwm-0)
 (n34f4st3vf5vqdp1-0) = (n67gzklu5eeaa5w-0 * n67gzklu5eeaa5w-0)
 (ntt4wmmar0ien1w6-0) = (nuk7qfxharohwf1l-0 - nl450041zb4ergf6-0 - n5wscwn905xh99ki-0)
 (n67gzklu5eeaa5w-0) = clamp(n2ixhbn599k56mn7-0 -1 1)
 (nyanol2vfruwmpwm-0) = (-1 - n34f4st3vf5vqdp1-0)
+(n56v4sd0ma4mb2uw-0) = Math:Copy-Sign(npovwjjic9ws6yau-0 ny5wywjmrvvcf8ga-0)
 (nuk7qfxharohwf1l-0) = (neljp3hu7j4528ht-0 * 2)
 (ny5wywjmrvvcf8ga-0) = (no3u0kjdgxlqx2ue-0 - 0.5)
 (neljp3hu7j4528ht-0) = Fraction(ny5wywjmrvvcf8ga-0)
 (no3u0kjdgxlqx2ue-0 no3u0kjdgxlqx2ue-1) = arg
 ntt4wmmar0ien1w6-0
-}
-
-Saturation(sig) {
-;; Soft-saturates 'sig'nal to the range of [-1,1]
-(najjukyd3xch3og6-0) = (nb2brlkpj8ng3343-0 * n1tu9qyo8rah2ohf-0 * n1tu9qyo8rah2ohf-0)
-(nwq8ape7is7yx21n-0) = (najjukyd3xch3og6-0 / nxyfz3uoimh5o3gv-0)
-(nkdk6o4d7wk0mrlw-0) = arg
-(nb2brlkpj8ng3343-0) = (n9z13nlg0bjvtqie-0 + #6)
-(nxyfz3uoimh5o3gv-0) = (najjukyd3xch3og6-0 + #12)
-(nhzp7hs97za4q5a1-0) = Math:Copy-Sign(nwq8ape7is7yx21n-0 nkdk6o4d7wk0mrlw-0)
-(n9z13nlg0bjvtqie-0) = (n1ddu675f0ov2mgm-0 * n1tu9qyo8rah2ohf-0)
-(n1tu9qyo8rah2ohf-0) = Abs(nkdk6o4d7wk0mrlw-0)
-(n1ddu675f0ov2mgm-0) = (n1tu9qyo8rah2ohf-0 + #3)
-nhzp7hs97za4q5a1-0
 }
 
 phasor(inc) {
@@ -71,15 +58,6 @@ phasor(inc) {
 na4p9ysyp1p3iir-0
 }
 
-sign() {
-(n8eb5umbmd1b4b20-0) = arg
-(nbyzrvnw8k9oz3un-0) = Ternary-Select(nhsoqrykco9o77ln-0 nha3zqc0n8s6gklr-0 necabc5fxm1wu4yl-0)
-(necabc5fxm1wu4yl-0) = 1
-(nha3zqc0n8s6gklr-0) = -1
-(nhsoqrykco9o77ln-0) = (n8eb5umbmd1b4b20-0 < #0)
-nbyzrvnw8k9oz3un-0
-}
-
 clamp(sig min max) {
 (n6sz5yn9dxjr94zj-0) = Min(ncsgkzy2vqtji1fl-0 njkb3fzfo05b614q-2)
 (ncsgkzy2vqtji1fl-0) = Max(njkb3fzfo05b614q-0 njkb3fzfo05b614q-1)
@@ -88,5 +66,48 @@ n6sz5yn9dxjr94zj-0
 }
 
 
+
+DSF(freq rolloff harmonics phase-shift) {
+;; Discrete Summation Formula ala Moorer  Computes equivalent to sum{k=0:N-1}(a^k * sin(beta + k*theta))  According to https://www.musicdsp.org/en/latest/Synthesis/140-dsf-super-set-of-blit.html
+(nxgxn40wvxotlh7v-0) = (nlpbe1tpdc2hac8i-0 - n4c4f1i3fyktg2vg-0 - n3htakwa5buiw643-0)
+(nf6o6f52u0f847jc-0) = DSFSin(nbo09ip7xz63x81k-0)
+(n8568rkj902ky5p4-0) = DSFSin(nadmzbv5hsb9xrae-0)
+(nb38p1foh3q9g240-0) = Gen:Rate()
+(neqlncxvd7iewdio-0) = Min(noed7ho21y8c369d-2 nbsry7t6qcbgtqbj-0)
+(nwgk69j83lt86hqn-0) = (nq5c6eu4yfqpp2yh-0 / noed7ho21y8c369d-0)
+(n6vhn4od7oal144e-0) = noed7ho21y8c369d-3
+(nbwqby4e3hawyib7-0) = ((1 + (nqmxpel91r5zx4jq-0 * ((nqmxpel91r5zx4jq-0 - (2 * n8568rkj902ky5p4-0))))))
+(n8e9vd9eer9c8ase-0) = (nee0icfwdmoac1vv-0 - 1)
+(nqmxpel91r5zx4jq-0) = noed7ho21y8c369d-1
+(nzcyikmije3pxng9-0) = (n8e9vd9eer9c8ase-0 * nc2a1b92koauh5yz-0)
+(norl7ce13mfz44z3-0) = (nxgxn40wvxotlh7v-0 + nnbhgp991moih667-0)
+(nlpbe1tpdc2hac8i-0) = DSFSin(n6vhn4od7oal144e-0)
+(nadmzbv5hsb9xrae-0) = (n5b1weybgbjwwmvy-0 + 0.25)
+(n92r2g1lw7j4ky5-0) = Approx:Fast:Pow(nqmxpel91r5zx4jq-0 neqlncxvd7iewdio-0)
+(n3htakwa5buiw643-0) = (n92r2g1lw7j4ky5-0 * nf6o6f52u0f847jc-0)
+(nbsry7t6qcbgtqbj-0) = (nwgk69j83lt86hqn-0 + 1)
+(nnbhgp991moih667-0) = (n92r2g1lw7j4ky5-0 * nqmxpel91r5zx4jq-0 * n1vj3809pl92qazs-0)
+(n4c4f1i3fyktg2vg-0) = (nqmxpel91r5zx4jq-0 * nn4dz2x4wyduqtia-0)
+(nc2a1b92koauh5yz-0) = (noed7ho21y8c369d-0 / nb38p1foh3q9g240-0)
+(nvh0xoy6bc284bq4-0) = (n6vhn4od7oal144e-0 + (((neqlncxvd7iewdio-0 - 1)) * n5b1weybgbjwwmvy-0))
+(noed7ho21y8c369d-0 noed7ho21y8c369d-1 noed7ho21y8c369d-2 noed7ho21y8c369d-3) = arg
+(n5b1weybgbjwwmvy-0) = phasor(nc2a1b92koauh5yz-0)
+(nbw6rq65pa3nb3e7-0) = (n6vhn4od7oal144e-0 - n5b1weybgbjwwmvy-0)
+(n1vj3809pl92qazs-0) = DSFSin(nvh0xoy6bc284bq4-0)
+(nbo09ip7xz63x81k-0) = (n6vhn4od7oal144e-0 + (neqlncxvd7iewdio-0 * n5b1weybgbjwwmvy-0))
+(nq5c6eu4yfqpp2yh-0) = (nb38p1foh3q9g240-0 / 2)
+(nn4dz2x4wyduqtia-0) = DSFSin(nbw6rq65pa3nb3e7-0)
+(nee0icfwdmoac1vv-0) = (norl7ce13mfz44z3-0 / nbwqby4e3hawyib7-0)
+nzcyikmije3pxng9-0
+}
+
+DSFSin(phase) {
+(n83aydacojcozbt9-0) = Approx:Cosine-Shape(nd12h2dslo1dpeym-0 njzutu8aulc3ah9o-0)
+(njzutu8aulc3ah9o-0) = #6
+(n4pm6wgg45sd8991-0) = arg
+(ngtwb3rb75brxj59-0) = Fraction(n4pm6wgg45sd8991-0)
+(nd12h2dslo1dpeym-0) = (ngtwb3rb75brxj59-0 - 0.25)
+n83aydacojcozbt9-0
+}
 
 }

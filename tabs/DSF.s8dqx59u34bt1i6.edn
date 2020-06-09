@@ -1,0 +1,308 @@
+{:documentation "Discrete Summation Formula ala Moorer\n\nComputes equivalent to sum{k=0:N-1}(a^k * sin(beta + k*theta))\n\nAccording to https://www.musicdsp.org/en/latest/Synthesis/140-dsf-super-set-of-blit.html"
+ :draft-argument "1 0.9999 20000 0"
+ :identifier "DSF"
+ :identity "s8dqx59u34bt1i6"
+ :patch
+{:cables
+{["1vj3809pl92qazs" 0] [:fixed "vh0xoy6bc284bq4" 0]
+ ["3htakwa5buiw643" 0] [:fixed "92r2g1lw7j4ky5" 0]
+ ["3htakwa5buiw643" 1] [:fixed "f6o6f52u0f847jc" 0]
+ ["4c4f1i3fyktg2vg" 0] [:fixed "qmxpel91r5zx4jq" 0]
+ ["4c4f1i3fyktg2vg" 1] [:fixed "n4dz2x4wyduqtia" 0]
+ ["5b1weybgbjwwmvy" 0] [:fixed "c2a1b92koauh5yz" 0]
+ ["6vhn4od7oal144e" 0] [:fixed "oed7ho21y8c369d" 3]
+ ["8568rkj902ky5p4" 0] [:fixed "admzbv5hsb9xrae" 0]
+ ["8e9vd9eer9c8ase" 0] [:fixed "ee0icfwdmoac1vv" 0]
+ ["92r2g1lw7j4ky5" 0] [:fixed "qmxpel91r5zx4jq" 0]
+ ["92r2g1lw7j4ky5" 1] [:fixed "eqlncxvd7iewdio" 0]
+ ["admzbv5hsb9xrae" 0] [:fixed "5b1weybgbjwwmvy" 0]
+ ["bcuot53viy86byc" 0] [:fixed "y1e5nu5yo2oklnj" 0]
+ ["bcuot53viy86byc" 1] [:fixed "oed7ho21y8c369d" 1]
+ ["bo09ip7xz63x81k" 0] [:fixed "6vhn4od7oal144e" 0]
+ ["bo09ip7xz63x81k" 1] [:fixed "eqlncxvd7iewdio" 0]
+ ["bo09ip7xz63x81k" 2] [:fixed "5b1weybgbjwwmvy" 0]
+ ["bsry7t6qcbgtqbj" 0] [:fixed "wgk69j83lt86hqn" 0]
+ ["bw6rq65pa3nb3e7" 0] [:fixed "6vhn4od7oal144e" 0]
+ ["bw6rq65pa3nb3e7" 1] [:fixed "5b1weybgbjwwmvy" 0]
+ ["bwqby4e3hawyib7" 0] [:fixed "qmxpel91r5zx4jq" 0]
+ ["bwqby4e3hawyib7" 1] [:fixed "8568rkj902ky5p4" 0]
+ ["c2a1b92koauh5yz" 0] [:fixed "oed7ho21y8c369d" 0]
+ ["c2a1b92koauh5yz" 1] [:fixed "b38p1foh3q9g240" 0]
+ ["ee0icfwdmoac1vv" 0] [:fixed "orl7ce13mfz44z3" 0]
+ ["ee0icfwdmoac1vv" 1] [:fixed "bwqby4e3hawyib7" 0]
+ ["eqlncxvd7iewdio" 0] [:fixed "oed7ho21y8c369d" 2]
+ ["eqlncxvd7iewdio" 1] [:fixed "bsry7t6qcbgtqbj" 0]
+ ["f6o6f52u0f847jc" 0] [:fixed "bo09ip7xz63x81k" 0]
+ ["lpbe1tpdc2hac8i" 0] [:fixed "6vhn4od7oal144e" 0]
+ ["n4dz2x4wyduqtia" 0] [:fixed "bw6rq65pa3nb3e7" 0]
+ ["nbhgp991moih667" 0] [:fixed "92r2g1lw7j4ky5" 0]
+ ["nbhgp991moih667" 1] [:fixed "qmxpel91r5zx4jq" 0]
+ ["nbhgp991moih667" 2] [:fixed "1vj3809pl92qazs" 0]
+ ["orl7ce13mfz44z3" 0] [:fixed "xgxn40wvxotlh7v" 0]
+ ["orl7ce13mfz44z3" 1] [:fixed "nbhgp991moih667" 0]
+ ["q5c6eu4yfqpp2yh" 0] [:fixed "b38p1foh3q9g240" 0]
+ ["qmxpel91r5zx4jq" 0] [:fixed "oed7ho21y8c369d" 1]
+ ["vh0xoy6bc284bq4" 0] [:fixed "6vhn4od7oal144e" 0]
+ ["vh0xoy6bc284bq4" 1] [:fixed "eqlncxvd7iewdio" 0]
+ ["vh0xoy6bc284bq4" 2] [:fixed "5b1weybgbjwwmvy" 0]
+ ["wgk69j83lt86hqn" 0] [:fixed "q5c6eu4yfqpp2yh" 0]
+ ["wgk69j83lt86hqn" 1] [:fixed "oed7ho21y8c369d" 0]
+ ["xgxn40wvxotlh7v" 0] [:fixed "lpbe1tpdc2hac8i" 0]
+ ["xgxn40wvxotlh7v" 1] [:fixed "4c4f1i3fyktg2vg" 0]
+ ["xgxn40wvxotlh7v" 2] [:fixed "3htakwa5buiw643" 0]
+ ["zcyikmije3pxng9" 0] [:fixed "8e9vd9eer9c8ase" 0]
+ ["zcyikmije3pxng9" 1] [:fixed "c2a1b92koauh5yz" 0]}
+ :nodes
+{"1vj3809pl92qazs" 
+{:inputs ["phase"]
+ :label "sin($phase)"
+ :outputs [""]
+ :parsed [:fn "DSFSin" [:tuple [:free-var "phase"]]]
+ :pos [182 -15]
+ }
+ "3htakwa5buiw643" 
+{:inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [98 183]
+ }
+ "4c4f1i3fyktg2vg" 
+{:inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [-37 212]
+ }
+ "5b1weybgbjwwmvy" 
+{:cable-midpoints 
+{}
+ :inputs ["inc"]
+ :label "phasor($inc)"
+ :name "theta"
+ :outputs [""]
+ :parsed [:fn "phasor" [:tuple [:free-var "inc"]]]
+ :pos [-228 -203]
+ }
+ "6vhn4od7oal144e" 
+{:color 2
+ :inputs ["beta"]
+ :label "$beta"
+ :outputs [""]
+ :parsed [:free-var "beta"]
+ :pos [-354 -114]
+ }
+ "8568rkj902ky5p4" 
+{:inputs ["phase"]
+ :label "sin($phase)"
+ :outputs [""]
+ :parsed [:fn "DSFSin" [:tuple [:free-var "phase"]]]
+ :pos [-269 250]
+ }
+ "8e9vd9eer9c8ase" 
+{:inputs ["a"]
+ :label "- 1"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "-" [:float "1"]]
+ :pos [397 278]
+ }
+ "92r2g1lw7j4ky5" 
+{:cable-midpoints 
+{1 [125 82]}
+ :color 4
+ :inputs ["x" "p"]
+ :label "Approx:Fast:Pow($x $p)"
+ :outputs [""]
+ :parsed [:fn "Approx:Fast:Pow" [:tuple [:free-var "x"] [:free-var "p"]]]
+ :pos [33 142]
+ }
+ "admzbv5hsb9xrae" 
+{:cable-midpoints 
+{0 [-146 229]}
+ :inputs ["theta"]
+ :label "$theta + 0.25"
+ :outputs [""]
+ :parsed [:infix [:free-var "theta"] "+" [:float "0.25"]]
+ :pos [-397 250]
+ }
+ "b38p1foh3q9g240" 
+{:color 3
+ :inputs []
+ :label "Gen:Rate()"
+ :outputs [""]
+ :parsed [:fn "Gen:Rate" [:tuple]]
+ :pos [-580 -401]
+ }
+ "bcuot53viy86byc" 
+{:inputs ["a" "b"]
+ :label "Min($a $b)"
+ :outputs [""]
+ :parsed [:fn "Min" [:tuple [:free-var "a"] [:free-var "b"]]]
+ :pos [-433 -197]
+ }
+ "bo09ip7xz63x81k" 
+{:cable-midpoints 
+{1 [82 -9]
+ 2 [24 88]}
+ :color 2
+ :inputs ["beta" "N" "theta"]
+ :label "$beta + $N * $theta"
+ :outputs [""]
+ :parsed [:infix [:free-var "beta"] "+" [:infix [:free-var "N"] "*" [:free-var "theta"]]]
+ :pos [-100 -27]
+ }
+ "bsry7t6qcbgtqbj" 
+{:color 3
+ :inputs ["a"]
+ :label "+ 1"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "+" [:float "1"]]
+ :pos [-295 -401]
+ }
+ "bw6rq65pa3nb3e7" 
+{:cable-midpoints 
+{1 [19 102]}
+ :color 2
+ :inputs ["beta" "theta"]
+ :label "$beta - $theta"
+ :outputs [""]
+ :parsed [:infix [:free-var "beta"] "-" [:free-var "theta"]]
+ :pos [-224 16]
+ }
+ "bwqby4e3hawyib7" 
+{:inputs ["a" "cos"]
+ :label "(1 + $a * ($a - 2 * $cos))"
+ :outputs [""]
+ :parsed [:tuple [:infix [:float "1"] "+" [:infix [:free-var "a"] "*" [:tuple [:infix [:free-var "a"] "-" [:infix [:float "2"] "*" [:free-var "cos"]]]]]]]
+ :pos [69 351]
+ }
+ "c2a1b92koauh5yz" 
+{:inputs ["a" "b" "more..."]
+ :label "/"
+ :name "rate"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
+ :pos [-334 -234]
+ }
+ "ee0icfwdmoac1vv" 
+{:flip-y true
+ :inputs ["a" "b" "more..."]
+ :label "/"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
+ :pos [314 278]
+ }
+ "eqlncxvd7iewdio" 
+{:color 3
+ :inputs ["a" "b"]
+ :label "Min($a $b)"
+ :name "N"
+ :outputs [""]
+ :parsed [:fn "Min" [:tuple [:free-var "a"] [:free-var "b"]]]
+ :pos [-427 -50]
+ }
+ "f6o6f52u0f847jc" 
+{:inputs ["phase"]
+ :label "sin($phase)"
+ :outputs [""]
+ :parsed [:fn "DSFSin" [:tuple [:free-var "phase"]]]
+ :pos [8 35]
+ }
+ "lpbe1tpdc2hac8i" 
+{:inputs ["phase"]
+ :label "sin($phase)"
+ :outputs [""]
+ :parsed [:fn "DSFSin" [:tuple [:free-var "phase"]]]
+ :pos [-220 125]
+ }
+ "n4dz2x4wyduqtia" 
+{:inputs ["phase"]
+ :label "sin($phase)"
+ :outputs [""]
+ :parsed [:fn "DSFSin" [:tuple [:free-var "phase"]]]
+ :pos [-133 72]
+ }
+ "nbhgp991moih667" 
+{:ephemeral-inputs #{"more"}
+ :inputs ["a" "b" "more" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more"] [:free-var "more..."]]
+ :pos [177 142]
+ }
+ "oed7ho21y8c369d" 
+{:inputs []
+ :label "(freq rolloff harmonics phase-shift) = arg"
+ :outputs ["freq" "rolloff" "harmonics" "phase-shift"]
+ :parsed "arg"
+ :pos [-571 -323]
+ }
+ "orl7ce13mfz44z3" 
+{:inputs ["a" "b" "more..."]
+ :label "+"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
+ :pos [230 278]
+ }
+ "q5c6eu4yfqpp2yh" 
+{:color 3
+ :inputs ["a"]
+ :label "/ 2"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "/" [:float "2"]]
+ :pos [-485 -401]
+ }
+ "qmxpel91r5zx4jq" 
+{:color 4
+ :inputs ["a"]
+ :label "$a"
+ :outputs [""]
+ :parsed [:free-var "a"]
+ :pos [-188 182]
+ }
+ "vh0xoy6bc284bq4" 
+{:cable-midpoints 
+{1 [128 -55]
+ 2 [29 51]}
+ :color 2
+ :inputs ["beta" "N" "theta"]
+ :label "$beta + ($N - 1) * $theta"
+ :outputs [""]
+ :parsed [:infix [:free-var "beta"] "+" [:infix [:tuple [:infix [:free-var "N"] "-" [:float "1"]]] "*" [:free-var "theta"]]]
+ :pos [26 -94]
+ }
+ "wgk69j83lt86hqn" 
+{:color 3
+ 
+ :flip-y true
+ :inputs ["a" "b" "more..."]
+ :label "/"
+ :name "maxN"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
+ :pos [-400 -401]
+ }
+ "xgxn40wvxotlh7v" 
+{:ephemeral-inputs #{"more"}
+ :inputs ["a" "b" "more" "more..."]
+ :label "-"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "-" [:free-var "b"] [:free-var "more"] [:free-var "more..."]]
+ :pos [34 278]
+ }
+ "y1e5nu5yo2oklnj" 
+{:inputs []
+ :label "0.99999"
+ :outputs [""]
+ :parsed [:float "0.99999"]
+ :pos [-568 -197]
+ }
+ "zcyikmije3pxng9" 
+{:cable-midpoints 
+{1 [343 0]}
+ :inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [481 278]
+ }}}}

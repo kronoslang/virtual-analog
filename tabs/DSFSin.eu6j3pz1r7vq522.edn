@@ -1,0 +1,47 @@
+{:draft-argument "Gen:Phasor(1)"
+ :identifier "DSFSin"
+ :identity "eu6j3pz1r7vq522"
+ :patch
+{:cables
+{["83aydacojcozbt9" 0] [:fixed "d12h2dslo1dpeym" 0]
+ ["83aydacojcozbt9" 1] [:fixed "jzutu8aulc3ah9o" 0]
+ ["d12h2dslo1dpeym" 0] [:fixed "gtwb3rb75brxj59" 0]
+ ["gtwb3rb75brxj59" 0] [:fixed "4pm6wgg45sd8991" 0]}
+ :nodes
+{"4pm6wgg45sd8991" 
+{:inputs []
+ :label "(phase) = arg"
+ :outputs ["phase"]
+ :parsed "arg"
+ :pos [-271 21]
+ }
+ "83aydacojcozbt9" 
+{:inputs ["x" "order"]
+ :label "Approx:Cosine-Shape($x $order)"
+ :outputs [""]
+ :parsed [:fn "Approx:Cosine-Shape" [:tuple [:free-var "x"] [:free-var "order"]]]
+ :pos [172 21]
+ :selected true}
+ "d12h2dslo1dpeym" 
+{:inputs ["a"]
+ :label "- 0.25"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "-" [:float "0.25"]]
+ :pos [21 21]
+ }
+ "gtwb3rb75brxj59" 
+{:inputs ["x"]
+ :label "Fraction($x)"
+ :outputs [""]
+ :parsed [:fn "Fraction" [:tuple [:free-var "x"]]]
+ :pos [-114 21]
+ }
+ "jzutu8aulc3ah9o" 
+{:inputs []
+ :label "#6"
+ :outputs [""]
+ :parsed [:invariant "6"]
+ :pos [-4 -71]
+ }}
+ :scale 1
+ :scroll [0 0]}}

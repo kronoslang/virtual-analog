@@ -15,34 +15,40 @@
  :label "z-1($sig~)"
  :outputs [""]
  :parsed [:fn "z-1" [:tuple [:free-var "sig~"]]]
- :pos [442 424]}
+ :pos [-29 -46]
+ }
  "a4p9ysyp1p3iir" 
 {:inputs ["out"]
  :label "$out"
  :outputs [""]
  :parsed [:free-var "out"]
- :pos [740 466]}
+ :pos [269 -4]
+ }
  "jatak14u3x1t56r" 
 {:inputs []
  :label "inc = arg"
  :outputs ["inc"]
  :parsed "arg"
- :pos [102 424]}
+ :pos [-369 -46]
+ }
  "pziw4g5gb6lcalz" 
 {:inputs ["sig"]
  :label "Gen:Signal($sig)"
  :outputs [""]
  :parsed [:fn "Gen:Signal" [:tuple [:free-var "sig"]]]
- :pos [215 424]}
+ :pos [-256 -46]
+ }
  "sxdaza9jozk6emu" 
 {:inputs ["x"]
  :label "Fraction($x)"
  :outputs [""]
  :parsed [:fn "Fraction" [:tuple [:free-var "x"]]]
- :pos [548 424]}
+ :pos [77 -46]
+ }
  "xkcnemcw9cl3wd7" 
 {:inputs ["a" "b" "more..."]
  :label "+"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
- :pos [366 424]}}}}
+ :pos [-105 -46]
+ }}}}

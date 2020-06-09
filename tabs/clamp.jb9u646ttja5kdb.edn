@@ -13,17 +13,17 @@
  :label "Min($a $b)"
  :outputs [""]
  :parsed [:fn "Min" [:tuple [:free-var "a"] [:free-var "b"]]]
- :pos [352 325]
+ :pos [78 -3]
  :selected "6sz5yn9dxjr94zj"}
  "csgkzy2vqtji1fl" 
 {:inputs ["a" "b"]
  :label "Max($a $b)"
  :outputs [""]
  :parsed [:fn "Max" [:tuple [:free-var "a"] [:free-var "b"]]]
- :pos [240 325]}
+ :pos [-34 -3]}
  "jkb3fzfo05b614q" 
 {:inputs []
  :label "(sig min max) = arg"
  :outputs ["sig" "min" "max"]
  :parsed "arg"
- :pos [96 280]}}}}
+ :pos [-178 -48]}}}}

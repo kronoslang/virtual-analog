@@ -27,77 +27,96 @@
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [819 564]}
+ :pos [244 176]
+ }
  "4d37na6pkdfv6rd" 
 {:inputs ["x"]
  :label "Fraction($x)"
  :outputs [""]
  :parsed [:fn "Fraction" [:tuple [:free-var "x"]]]
- :pos [377 558]}
+ :pos [-198 170]
+ }
  "5a2g4mefw9grck4" 
 {:inputs ["inc"]
  :label "phasor($inc)"
  :outputs [""]
  :parsed [:fn "phasor" [:tuple [:free-var "inc"]]]
- :pos [299 400]}
+ :pos [-276 12]
+ }
  "6hckv72d7518pb" 
 {:inputs ["phase" "rate"]
  :label "Poly-BLEP($phase $rate)"
  :outputs [""]
  :parsed [:fn "Poly-BLEP" [:tuple [:free-var "phase"] [:free-var "rate"]]]
- :pos [592 564]}
+ :pos [17 176]
+ }
  "axhdgwv7vgqmh2t" 
 {:inputs ["a"]
  :label "* #0.5"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:invariant "0.5"]]
- :pos [1008 489]}
+ :pos [433 101]
+ }
  "gas72blv8g40vr" 
 {:inputs ["phase" "rate"]
  :label "Poly-BLEP($phase $rate)"
  :outputs [""]
  :parsed [:fn "Poly-BLEP" [:tuple [:free-var "phase"] [:free-var "rate"]]]
- :pos [582 321]}
+ :pos [7 -67]
+ }
  "ilwf1ougu3jz56e" 
 {:inputs ["sig"]
  :label "Interval-of($sig)"
  :outputs [""]
  :parsed [:fn "Interval-of" [:tuple [:free-var "sig"]]]
- :pos [254 162]}
+ :pos [-321 -226]
+ }
  "j56jgd6wqnjs5z9" 
 {:inputs []
  :label "0"
  :outputs [""]
  :parsed [:float "0"]
- :pos [43 162]}
+ :pos [-532 -226]
+ }
  "kif86s3f6v203vv" 
 {:inputs ["a" "b" "more..."]
  :label "+"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
- :pos [907 464]
- :selected "kif86s3f6v203vv"}
+ :pos [332 76]
+ }
  "rclehe8v73xu2fe" 
 {:inputs []
  :label "(freq width waveform) = arg"
  :outputs ["freq" "width" "waveform"]
  :parsed "arg"
- :pos [52 288]}
+ :pos [-523 -100]
+ }
  "tp7d2o7fq8xs6fe" 
 {:inputs ["a" "b" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [260 296]}
+ :pos [-315 -92]
+ }
+ "u5bgu6k9ah7lyyp" 
+{:inputs ["sig"]
+ :label "Gen:Signal($sig)"
+ :outputs [""]
+ :parsed [:fn "Gen:Signal" [:tuple [:free-var "sig"]]]
+ :pos [-419 -295]
+ }
  "uoohopd8it403h2" 
 {:inputs ["sig"]
  :label "Gen:Signal($sig)"
  :outputs [""]
  :parsed [:fn "Gen:Signal" [:tuple [:free-var "sig"]]]
- :pos [129 162]}
+ :pos [-446 -226]
+ }
  "y0c95fs5kvyc2z" 
 {:inputs ["a" "b" "more..."]
  :label "+"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
- :pos [310 558]}}}}
+ :pos [-265 170]
+ }}}}
