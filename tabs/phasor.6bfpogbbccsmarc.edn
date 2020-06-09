@@ -21,7 +21,8 @@
  :label "$out"
  :outputs [""]
  :parsed [:free-var "out"]
- :pos [269 -4]}
+ :pos [269 -4]
+ :selected true}
  "jatak14u3x1t56r" 
 {:inputs []
  :label "inc = arg"

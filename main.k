@@ -23,25 +23,49 @@ BLIT-Osc(freq width waveform) {
 (n2m41jl4cfhng2n3-0) = 10
 (nb9v90dbo2z4d9t1-0) = (1 / nauaz24yx863c33v-0)
 (npp0mh5x82swj59r-0) = (n04a21t3qsecf8bd-0 / nkp2zr9vgfczy6h7-0)
+(n2qpfev0wpf5uwfq-0) = (nkp2zr9vgfczy6h7-0 * n72pumrapu5rz2ua-0)
 (nu8z6vb0ahicka5-0) = (phase rate) => ( DSF(phase rate n1mss3tboknlhovv-0 nauaz24yx863c33v-0 n99e16vcfs145s1d-0) ) 
 (n99e16vcfs145s1d-0) = #0.25
 (n1mss3tboknlhovv-0) = Approx:Fast:Pow(ny7e4vr3e2gzz2oq-0 nb9v90dbo2z4d9t1-0)
 (nauaz24yx863c33v-0) = Floor(npp0mh5x82swj59r-0)
+(n24hy1r6777ecq0f-0) = Gen:Rate()
+(ndqyyzai8rg2r48z-0) = (1 - n2qpfev0wpf5uwfq-0)
 (ntbur1zsci999meq-0 ntbur1zsci999meq-1 ntbur1zsci999meq-2) = arg
 (n04a21t3qsecf8bd-0) = (nao171vjon4ab7hc-0 * 0.5)
 (nvokj1b4s4rc58a0-0) = Dual-Saw(nu8z6vb0ahicka5-0 nkp2zr9vgfczy6h7-0 ntbur1zsci999meq-1 ntbur1zsci999meq-2)
-(nmiqxw8ly52vmb60-0) = Filter:Integrate(nvokj1b4s4rc58a0-0 n9kbgx4blt43lam2-0)
+(nmiqxw8ly52vmb60-0) = Filter:Integrate(nvokj1b4s4rc58a0-0 ndqyyzai8rg2r48z-0)
+(nkzfu7f3254ah6wx-0) = (nmiqxw8ly52vmb60-0 * n2qpfev0wpf5uwfq-0 * n8k8m9bc4fyog13u-0 * nu4ifd7k5z51pn5-0)
 (nao171vjon4ab7hc-0) = Gen:Rate()
-(n9kbgx4blt43lam2-0) = 0.995
+(n72pumrapu5rz2ua-0) = (1 / n24hy1r6777ecq0f-0)
+(nu4ifd7k5z51pn5-0) = 2
 (ny7e4vr3e2gzz2oq-0) = 0.5
+(n8k8m9bc4fyog13u-0) = Math:Pi
 (nkp2zr9vgfczy6h7-0) = Max(ntbur1zsci999meq-0 n2m41jl4cfhng2n3-0)
-nmiqxw8ly52vmb60-0
+nkzfu7f3254ah6wx-0
+}
+
+DPW-Osc(freq width waveform) {
+(n7o2zd1d5e8gtc1n-0) = Math:Exp(n66m3mh93axsliit-0)
+(nt5sr98z187vy4ky-0) = (n2ge8gpmt1iag2ld-0 * Math:Pi)
+(n2ge8gpmt1iag2ld-0) = (n6wko4dcgu1734xf-0 * 2)
+(nvti4hcfxnrsimio-0 nvti4hcfxnrsimio-1 nvti4hcfxnrsimio-2) = arg
+(nv378kqoubfihlbf-0) = Math:Pi
+(n66m3mh93axsliit-0) = (nt5sr98z187vy4ky-0 * I)
+(nc2nciu81r9p7c36-0) = (nz3zyz52h0qkcdxn-0 * ncp1hgu9y35dw6qw-0)
+(n6rhwj5c58taic5y-0) = (n7o2zd1d5e8gtc1n-0 - 1)
+(n6wko4dcgu1734xf-0) = (nvti4hcfxnrsimio-0 / nae50aj7fpgyu2m5-0)
+(nae50aj7fpgyu2m5-0) = Gen:Rate()
+(nywbd4z7gfhvfydk-0) = (phase rate) => ( DPW(phase rate) ) 
+(ncp1hgu9y35dw6qw-0) = (nv378kqoubfihlbf-0 / nsu0zg8t4o4z93g6-0)
+(nsu0zg8t4o4z93g6-0) = Abs(n6rhwj5c58taic5y-0)
+(nz3zyz52h0qkcdxn-0) = Dual-Saw(nywbd4z7gfhvfydk-0 nvti4hcfxnrsimio-0 nvti4hcfxnrsimio-1 nvti4hcfxnrsimio-2)
+nc2nciu81r9p7c36-0
 }
 
 Dual-Saw(engine freq width shape) {
 (ngwiza4tcnjx43th-0) = (n0v993l9lu93zrb4-1 * n39m4vfjjo3ml1nr-0)
 (nlgii8aqy7d0e8lg-0) = phasor(ngwiza4tcnjx43th-0)
-(nc6z6xdas21z9bzq-0) = (n4vsbunvcp129gj-0 * #0.5)
+(npu8aoyeh0qhw9ca-0) = (n4vsbunvcp129gj-0 * #0.5)
 (n4vsbunvcp129gj-0) = (n9z617c34ij2j3t3-0 + nyzem873iw6uh697-0)
 (ndafe8dourjlpn4v-0) = 0
 (n2q8g1xuctho4mzp-0) = Gen:Signal(ndafe8dourjlpn4v-0)
@@ -52,7 +76,7 @@ Dual-Saw(engine freq width shape) {
 (nyzem873iw6uh697-0) = Eval(n0v993l9lu93zrb4-0 nlgii8aqy7d0e8lg-0 ngwiza4tcnjx43th-0 )
 (nttvfwceioxw4ekz-0) = Fraction(nquxe9rfl5fv5262-0)
 (nquxe9rfl5fv5262-0) = (n0v993l9lu93zrb4-2 + nlgii8aqy7d0e8lg-0)
-nc6z6xdas21z9bzq-0
+npu8aoyeh0qhw9ca-0
 }
 
 Poly-BLEP(phase rate) {
@@ -60,6 +84,7 @@ Poly-BLEP(phase rate) {
 (n2ixhbn599k56mn7-0) = (ny5wywjmrvvcf8ga-0 / no3u0kjdgxlqx2ue-1)
 (npovwjjic9ws6yau-0) = 1
 (n5wscwn905xh99ki-0) = (na4rlm23qxqfgng6-0 + n67gzklu5eeaa5w-0 + n67gzklu5eeaa5w-0)
+(n1me2m516ebk1j9a-0) = (ntt4wmmar0ien1w6-0 * -2)
 (nl450041zb4ergf6-0) = 1
 (na4rlm23qxqfgng6-0) = (n56v4sd0ma4mb2uw-0 * nyanol2vfruwmpwm-0)
 (n34f4st3vf5vqdp1-0) = (n67gzklu5eeaa5w-0 * n67gzklu5eeaa5w-0)
@@ -71,7 +96,7 @@ Poly-BLEP(phase rate) {
 (ny5wywjmrvvcf8ga-0) = (no3u0kjdgxlqx2ue-0 - 0.5)
 (neljp3hu7j4528ht-0) = Fraction(ny5wywjmrvvcf8ga-0)
 (no3u0kjdgxlqx2ue-0 no3u0kjdgxlqx2ue-1) = arg
-ntt4wmmar0ien1w6-0
+n1me2m516ebk1j9a-0
 }
 
 DSF(phase rate rolloff harmonics phase-shift) {
@@ -87,7 +112,6 @@ DSF(phase rate rolloff harmonics phase-shift) {
 (nedza7zw08vzg17t-0) = (nm9979s6reekfesn-0 - noed7ho21y8c369d-0)
 (nal1ahdob52pqt0n-0) = Math:Pow(nqmxpel91r5zx4jq-0 ndkv773rknsskkwe-0)
 (nqmxpel91r5zx4jq-0) = nbcuot53viy86byc-0
-(nzcyikmije3pxng9-0) = (n8e9vd9eer9c8ase-0 * noed7ho21y8c369d-1)
 (norl7ce13mfz44z3-0) = (nxgxn40wvxotlh7v-0 + nnbhgp991moih667-0)
 (ndohe797fypmrsg6-0) = (nqmxpel91r5zx4jq-0 - nnaw81j62abjvz19-0)
 (nadmzbv5hsb9xrae-0) = (noed7ho21y8c369d-0 + 0.25)
@@ -107,7 +131,17 @@ DSF(phase rate rolloff harmonics phase-shift) {
 (nzvw998z1c3hduq-0) = Math:Sin(naysdq0tzu1qy6hu-0)
 (nee0icfwdmoac1vv-0) = (norl7ce13mfz44z3-0 / n20da95ouaf4ndjt-0)
 (naysdq0tzu1qy6hu-0) = ((n6vhn4od7oal144e-0 * #2) * Math:Pi)
-nzcyikmije3pxng9-0
+n8e9vd9eer9c8ase-0
+}
+
+DPW(phase rate) {
+(n7kuvyka2jw66965-0) = (nyw9am531g1jr2v6-0 - 1)
+(nc8j4lhgzrd0325c-0) = (ncdy6v222lihd82s-0 - ncjh0hfdbgb2au8v-0)
+(ncdy6v222lihd82s-0) = z-1(ncjh0hfdbgb2au8v-0)
+(ncjh0hfdbgb2au8v-0) = (n7kuvyka2jw66965-0 * n7kuvyka2jw66965-0)
+(nivylx8r77azge4x-0 nivylx8r77azge4x-1) = arg
+(nyw9am531g1jr2v6-0) = (nivylx8r77azge4x-0 * 2)
+nc8j4lhgzrd0325c-0
 }
 
 DSFSin(phase) {

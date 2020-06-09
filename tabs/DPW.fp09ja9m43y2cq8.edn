@@ -1,0 +1,50 @@
+{:draft-argument "phasor(0.0001) 0.0001"
+ :identifier "DPW"
+ :identity "fp09ja9m43y2cq8"
+ :patch
+{:cables
+{["7kuvyka2jw66965" 0] [:fixed "yw9am531g1jr2v6" 0]
+ ["c8j4lhgzrd0325c" 0] [:fixed "cdy6v222lihd82s" 0]
+ ["c8j4lhgzrd0325c" 1] [:fixed "cjh0hfdbgb2au8v" 0]
+ ["cdy6v222lihd82s" 0] [:fixed "cjh0hfdbgb2au8v" 0]
+ ["cjh0hfdbgb2au8v" 0] [:fixed "7kuvyka2jw66965" 0]
+ ["cjh0hfdbgb2au8v" 1] [:fixed "7kuvyka2jw66965" 0]
+ ["yw9am531g1jr2v6" 0] [:fixed "ivylx8r77azge4x" 0]}
+ :nodes
+{"7kuvyka2jw66965" 
+{:inputs ["a"]
+ :label "- 1"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "-" [:float "1"]]
+ :pos [-57 -50]}
+ "c8j4lhgzrd0325c" 
+{:inputs ["a" "b" "more..."]
+ :label "-"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "-" [:free-var "b"] [:free-var "more..."]]
+ :pos [197 1]
+ :selected true}
+ "cdy6v222lihd82s" 
+{:inputs ["sig~"]
+ :label "z-1($sig~)"
+ :outputs [""]
+ :parsed [:fn "z-1" [:tuple [:free-var "sig~"]]]
+ :pos [116 -1]}
+ "cjh0hfdbgb2au8v" 
+{:inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [54 -50]}
+ "ivylx8r77azge4x" 
+{:inputs []
+ :label "(phase rate) = arg"
+ :outputs ["phase" "rate"]
+ :parsed "arg"
+ :pos [-297 -46]}
+ "yw9am531g1jr2v6" 
+{:inputs ["a"]
+ :label "* 2"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:float "2"]]
+ :pos [-168 -50]}}}}

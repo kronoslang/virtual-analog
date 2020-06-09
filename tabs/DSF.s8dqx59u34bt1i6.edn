@@ -47,8 +47,6 @@
  ["xgxn40wvxotlh7v" 0] [:fixed "zvw998z1c3hduq" 0]
  ["xgxn40wvxotlh7v" 1] [:fixed "4c4f1i3fyktg2vg" 0]
  ["xgxn40wvxotlh7v" 2] [:fixed "3htakwa5buiw643" 0]
- ["zcyikmije3pxng9" 0] [:fixed "8e9vd9eer9c8ase" 0]
- ["zcyikmije3pxng9" 1] [:fixed "oed7ho21y8c369d" 1]
  ["zvw998z1c3hduq" 0] [:fixed "aysdq0tzu1qy6hu" 0]}
  :nodes
 {"1vj3809pl92qazs" 
@@ -56,60 +54,69 @@
  :label "sin($phase)"
  :outputs [""]
  :parsed [:fn "DSFSin" [:tuple [:free-var "phase"]]]
- :pos [160 -108]}
+ :pos [160 -108]
+ }
  "20da95ouaf4ndjt" 
 {:color 3
  :inputs ["a"]
  :label "+ 1"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:float "1"]]
- :pos [165 332]}
+ :pos [165 332]
+ }
  "3htakwa5buiw643" 
 {:inputs ["a" "b" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [157 154]}
+ :pos [157 154]
+ }
  "4c4f1i3fyktg2vg" 
 {:inputs ["a" "b" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [80 154]}
+ :pos [80 154]
+ }
  "4eq03fsgxye90dw" 
 {:color 3
  :inputs []
  :label "2"
  :outputs [""]
  :parsed [:float "2"]
- :pos [-187 332]}
+ :pos [-187 332]
+ }
  "5p9kvhderiel6yt" 
 {:color 3
  :inputs ["a" "b" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [77 332]}
+ :pos [77 332]
+ }
  "6vhn4od7oal144e" 
 {:color 2
  :inputs ["beta"]
  :label "$beta"
  :outputs [""]
  :parsed [:free-var "beta"]
- :pos [-453 -249]}
+ :pos [-453 -249]
+ }
  "8568rkj902ky5p4" 
 {:color 3
  :inputs ["phase"]
  :label "sin($phase)"
  :outputs [""]
  :parsed [:fn "DSFSin" [:tuple [:free-var "phase"]]]
- :pos [-204 224]}
+ :pos [-204 224]
+ }
  "8e9vd9eer9c8ase" 
 {:inputs ["a"]
  :label "- 1"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "-" [:float "1"]]
- :pos [447 252]}
+ :pos [447 252]
+ }
  "admzbv5hsb9xrae" 
 {:cable-midpoints 
 {}
@@ -118,28 +125,32 @@
  :label "$theta + 0.25"
  :outputs [""]
  :parsed [:infix [:free-var "theta"] "+" [:float "0.25"]]
- :pos [-332 224]}
+ :pos [-332 224]
+ }
  "al1ahdob52pqt0n" 
 {:color 4
  :inputs ["a" "b"]
  :label "Math:Pow($a $b)"
  :outputs [""]
  :parsed [:fn "Math:Pow" [:tuple [:free-var "a"] [:free-var "b"]]]
- :pos [-321 99]}
+ :pos [-321 99]
+ }
  "aysdq0tzu1qy6hu" 
 {:color 2
  :inputs ["a"]
  :label "$a * #2 * Math:Pi"
  :outputs [""]
  :parsed [:infix [:infix [:free-var "a"] "*" [:invariant "2"]] "*" "Math:Pi"]
- :pos [-356 -113]}
+ :pos [-356 -113]
+ }
  "bcuot53viy86byc" 
 {:color 4
  :inputs ["a" "b"]
  :label "Min($a $b)"
  :outputs [""]
  :parsed [:fn "Min" [:tuple [:free-var "a"] [:free-var "b"]]]
- :pos [-509 148]}
+ :pos [-509 148]
+ }
  "bw6rq65pa3nb3e7" 
 {:cable-midpoints 
 {}
@@ -148,7 +159,8 @@
  :label "$beta - $theta"
  :outputs [""]
  :parsed [:infix [:free-var "beta"] "-" [:free-var "theta"]]
- :pos [-85 -55]}
+ :pos [-85 -55]
+ }
  "dkv773rknsskkwe" 
 {:color 4
  :inputs ["a"]
@@ -156,7 +168,8 @@
  :name "N"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:float "2"]]
- :pos [-493 22]}
+ :pos [-493 22]
+ }
  "dohe797fypmrsg6" 
 {:color 3
  :flip-y true
@@ -164,66 +177,76 @@
  :label "-"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "-" [:free-var "b"] [:free-var "more..."]]
- :pos [-11 290]}
+ :pos [-11 290]
+ }
  "edza7zw08vzg17t" 
 {:color 2
  :inputs ["a" "b" "more..."]
  :label "-"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "-" [:free-var "b"] [:free-var "more..."]]
- :pos [63 -144]}
+ :pos [63 -144]
+ }
  "ee0icfwdmoac1vv" 
 {:flip-y true
  :inputs ["a" "b" "more..."]
  :label "/"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
- :pos [348 252]}
+ :pos [348 252]
+ }
  "f6o6f52u0f847jc" 
 {:inputs ["phase"]
  :label "sin($phase)"
  :outputs [""]
  :parsed [:fn "DSFSin" [:tuple [:free-var "phase"]]]
- :pos [91 -42]}
+ :pos [91 -42]
+ }
  "m9979s6reekfesn" 
 {:color 2
  :inputs ["a" "b" "more..."]
  :label "+"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
- :pos [-3 -88]}
+ :pos [-3 -88]
+ }
  "n4dz2x4wyduqtia" 
 {:inputs ["phase"]
  :label "sin($phase)"
  :outputs [""]
  :parsed [:fn "DSFSin" [:tuple [:free-var "phase"]]]
- :pos [24 23]}
+ :pos [24 23]
+ }
  "naw81j62abjvz19" 
 {:color 3
  :inputs ["a" "b" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [-99 332]}
+ :pos [-99 332]
+ }
  "nbhgp991moih667" 
 {:ephemeral-inputs #{"more"}
  :inputs ["a" "b" "more" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more"] [:free-var "more..."]]
- :pos [246 154]}
+ :pos [246 154]
+ }
  "oed7ho21y8c369d" 
 {:inputs []
  :label "(phase rate rolloff harmonics phase-shift) = arg"
  :outputs ["phase" "rate" "rolloff" "harmonics" "phase-shift"]
  :parsed "arg"
- :pos [-645 -381]}
+ :pos [-645 -381]
+ }
  "orl7ce13mfz44z3" 
 {:inputs ["a" "b" "more..."]
  :label "+"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
- :pos [249 252]}
+ :pos [249 252]
+ }
  "qmxpel91r5zx4jq" 
 {:color 4
  :inputs ["a"]
@@ -231,41 +254,38 @@
  :name "rolloff"
  :outputs [""]
  :parsed [:free-var "a"]
- :pos [-403 153]}
+ :pos [-403 153]
+ }
  "xd3wic81232ovcg" 
 {:color 2
  :inputs ["a" "b" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [-47 -159]}
+ :pos [-47 -159]
+ }
  "xgxn40wvxotlh7v" 
 {:ephemeral-inputs #{"more"}
  :inputs ["a" "b" "more" "more..."]
  :label "-"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "-" [:free-var "b"] [:free-var "more"] [:free-var "more..."]]
- :pos [150 252]}
+ :pos [150 252]
+ }
  "y1e5nu5yo2oklnj" 
 {:inputs []
  :label "0.99999"
  :outputs [""]
  :parsed [:float "0.99999"]
- :pos [-597 181]}
- "zcyikmije3pxng9" 
-{:cable-midpoints 
-{}
- :inputs ["a" "b" "more..."]
- :label "*"
- :outputs [""]
- :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [546 252]}
+ :pos [-597 181]
+ }
  "zvw998z1c3hduq" 
 {:color 2
  :inputs ["a"]
  :label "Math:Sin($a)"
  :outputs [""]
  :parsed [:fn "Math:Sin" [:tuple [:free-var "a"]]]
- :pos [-197 -4]}}
+ :pos [-197 -4]
+ }}
  :scale 0.7350918906249997
  :scroll [0 0]}}
