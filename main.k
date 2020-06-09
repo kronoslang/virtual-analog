@@ -20,6 +20,7 @@ nzxb7k0beezz7hk7-0
 }
 
 BLIT-Osc(freq width waveform) {
+;; Synthesizes two phase-offset, band-limited sawtooth waves from a shared phasor with 'freq'uency. The 'width' determines the phase offset relative to the waveform period. 'waveform' is the gain coefficient for the offset sawtooth; use 1 for dual saw and -1 for variable width pulse. The sawtooths are derived from a band-limited impulse train. 
 (n2m41jl4cfhng2n3-0) = 10
 (nb9v90dbo2z4d9t1-0) = (1 / nauaz24yx863c33v-0)
 (npp0mh5x82swj59r-0) = (n04a21t3qsecf8bd-0 / nkp2zr9vgfczy6h7-0)
@@ -45,6 +46,7 @@ nkzfu7f3254ah6wx-0
 }
 
 DPW-Osc(freq width waveform) {
+;; Synthesizes two phase-offset, band-limited sawtooth waves from a shared phasor with 'freq'uency. The 'width' determines the phase offset relative to the waveform period. 'waveform' is the gain coefficient for the offset sawtooth; use 1 for dual saw and -1 for variable width pulse. The sawtooths are generated as differentiated parabolic waveforms. 
 (n7o2zd1d5e8gtc1n-0) = Math:Exp(n66m3mh93axsliit-0)
 (nt5sr98z187vy4ky-0) = (n2ge8gpmt1iag2ld-0 * Math:Pi)
 (n2ge8gpmt1iag2ld-0) = (n6wko4dcgu1734xf-0 * 2)
@@ -171,6 +173,7 @@ n6sz5yn9dxjr94zj-0
 }
 
 Moog-VCF(sig fc res) {
+;; Minimoog filter model after Stilson and Smith. 
 (nge494w6gmv9g6p6-0) = (nihzgnrksmn9n58o-0 * 0.5)
 (n3z9e4epjsczb6t3-0) = (n4dugdl9uxhht5yr-0 * nvzx41o6vr09sfij-0 * nvzx41o6vr09sfij-0 * nczr7kmaim9ng4je-0)
 (n1j3h5h3u3zjmqav-0) = (1 - nc8emdjq0gjiuxvm-0)

@@ -1,4 +1,5 @@
-{:draft-argument "0.1 0 0"
+{:documentation "Synthesizes two phase-offset, band-limited sawtooth waves from a shared phasor with 'freq'uency. The 'width' determines the phase offset relative to the waveform period. 'waveform' is the gain coefficient for the offset sawtooth; use 1 for dual saw and -1 for variable width pulse. The sawtooths are generated as differentiated parabolic waveforms.\n"
+ :draft-argument "0.1 0 0"
  :identifier "DPW-Osc"
  :identity "upphajzg1s3re08"
  :patch
@@ -25,96 +26,82 @@
  :label "* 2"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:float "2"]]
- :pos [-41 -151]
- }
+ :pos [-41 -151]}
  "66m3mh93axsliit" 
 {:inputs ["a"]
  :label "* I"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" "I"]
- :pos [168 -151]
- }
+ :pos [168 -151]}
  "6rhwj5c58taic5y" 
 {:inputs ["a"]
  :label "- 1"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "-" [:float "1"]]
- :pos [376 -151]
- }
+ :pos [376 -151]}
  "6wko4dcgu1734xf" 
 {:inputs ["a" "b" "more..."]
  :label "/"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
- :pos [-145 -151]
- }
+ :pos [-145 -151]}
  "7o2zd1d5e8gtc1n" 
 {:inputs ["a"]
  :label "Math:Exp($a)"
  :outputs [""]
  :parsed [:fn "Math:Exp" [:tuple [:free-var "a"]]]
- :pos [272 -151]
- }
+ :pos [272 -151]}
  "ae50aj7fpgyu2m5" 
 {:inputs []
  :label "Gen:Rate()"
  :outputs [""]
  :parsed [:fn "Gen:Rate" [:tuple]]
- :pos [-237 -228]
- }
+ :pos [-237 -228]}
  "c2nciu81r9p7c36" 
 {:inputs ["a" "b" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [229 139]
- }
+ :pos [229 139]}
  "cp1hgu9y35dw6qw" 
 {:inputs ["a" "b" "more..."]
  :label "/"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
- :pos [200 14]
- }
+ :pos [200 14]}
  "su0zg8t4o4z93g6" 
 {:inputs ["a"]
  :label "Abs($a)"
  :outputs [""]
  :parsed [:fn "Abs" [:tuple [:free-var "a"]]]
- :pos [480 -151]
- }
+ :pos [480 -151]}
  "t5sr98z187vy4ky" 
 {:inputs ["a"]
  :label "* Math:Pi"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" "Math:Pi"]
- :pos [63 -151]
- }
+ :pos [63 -151]}
  "v378kqoubfihlbf" 
 {:inputs []
  :label "Math:Pi"
  :outputs [""]
  :parsed "Math:Pi"
- :pos [145 -56]
- }
+ :pos [145 -56]}
  "vti4hcfxnrsimio" 
 {:inputs []
  :label "(freq width waveform) = arg"
  :outputs ["freq" "width" "waveform"]
  :parsed "arg"
- :pos [-239 -93]
- }
+ :pos [-239 -93]}
  "ywbd4z7gfhvfydk" 
 {:inputs ["phase" "rate"]
  :label "DPW($phase $rate)"
  :outputs [""]
  :parsed [:fn "DPW" [:tuple [:free-var "phase"] [:free-var "rate"]]]
- :pos [-84 94]
- }
+ :pos [-84 94]}
  "z3zyz52h0qkcdxn" 
 {:inputs ["engine" "freq" "width" "shape"]
  :label "Dual-Saw($engine $freq $width $shape)"
  :outputs [""]
  :parsed [:fn "Dual-Saw" [:tuple [:free-var "engine"] [:free-var "freq"] [:free-var "width"] [:free-var "shape"]]]
- :pos [71 85]
- }}}}
+ :pos [71 85]}}}}

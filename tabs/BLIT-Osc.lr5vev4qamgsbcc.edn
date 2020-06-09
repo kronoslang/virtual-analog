@@ -1,4 +1,5 @@
-{:draft-argument "1 + 200 * Gen:Phasor(0.05) Gen:Sin(0.05) 0"
+{:documentation "Synthesizes two phase-offset, band-limited sawtooth waves from a shared phasor with 'freq'uency. The 'width' determines the phase offset relative to the waveform period. 'waveform' is the gain coefficient for the offset sawtooth; use 1 for dual saw and -1 for variable width pulse. The sawtooths are derived from a band-limited impulse train.\n"
+ :draft-argument "1 + 200 * Gen:Phasor(0.05) Gen:Sin(0.05) 0"
  :identifier "BLIT-Osc"
  :identity "lr5vev4qamgsbcc"
  :patch
@@ -36,130 +37,113 @@
  :label "* 0.5"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:float "0.5"]]
- :pos [-410 1]
- }
+ :pos [-410 1]}
  "1mss3tboknlhovv" 
 {:color 2
  :inputs ["x" "p"]
  :label "Approx:Fast:Pow($x $p)"
  :outputs [""]
  :parsed [:fn "Approx:Fast:Pow" [:tuple [:free-var "x"] [:free-var "p"]]]
- :pos [-150 92]
- }
+ :pos [-150 92]}
  "24hy1r6777ecq0f" 
 {:inputs []
  :label "Gen:Rate()"
  :outputs [""]
  :parsed [:fn "Gen:Rate" [:tuple]]
- :pos [-260 -262]
- }
+ :pos [-260 -262]}
  "2m41jl4cfhng2n3" 
 {:color 3
  :inputs []
  :label "10"
  :outputs [""]
  :parsed [:float "10"]
- :pos [-416 -248]
- }
+ :pos [-416 -248]}
  "2qpfev0wpf5uwfq" 
 {:ephemeral-inputs #{}
  :inputs ["a" "b" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [-41 -198]
- }
+ :pos [-41 -198]}
  "72pumrapu5rz2ua" 
 {:inputs ["b"]
  :label "1 /"
  :outputs [""]
  :parsed [:infix [:float "1"] "/" [:free-var "b"]]
- :pos [-148 -262]
- }
+ :pos [-148 -262]}
  "8k8m9bc4fyog13u" 
 {:inputs []
  :label "Math:Pi"
  :outputs [""]
  :parsed "Math:Pi"
- :pos [270 -254]
- }
+ :pos [270 -254]}
  "99e16vcfs145s1d" 
 {:inputs []
  :label "#0.25"
  :outputs [""]
  :parsed [:invariant "0.25"]
- :pos [-77 37]
- }
+ :pos [-77 37]}
  "ao171vjon4ab7hc" 
 {:color 2
  :inputs []
  :label "Gen:Rate()"
  :outputs [""]
  :parsed [:fn "Gen:Rate" [:tuple]]
- :pos [-477 -57]
- }
+ :pos [-477 -57]}
  "auaz24yx863c33v" 
 {:color 2
  :inputs ["a"]
  :label "Floor($a)"
  :outputs [""]
  :parsed [:fn "Floor" [:tuple [:free-var "a"]]]
- :pos [-241 -45]
- }
+ :pos [-241 -45]}
  "b9v90dbo2z4d9t1" 
 {:color 2
  :inputs ["b"]
  :label "1 /"
  :outputs [""]
  :parsed [:infix [:float "1"] "/" [:free-var "b"]]
- :pos [-199 41]
- }
+ :pos [-199 41]}
  "dqyyzai8rg2r48z" 
 {:inputs ["b"]
  :label "1 -"
  :outputs [""]
  :parsed [:infix [:float "1"] "-" [:free-var "b"]]
- :pos [107 -30]
- }
+ :pos [107 -30]}
  "kp2zr9vgfczy6h7" 
 {:color 3
  :inputs ["a" "b"]
  :label "Max($a $b)"
  :outputs [""]
  :parsed [:fn "Max" [:tuple [:free-var "a"] [:free-var "b"]]]
- :pos [-366 -172]
- }
+ :pos [-366 -172]}
  "kzfu7f3254ah6wx" 
 {:ephemeral-inputs #{"more" "more2"}
  :inputs ["a" "b" "more" "more2" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more"] [:free-var "more2"] [:free-var "more..."]]
- :pos [345 -57]
- }
+ :pos [345 -57]}
  "miqxw8ly52vmb60" 
 {:inputs ["sig" "feedback"]
  :label "Filter:Integrate($sig $feedback)"
  :outputs [""]
  :parsed [:fn "Filter:Integrate" [:tuple [:free-var "sig"] [:free-var "feedback"]]]
- :pos [377 197]
- }
+ :pos [377 197]}
  "pp0mh5x82swj59r" 
 {:color 2
  :inputs ["a" "b" "more..."]
  :label "/"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
- :pos [-323 -45]
- }
+ :pos [-323 -45]}
  "tbur1zsci999meq" 
 {:color 3
  :inputs []
  :label "(freq width waveform) = arg"
  :outputs ["freq" "width" "waveform"]
  :parsed "arg"
- :pos [-452 -142]
- }
+ :pos [-452 -142]}
  "u4ifd7k5z51pn5" 
 {:inputs []
  :label "2"
@@ -171,22 +155,19 @@
  :label "DSF($phase $rate $rolloff $harmonics $phase-shift)"
  :outputs [""]
  :parsed [:fn "DSF" [:tuple [:free-var "phase"] [:free-var "rate"] [:free-var "rolloff"] [:free-var "harmonics"] [:free-var "phase-shift"]]]
- :pos [-3 159]
- }
+ :pos [-3 159]}
  "vokj1b4s4rc58a0" 
 {:inputs ["engine" "freq" "width" "shape"]
  :label "Dual-Saw($engine $freq $width $shape)"
  :outputs [""]
  :parsed [:fn "Dual-Saw" [:tuple [:free-var "engine"] [:free-var "freq"] [:free-var "width"] [:free-var "shape"]]]
- :pos [210 198]
- }
+ :pos [210 198]}
  "y7e4vr3e2gzz2oq" 
 {:color 2
  :inputs []
  :label "0.5"
  :outputs [""]
  :parsed [:float "0.5"]
- :pos [-286 92]
- }}
+ :pos [-286 92]}}
  :scale 1
  :scroll [0 0]}}

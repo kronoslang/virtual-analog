@@ -14,19 +14,16 @@
  :label "(freq width waveform) = arg"
  :outputs ["freq" "width" "waveform"]
  :parsed "arg"
- :pos [-221 -77]
- }
+ :pos [-221 -77]}
  "u8q4rufog1bgjw7" 
 {:inputs ["phase" "rate"]
  :label "Poly-BLEP($phase $rate)"
  :outputs [""]
  :parsed [:fn "Poly-BLEP" [:tuple [:free-var "phase"] [:free-var "rate"]]]
- :pos [-130 25]
- }
+ :pos [-130 25]}
  "zxb7k0beezz7hk7" 
 {:inputs ["engine" "freq" "width" "shape"]
  :label "Dual-Saw($engine $freq $width $shape)"
  :outputs [""]
  :parsed [:fn "Dual-Saw" [:tuple [:free-var "engine"] [:free-var "freq"] [:free-var "width"] [:free-var "shape"]]]
- :pos [122 27]
- }}}}
+ :pos [122 27]}}}}

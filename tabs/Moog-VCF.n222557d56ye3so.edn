@@ -1,4 +1,5 @@
-{:draft-argument "Gen:Noise(0.499d) 440 4"
+{:documentation "Minimoog filter model after Stilson and Smith. "
+ :draft-argument "Gen:Noise(0.499d) 440 4"
  :identifier "Moog-VCF"
  :identity "n222557d56ye3so"
  :patch
@@ -35,30 +36,26 @@
  :label "0.15"
  :outputs [""]
  :parsed [:float "0.15"]
- :pos [-141 -231]
- }
+ :pos [-141 -231]}
  "1j3h5h3u3zjmqav" 
 {:inputs ["b"]
  :label "1 -"
  :outputs [""]
  :parsed [:infix [:float "1"] "-" [:free-var "b"]]
- :pos [-305 99]
- }
+ :pos [-305 99]}
  "22hzkhc0bzadx3" 
 {:inputs ["sig~"]
  :label "z-1($sig~)"
  :outputs [""]
  :parsed [:fn "z-1" [:tuple [:free-var "sig~"]]]
- :pos [215 213]
- }
+ :pos [215 213]}
  "3z9e4epjsczb6t3" 
 {:ephemeral-inputs #{"more" "more2"}
  :inputs ["a" "b" "more" "more2" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more"] [:free-var "more2"] [:free-var "more..."]]
- :pos [-13 31]
- }
+ :pos [-13 31]}
  "4dugdl9uxhht5yr" 
 {:cable-midpoints 
 {1 [18 55]}
@@ -66,37 +63,32 @@
  :label "-"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "-" [:free-var "b"] [:free-var "more..."]]
- :pos [-287 31]
- }
+ :pos [-287 31]}
  "6379kaavqjgwf8d" 
 {:inputs ["b"]
  :label "1 -"
  :outputs [""]
  :parsed [:infix [:float "1"] "-" [:free-var "b"]]
- :pos [65 -180]
- }
+ :pos [65 -180]}
  "7xidtp7r27qucpy" 
 {:inputs ["a"]
  :label "* 1.16"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:float "1.16"]]
- :pos [-201 -151]
- }
+ :pos [-201 -151]}
  "96b4701cv6v31i1" 
 {:inputs ["n" "func" "x"]
  :label "Algorithm:Iterate($n $func $x)"
  :outputs [""]
  :parsed [:fn "Algorithm:Iterate" [:tuple [:free-var "n"] [:free-var "func"] [:free-var "x"]]]
- :pos [1 213]
- }
+ :pos [1 213]}
  "c8emdjq0gjiuxvm" 
 {:inputs ["a" "b" "more..."]
  :label "/"
  :name "f"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
- :pos [-327 -151]
- }
+ :pos [-327 -151]}
  "cfnxez1qsbcq2nx" 
 {:cable-midpoints 
 {}
@@ -107,51 +99,44 @@
  :name "feedback"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more"] [:free-var "more..."]]
- :pos [200 -87]
- }
+ :pos [200 -87]}
  "czr7kmaim9ng4je" 
 {:inputs []
  :label "0.35013"
  :outputs [""]
  :parsed [:float "0.35013"]
- :pos [-194 -88]
- }
+ :pos [-194 -88]}
  "d0h76xo76hy51ic" 
 {:color 2
  :inputs []
  :label "(sig fc res) = arg"
  :outputs ["sig" "fc" "res"]
  :parsed "arg"
- :pos [-573 111]
- }
+ :pos [-573 111]}
  "dvg50k3y1hlye9m" 
 {:inputs ["sig" "coef"]
  :label "VCF-Stage($sig $coef)"
  :outputs [""]
  :parsed [:fn "VCF-Stage" [:tuple [:free-var "sig"] [:free-var "coef"]]]
- :pos [-144 159]
- }
+ :pos [-144 159]}
  "e3tok7ar7m6mdbn" 
 {:inputs ["out"]
  :label "$out"
  :outputs [""]
  :parsed [:free-var "out"]
- :pos [356 271]
- }
+ :pos [356 271]}
  "ge494w6gmv9g6p6" 
 {:inputs ["a"]
  :label "* 0.5"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:float "0.5"]]
- :pos [-417 -220]
- }
+ :pos [-417 -220]}
  "ihzgnrksmn9n58o" 
 {:inputs []
  :label "Gen:Rate()"
  :outputs [""]
  :parsed [:fn "Gen:Rate" [:tuple]]
- :pos [-518 -220]
- }
+ :pos [-518 -220]}
  "vzx41o6vr09sfij" 
 {:ephemeral-inputs #{}
  :inputs ["a" "b" "more..."]
@@ -159,28 +144,24 @@
  :name "f^2"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [-91 -136]
- }
+ :pos [-91 -136]}
  "wzz24h606nju96f" 
 {:inputs ["a" "b" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [-19 -177]
- }
+ :pos [-19 -177]}
  "xig7y46l6robr6t" 
 {:inputs ["w"]
  :label "Approx:Tanh($w)"
  :outputs [""]
  :parsed [:fn "Approx:Tanh" [:tuple [:free-var "w"]]]
- :pos [114 213]
- }
+ :pos [114 213]}
  "zku1eg6n6bhxnpl" 
 {:inputs []
  :label "#4"
  :outputs [""]
  :parsed [:invariant "4"]
- :pos [-115 260]
- }}
+ :pos [-115 260]}}
  :scale 0.9986255327904525
  :scroll [0 0]}}
