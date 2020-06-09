@@ -1,68 +1,61 @@
 {:identity "initial"
  :patch
 {:cables
-{["16mrf8fw9lwu4mz" 0] [:fixed "3656ipd9n9t7vvf" 0]
- ["3656ipd9n9t7vvf" 0] [:fixed "7xxix5ob6un7zo" 0]
- ["8wwchm0ih1zm5i" 0] [:fixed "vr3pz9q6plh3j2" 0]
- ["8wwchm0ih1zm5i" 1] [:fixed "16mrf8fw9lwu4mz" 0]
+{["8wwchm0ih1zm5i" 0] [:fixed "vr3pz9q6plh3j2" 0]
+ ["8wwchm0ih1zm5i" 1] [:fixed "pqixk8dlblkz6wr" 0]
  ["8wwchm0ih1zm5i" 2] [:fixed "cezrov28owiovj3" 0]
- ["vr3pz9q6plh3j2" 0] [:fixed "gcgpau135qs5uu" 0]
+ ["vr3pz9q6plh3j2" 0] [:fixed "hsl52uiyv3kpmvu" 0]
  ["vr3pz9q6plh3j2" 1] [:fixed "z5g6omrswabswqq" 0]
  ["z5g6omrswabswqq" 0] [:fixed "8yrg9pyto6t8b88" 0]}
  :nodes
-{"16mrf8fw9lwu4mz" 
-{:inputs ["a"]
- :label "* 1500"
- :outputs [""]
- :parsed [:infix [:free-var "a"] "*" [:float "1500"]]
- :pos [292 36]}
- "3656ipd9n9t7vvf" 
-{:inputs ["freq"]
- :label "Gen:Phasor($freq)"
- :outputs [""]
- :parsed [:fn "Gen:Phasor" [:tuple [:free-var "freq"]]]
- :pos [168 36]}
- "7xxix5ob6un7zo" 
-{:inputs []
- :label "2"
- :outputs [""]
- :parsed [:float "2"]
- :pos [64 36]}
- "8wwchm0ih1zm5i" 
+{"8wwchm0ih1zm5i" 
 {:inputs ["sig" "fc" "res"]
  :label "Moog-VCF($sig $fc $res)"
  :outputs [""]
  :parsed [:fn "Moog-VCF" [:tuple [:free-var "sig"] [:free-var "fc"] [:free-var "res"]]]
- :pos [286 221]}
+ :pos [286 221]
+ :selected true}
  "8yrg9pyto6t8b88" 
 {:inputs []
  :label "0.1"
  :outputs [""]
  :parsed [:float "0.1"]
- :pos [-213 -180]}
+ :pos [-213 -180]
+ }
  "cezrov28owiovj3" 
 {:inputs []
  :label "0 .o 4"
  :outputs [""]
- :parsed [:widget "-yty1kh" 0.5 {:type :dial, :skin :circular, :min [:float "0"], :max [:float "4"]}]
- :pos [263 108]}
- "gcgpau135qs5uu" 
+ :parsed [:widget "-yty1kh" 0.46499999999999997 {:type :dial, :skin :circular, :min [:float "0"], :max [:float "4"]}]
+ :pos [309 29]
+ }
+ "hsl52uiyv3kpmvu" 
 {:inputs []
- :label "20 ---o--- 2000"
+ :label "20 -x- 4000"
  :outputs [""]
- :parsed [:slider [:float "20"] [:number-widget :float "-gbwna4" "1259" ""] "3geelo" :linear 7 0.37371802696814904]
- :pos [-254 -14]}
+ :parsed [:widget "q2q6fc" 0.14404776436941966 {:type :slider, :limits [[:float "20"] [:float "4000"]], :render [:limits], :size 3, :orientation :vertical, :curve :exponential}]
+ :pos [-299 40]
+ }
+ "pqixk8dlblkz6wr" 
+{:inputs []
+ :label "20 -x- 16000"
+ :outputs [""]
+ :parsed [:widget "c65q5z" 0.5 {:type :slider, :limits [[:float "20"] [:float "16000"]], :render [:limits], :size 3, :orientation :vertical, :curve :exponential}]
+ :pos [152 -131]
+ }
  "vr3pz9q6plh3j2" 
 {:inputs ["freq" "width"]
  :label "Dual-Saw($freq $width 1)"
  :outputs [""]
- :parsed [:fn "BLEP-Osc" [:tuple [:free-var "freq"] [:free-var "width"] [:float "1"]]]
- :pos [-9 148]}
+ :parsed [:fn "BLEP-Osc" [:tuple [:free-var "freq"] [:free-var "width"] [:number-widget :float "-xsqq2w" "0" ""]]]
+ :pos [-9 148]
+ }
  "z5g6omrswabswqq" 
 {:inputs ["freq"]
  :label "Gen:Sin($freq)"
  :outputs [""]
  :parsed [:fn "Gen:Sin" [:tuple [:free-var "freq"]]]
- :pos [-45 -162]}}
+ :pos [-45 -162]
+ }}
  :scale 1
  :scroll [0 0]}}

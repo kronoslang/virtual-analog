@@ -137,20 +137,25 @@ n6sz5yn9dxjr94zj-0
 }
 
 Moog-VCF(sig fc res) {
+(nge494w6gmv9g6p6-0) = (nihzgnrksmn9n58o-0 * 0.5)
 (n3z9e4epjsczb6t3-0) = (n4dugdl9uxhht5yr-0 * nvzx41o6vr09sfij-0 * nvzx41o6vr09sfij-0 * nczr7kmaim9ng4je-0)
 (n1j3h5h3u3zjmqav-0) = (1 - nc8emdjq0gjiuxvm-0)
+(ncfnxez1qsbcq2nx-0) = (n6379kaavqjgwf8d-0 * nd0h76xo76hy51ic-2 * n22hzkhc0bzadx3-0)
 (ne3tok7ar7m6mdbn-0) = n22hzkhc0bzadx3-0
 (n96b4701cv6v31i1-0) = Algorithm:Iterate(nzku1eg6n6bhxnpl-0 ndvg50k3y1hlye9m-0 n3z9e4epjsczb6t3-0)
 (nxig7y46l6robr6t-0) = Approx:Tanh(n96b4701cv6v31i1-0)
 (n22hzkhc0bzadx3-0) = z-1(nxig7y46l6robr6t-0)
+(n1fm7935bivqj261-0) = 0.15
 (nczr7kmaim9ng4je-0) = 0.35013
-(nc8emdjq0gjiuxvm-0) = (nd0h76xo76hy51ic-1 / nihzgnrksmn9n58o-0)
+(n6379kaavqjgwf8d-0) = (1 - nwzz24h606nju96f-0)
+(nc8emdjq0gjiuxvm-0) = (nd0h76xo76hy51ic-1 / nge494w6gmv9g6p6-0)
 (nd0h76xo76hy51ic-0 nd0h76xo76hy51ic-1 nd0h76xo76hy51ic-2) = arg
 (nzku1eg6n6bhxnpl-0) = #4
 (nvzx41o6vr09sfij-0) = (n7xidtp7r27qucpy-0 * n7xidtp7r27qucpy-0)
 (nihzgnrksmn9n58o-0) = Gen:Rate()
-(n4dugdl9uxhht5yr-0) = (nd0h76xo76hy51ic-0 - n22hzkhc0bzadx3-0)
+(n4dugdl9uxhht5yr-0) = (nd0h76xo76hy51ic-0 - ncfnxez1qsbcq2nx-0)
 (n7xidtp7r27qucpy-0) = (nc8emdjq0gjiuxvm-0 * 1.16)
+(nwzz24h606nju96f-0) = (nvzx41o6vr09sfij-0 * n1fm7935bivqj261-0)
 (ndvg50k3y1hlye9m-0) = (sig) => ( VCF-Stage(sig n1j3h5h3u3zjmqav-0) ) 
 ne3tok7ar7m6mdbn-0
 }
