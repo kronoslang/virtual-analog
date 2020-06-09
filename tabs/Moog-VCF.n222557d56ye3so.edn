@@ -1,0 +1,152 @@
+{:draft-argument "Gen:Noise(0.499d) 20000 * Gen:Phasor(0.1) 3"
+ :identifier "Moog-VCF"
+ :identity "n222557d56ye3so"
+ :patch
+{:cables
+{["1j3h5h3u3zjmqav" 0] [:fixed "c8emdjq0gjiuxvm" 0]
+ ["22hzkhc0bzadx3" 0] [:fixed "xig7y46l6robr6t" 0]
+ ["3z9e4epjsczb6t3" 0] [:fixed "4dugdl9uxhht5yr" 0]
+ ["3z9e4epjsczb6t3" 1] [:fixed "vzx41o6vr09sfij" 0]
+ ["3z9e4epjsczb6t3" 2] [:fixed "vzx41o6vr09sfij" 0]
+ ["3z9e4epjsczb6t3" 3] [:fixed "czr7kmaim9ng4je" 0]
+ ["4dugdl9uxhht5yr" 0] [:fixed "d0h76xo76hy51ic" 0]
+ ["4dugdl9uxhht5yr" 1] [:fixed "22hzkhc0bzadx3" 0]
+ ["6379kaavqjgwf8d" 0] [:fixed "wzz24h606nju96f" 0]
+ ["7xidtp7r27qucpy" 0] [:fixed "c8emdjq0gjiuxvm" 0]
+ ["96b4701cv6v31i1" 0] [:fixed "zku1eg6n6bhxnpl" 0]
+ ["96b4701cv6v31i1" 1] [:fixed "dvg50k3y1hlye9m" 0]
+ ["96b4701cv6v31i1" 2] [:fixed "3z9e4epjsczb6t3" 0]
+ ["c8emdjq0gjiuxvm" 0] [:fixed "d0h76xo76hy51ic" 1]
+ ["c8emdjq0gjiuxvm" 1] [:fixed "ihzgnrksmn9n58o" 0]
+ ["cfnxez1qsbcq2nx" 0] [:fixed "6379kaavqjgwf8d" 0]
+ ["cfnxez1qsbcq2nx" 1] [:fixed "d0h76xo76hy51ic" 2]
+ ["dvg50k3y1hlye9m" 1] [:fixed "1j3h5h3u3zjmqav" 0]
+ ["e3tok7ar7m6mdbn" 0] [:fixed "22hzkhc0bzadx3" 0]
+ ["vzx41o6vr09sfij" 0] [:fixed "7xidtp7r27qucpy" 0]
+ ["vzx41o6vr09sfij" 1] [:fixed "7xidtp7r27qucpy" 0]
+ ["wzz24h606nju96f" 0] [:fixed "vzx41o6vr09sfij" 0]
+ ["wzz24h606nju96f" 1] [:fixed "1fm7935bivqj261" 0]
+ ["xig7y46l6robr6t" 0] [:fixed "96b4701cv6v31i1" 0]}
+ :nodes
+{"1fm7935bivqj261" 
+{:inputs []
+ :label "0.15"
+ :outputs [""]
+ :parsed [:float "0.15"]
+ :pos [-141 -231]}
+ "1j3h5h3u3zjmqav" 
+{:inputs ["b"]
+ :label "1 -"
+ :outputs [""]
+ :parsed [:infix [:float "1"] "-" [:free-var "b"]]
+ :pos [-305 99]}
+ "22hzkhc0bzadx3" 
+{:inputs ["sig~"]
+ :label "z-1($sig~)"
+ :outputs [""]
+ :parsed [:fn "z-1" [:tuple [:free-var "sig~"]]]
+ :pos [215 213]}
+ "3z9e4epjsczb6t3" 
+{:ephemeral-inputs #{"more" "more2"}
+ :inputs ["a" "b" "more" "more2" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more"] [:free-var "more2"] [:free-var "more..."]]
+ :pos [-13 31]}
+ "4dugdl9uxhht5yr" 
+{:inputs ["a" "b" "more..."]
+ :label "-"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "-" [:free-var "b"] [:free-var "more..."]]
+ :pos [-287 31]}
+ "6379kaavqjgwf8d" 
+{:inputs ["b"]
+ :label "1 -"
+ :outputs [""]
+ :parsed [:infix [:float "1"] "-" [:free-var "b"]]
+ :pos [52 -136]}
+ "7xidtp7r27qucpy" 
+{:inputs ["a"]
+ :label "* 1.16"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:float "1.16"]]
+ :pos [-201 -151]}
+ "96b4701cv6v31i1" 
+{:inputs ["n" "func" "x"]
+ :label "Algorithm:Iterate($n $func $x)"
+ :outputs [""]
+ :parsed [:fn "Algorithm:Iterate" [:tuple [:free-var "n"] [:free-var "func"] [:free-var "x"]]]
+ :pos [1 213]}
+ "c8emdjq0gjiuxvm" 
+{:inputs ["a" "b" "more..."]
+ :label "/"
+ :name "f"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
+ :pos [-327 -151]}
+ "cfnxez1qsbcq2nx" 
+{:flip-y true
+ :inputs ["a" "b" "more..."]
+ :label "*"
+ :name "feedback"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [177 -136]}
+ "czr7kmaim9ng4je" 
+{:inputs []
+ :label "0.35013"
+ :outputs [""]
+ :parsed [:float "0.35013"]
+ :pos [-158 -18]}
+ "d0h76xo76hy51ic" 
+{:inputs []
+ :label "(sig fc res) = arg"
+ :outputs ["sig" "fc" "res"]
+ :parsed "arg"
+ :pos [-461 -120]}
+ "dvg50k3y1hlye9m" 
+{:inputs ["sig" "coef"]
+ :label "VCF-Stage($sig $coef)"
+ :outputs [""]
+ :parsed [:fn "VCF-Stage" [:tuple [:free-var "sig"] [:free-var "coef"]]]
+ :pos [-144 159]}
+ "e3tok7ar7m6mdbn" 
+{:inputs ["out"]
+ :label "$out"
+ :outputs [""]
+ :parsed [:free-var "out"]
+ :pos [356 271]}
+ "ihzgnrksmn9n58o" 
+{:inputs []
+ :label "Gen:Rate()"
+ :outputs [""]
+ :parsed [:fn "Gen:Rate" [:tuple]]
+ :pos [-393 -229]}
+ "vzx41o6vr09sfij" 
+{:ephemeral-inputs #{}
+ :inputs ["a" "b" "more..."]
+ :label "*"
+ :name "f^2"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [-91 -136]}
+ "wzz24h606nju96f" 
+{:inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [-32 -136]}
+ "xig7y46l6robr6t" 
+{:inputs ["w"]
+ :label "Approx:Tanh($w)"
+ :outputs [""]
+ :parsed [:fn "Approx:Tanh" [:tuple [:free-var "w"]]]
+ :pos [114 213]}
+ "zku1eg6n6bhxnpl" 
+{:inputs []
+ :label "#4"
+ :outputs [""]
+ :parsed [:invariant "4"]
+ :pos [-115 260]}}
+ :scale 0.9986255327904525
+ :scroll [0 0]}}

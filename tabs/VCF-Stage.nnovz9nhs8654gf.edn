@@ -1,0 +1,63 @@
+{:draft-argument "sig coef"
+ :identifier "VCF-Stage"
+ :identity "nnovz9nhs8654gf"
+ :patch
+{:cables
+{["2mxkycckz812q0e" 0] [:fixed "upueiflnl99q917" 0]
+ ["2mxkycckz812q0e" 1] [:fixed "rpl8vqmtwvjk821" 0]
+ ["2mxkycckz812q0e" 2] [:fixed "d735airmq1gonwb" 0]
+ ["av3g8j9p539w4p2" 0] [:fixed "2mxkycckz812q0e" 0]
+ ["d735airmq1gonwb" 0] [:fixed "upueiflnl99q917" 1]
+ ["d735airmq1gonwb" 1] [:fixed "av3g8j9p539w4p2" 0]
+ ["dgz6t6fcq2rdhz" 0] [:fixed "2mxkycckz812q0e" 0]
+ ["l7tctekhwa9o99g" 0] [:fixed "upueiflnl99q917" 0]
+ ["rpl8vqmtwvjk821" 0] [:fixed "l7tctekhwa9o99g" 0]}
+ :nodes
+{"2mxkycckz812q0e" 
+{:color 2
+ :ephemeral-inputs #{"more"}
+ :inputs ["a" "b" "more" "more..."]
+ :label "+"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more"] [:free-var "more..."]]
+ :pos [-50 79]}
+ "av3g8j9p539w4p2" 
+{:color 2
+ :inputs ["sig~"]
+ :label "z-1($sig~)"
+ :outputs [""]
+ :parsed [:fn "z-1" [:tuple [:free-var "sig~"]]]
+ :pos [115 20]}
+ "d735airmq1gonwb" 
+{:color 2
+ :inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [-68 -39]}
+ "dgz6t6fcq2rdhz" 
+{:inputs ["out"]
+ :label "$out"
+ :outputs [""]
+ :parsed [:free-var "out"]
+ :pos [125 109]}
+ "l7tctekhwa9o99g" 
+{:color 3
+ :inputs ["sig~"]
+ :label "z-1($sig~)"
+ :outputs [""]
+ :parsed [:fn "z-1" [:tuple [:free-var "sig~"]]]
+ :pos [-66 -158]}
+ "rpl8vqmtwvjk821" 
+{:color 3
+ :inputs ["a"]
+ :label "* 0.3"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:float "0.3"]]
+ :pos [56 -158]}
+ "upueiflnl99q917" 
+{:inputs []
+ :label "(sig coef) = arg"
+ :outputs ["sig" "coef"]
+ :parsed "arg"
+ :pos [-225 -98]}}}}

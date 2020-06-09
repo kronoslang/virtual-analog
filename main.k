@@ -20,16 +20,22 @@ nzxb7k0beezz7hk7-0
 }
 
 BLIT-Osc(freq width waveform) {
-(npp0mh5x82swj59r-0) = (ntbur1zsci999meq-0 / nao171vjon4ab7hc-0)
-(nu8z6vb0ahicka5-0) = (phase rate) => ( DSF(phase rate n1mss3tboknlhovv-0 n00igxds448qpuov-0 n99e16vcfs145s1d-0) ) 
+(n2m41jl4cfhng2n3-0) = 10
+(nb9v90dbo2z4d9t1-0) = (1 / nauaz24yx863c33v-0)
+(npp0mh5x82swj59r-0) = (n04a21t3qsecf8bd-0 / nkp2zr9vgfczy6h7-0)
+(nu8z6vb0ahicka5-0) = (phase rate) => ( DSF(phase rate n1mss3tboknlhovv-0 nauaz24yx863c33v-0 n99e16vcfs145s1d-0) ) 
 (n99e16vcfs145s1d-0) = #0.25
-(n1mss3tboknlhovv-0) = Approx:Fast:Pow(ny7e4vr3e2gzz2oq-0 npp0mh5x82swj59r-0)
+(n1mss3tboknlhovv-0) = Approx:Fast:Pow(ny7e4vr3e2gzz2oq-0 nb9v90dbo2z4d9t1-0)
+(nauaz24yx863c33v-0) = Floor(npp0mh5x82swj59r-0)
 (ntbur1zsci999meq-0 ntbur1zsci999meq-1 ntbur1zsci999meq-2) = arg
-(nvokj1b4s4rc58a0-0) = Dual-Saw(nu8z6vb0ahicka5-0 ntbur1zsci999meq-0 ntbur1zsci999meq-1 ntbur1zsci999meq-2)
-(n00igxds448qpuov-0) = 5000
+(n04a21t3qsecf8bd-0) = (nao171vjon4ab7hc-0 * 0.5)
+(nvokj1b4s4rc58a0-0) = Dual-Saw(nu8z6vb0ahicka5-0 nkp2zr9vgfczy6h7-0 ntbur1zsci999meq-1 ntbur1zsci999meq-2)
+(nmiqxw8ly52vmb60-0) = Filter:Integrate(nvokj1b4s4rc58a0-0 n9kbgx4blt43lam2-0)
 (nao171vjon4ab7hc-0) = Gen:Rate()
+(n9kbgx4blt43lam2-0) = 0.995
 (ny7e4vr3e2gzz2oq-0) = 0.5
-nvokj1b4s4rc58a0-0
+(nkp2zr9vgfczy6h7-0) = Max(ntbur1zsci999meq-0 n2m41jl4cfhng2n3-0)
+nmiqxw8ly52vmb60-0
 }
 
 Dual-Saw(engine freq width shape) {
@@ -105,11 +111,11 @@ nzcyikmije3pxng9-0
 }
 
 DSFSin(phase) {
-(n83aydacojcozbt9-0) = Approx:Cosine-Shape(nd12h2dslo1dpeym-0 njzutu8aulc3ah9o-0)
 (n4pm6wgg45sd8991-0) = arg
-(njzutu8aulc3ah9o-0) = #6
-(ngtwb3rb75brxj59-0) = Fraction(n4pm6wgg45sd8991-0)
+(n83aydacojcozbt9-0) = Approx:Cosine-Shape(nd12h2dslo1dpeym-0 njzutu8aulc3ah9o-0)
 (nd12h2dslo1dpeym-0) = (ngtwb3rb75brxj59-0 - 0.25)
+(ngtwb3rb75brxj59-0) = Fraction(n4pm6wgg45sd8991-0)
+(njzutu8aulc3ah9o-0) = #6
 n83aydacojcozbt9-0
 }
 
@@ -130,6 +136,34 @@ clamp(sig min max) {
 n6sz5yn9dxjr94zj-0
 }
 
+Moog-VCF(sig fc res) {
+(n3z9e4epjsczb6t3-0) = (n4dugdl9uxhht5yr-0 * nvzx41o6vr09sfij-0 * nvzx41o6vr09sfij-0 * nczr7kmaim9ng4je-0)
+(n1j3h5h3u3zjmqav-0) = (1 - nc8emdjq0gjiuxvm-0)
+(ne3tok7ar7m6mdbn-0) = n22hzkhc0bzadx3-0
+(n96b4701cv6v31i1-0) = Algorithm:Iterate(nzku1eg6n6bhxnpl-0 ndvg50k3y1hlye9m-0 n3z9e4epjsczb6t3-0)
+(nxig7y46l6robr6t-0) = Approx:Tanh(n96b4701cv6v31i1-0)
+(n22hzkhc0bzadx3-0) = z-1(nxig7y46l6robr6t-0)
+(nczr7kmaim9ng4je-0) = 0.35013
+(nc8emdjq0gjiuxvm-0) = (nd0h76xo76hy51ic-1 / nihzgnrksmn9n58o-0)
+(nd0h76xo76hy51ic-0 nd0h76xo76hy51ic-1 nd0h76xo76hy51ic-2) = arg
+(nzku1eg6n6bhxnpl-0) = #4
+(nvzx41o6vr09sfij-0) = (n7xidtp7r27qucpy-0 * n7xidtp7r27qucpy-0)
+(nihzgnrksmn9n58o-0) = Gen:Rate()
+(n4dugdl9uxhht5yr-0) = (nd0h76xo76hy51ic-0 - n22hzkhc0bzadx3-0)
+(n7xidtp7r27qucpy-0) = (nc8emdjq0gjiuxvm-0 * 1.16)
+(ndvg50k3y1hlye9m-0) = (sig) => ( VCF-Stage(sig n1j3h5h3u3zjmqav-0) ) 
+ne3tok7ar7m6mdbn-0
+}
 
+VCF-Stage(sig coef) {
+(n2mxkycckz812q0e-0) = (nupueiflnl99q917-0 + nrpl8vqmtwvjk821-0 + nd735airmq1gonwb-0)
+(nav3g8j9p539w4p2-0) = z-1(n2mxkycckz812q0e-0)
+(nd735airmq1gonwb-0) = (nupueiflnl99q917-1 * nav3g8j9p539w4p2-0)
+(ndgz6t6fcq2rdhz-0) = n2mxkycckz812q0e-0
+(nl7tctekhwa9o99g-0) = z-1(nupueiflnl99q917-0)
+(nrpl8vqmtwvjk821-0) = (nl7tctekhwa9o99g-0 * 0.3)
+(nupueiflnl99q917-0 nupueiflnl99q917-1) = arg
+ndgz6t6fcq2rdhz-0
+}
 
 }

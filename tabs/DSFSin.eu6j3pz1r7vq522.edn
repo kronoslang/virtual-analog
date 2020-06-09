@@ -13,35 +13,30 @@
  :label "(phase) = arg"
  :outputs ["phase"]
  :parsed "arg"
- :pos [-269 0]
- }
+ :pos [-269 11]}
  "83aydacojcozbt9" 
 {:inputs ["x" "order"]
  :label "Approx:Cosine-Shape($x $order)"
  :outputs [""]
  :parsed [:fn "Approx:Cosine-Shape" [:tuple [:free-var "x"] [:free-var "order"]]]
- :pos [169 0]
- }
+ :pos [169 11]}
  "d12h2dslo1dpeym" 
 {:inputs ["a"]
  :label "- 0.25"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "-" [:float "0.25"]]
- :pos [18 0]
- }
+ :pos [18 11]}
  "gtwb3rb75brxj59" 
 {:inputs ["x"]
  :label "Fraction($x)"
  :outputs [""]
  :parsed [:fn "Fraction" [:tuple [:free-var "x"]]]
- :pos [-117 0]
- }
+ :pos [-117 11]}
  "jzutu8aulc3ah9o" 
 {:inputs []
  :label "#6"
  :outputs [""]
  :parsed [:invariant "6"]
- :pos [-7 -71]
- }}
+ :pos [-7 -60]}}
  :scale 1
  :scroll [0 0]}}
