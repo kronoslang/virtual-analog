@@ -1,0 +1,81 @@
+{:draft-argument "440 Gen:Sin(0.5) -1"
+ :identifier "BLIT-Osc"
+ :identity "lr5vev4qamgsbcc"
+ :patch
+{:cables
+{["1mss3tboknlhovv" 0] [:fixed "y7e4vr3e2gzz2oq" 0]
+ ["1mss3tboknlhovv" 1] [:fixed "pp0mh5x82swj59r" 0]
+ ["pp0mh5x82swj59r" 0] [:fixed "tbur1zsci999meq" 0]
+ ["pp0mh5x82swj59r" 1] [:fixed "ao171vjon4ab7hc" 0]
+ ["u8z6vb0ahicka5" 2] [:fixed "1mss3tboknlhovv" 0]
+ ["u8z6vb0ahicka5" 3] [:fixed "00igxds448qpuov" 0]
+ ["u8z6vb0ahicka5" 4] [:fixed "99e16vcfs145s1d" 0]
+ ["vokj1b4s4rc58a0" 0] [:fixed "u8z6vb0ahicka5" 0]
+ ["vokj1b4s4rc58a0" 1] [:fixed "tbur1zsci999meq" 0]
+ ["vokj1b4s4rc58a0" 2] [:fixed "tbur1zsci999meq" 1]
+ ["vokj1b4s4rc58a0" 3] [:fixed "tbur1zsci999meq" 2]}
+ :nodes
+{"00igxds448qpuov" 
+{:inputs []
+ :label "5000"
+ :outputs [""]
+ :parsed [:float "5000"]
+ :pos [-214 80]
+ }
+ "1mss3tboknlhovv" 
+{:inputs ["x" "p"]
+ :label "Approx:Fast:Pow($x $p)"
+ :outputs [""]
+ :parsed [:fn "Approx:Fast:Pow" [:tuple [:free-var "x"] [:free-var "p"]]]
+ :pos [-309 73]
+ }
+ "99e16vcfs145s1d" 
+{:inputs []
+ :label "#0.25"
+ :outputs [""]
+ :parsed [:invariant "0.25"]
+ :pos [-186 -139]
+ }
+ "ao171vjon4ab7hc" 
+{:inputs []
+ :label "Gen:Rate()"
+ :outputs [""]
+ :parsed [:fn "Gen:Rate" [:tuple]]
+ :pos [-522 55]
+ }
+ "pp0mh5x82swj59r" 
+{:flip-y true
+ :inputs ["a" "b" "more..."]
+ :label "/"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
+ :pos [-411 0]
+ }
+ "tbur1zsci999meq" 
+{:inputs []
+ :label "(freq width waveform) = arg"
+ :outputs ["freq" "width" "waveform"]
+ :parsed "arg"
+ :pos [-540 -97]
+ }
+ "u8z6vb0ahicka5" 
+{:inputs ["phase" "rate" "rolloff" "harmonics" "phase-shift"]
+ :label "DSF($phase $rate $rolloff $harmonics $phase-shift)"
+ :outputs [""]
+ :parsed [:fn "DSF" [:tuple [:free-var "phase"] [:free-var "rate"] [:free-var "rolloff"] [:free-var "harmonics"] [:free-var "phase-shift"]]]
+ :pos [-189 192]
+ }
+ "vokj1b4s4rc58a0" 
+{:inputs ["engine" "freq" "width" "shape"]
+ :label "Dual-Saw($engine $freq $width $shape)"
+ :outputs [""]
+ :parsed [:fn "Dual-Saw" [:tuple [:free-var "engine"] [:free-var "freq"] [:free-var "width"] [:free-var "shape"]]]
+ :pos [99 218]
+ }
+ "y7e4vr3e2gzz2oq" 
+{:inputs []
+ :label "0.5"
+ :outputs [""]
+ :parsed [:float "0.5"]
+ :pos [-423 116]
+ }}}}

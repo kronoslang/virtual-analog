@@ -1,0 +1,120 @@
+{:draft-argument "engine-fn freq width shape"
+ :identifier "Dual-Saw"
+ :identity "vzdipxam0izx6br"
+ :patch
+{:cables
+{["2q8g1xuctho4mzp" 0] [:fixed "dafe8dourjlpn4v" 0]
+ ["39m4vfjjo3ml1nr" 0] [:fixed "2q8g1xuctho4mzp" 0]
+ ["4vsbunvcp129gj" 0] [:fixed "9z617c34ij2j3t3" 0]
+ ["4vsbunvcp129gj" 1] [:fixed "yzem873iw6uh697" 0]
+ ["9z617c34ij2j3t3" 0] [:fixed "0v993l9lu93zrb4" 3]
+ ["9z617c34ij2j3t3" 1] [:fixed "jvgvk4bue2vi67d" 0]
+ ["c6z6xdas21z9bzq" 0] [:fixed "4vsbunvcp129gj" 0]
+ ["gwiza4tcnjx43th" 0] [:fixed "0v993l9lu93zrb4" 1]
+ ["gwiza4tcnjx43th" 1] [:fixed "39m4vfjjo3ml1nr" 0]
+ ["jvgvk4bue2vi67d" 0] [:fixed "0v993l9lu93zrb4" 0]
+ ["jvgvk4bue2vi67d" 1] [:fixed "ttvfwceioxw4ekz" 0]
+ ["jvgvk4bue2vi67d" 2] [:fixed "gwiza4tcnjx43th" 0]
+ ["lgii8aqy7d0e8lg" 0] [:fixed "gwiza4tcnjx43th" 0]
+ ["quxe9rfl5fv5262" 0] [:fixed "0v993l9lu93zrb4" 2]
+ ["quxe9rfl5fv5262" 1] [:fixed "lgii8aqy7d0e8lg" 0]
+ ["ttvfwceioxw4ekz" 0] [:fixed "quxe9rfl5fv5262" 0]
+ ["yzem873iw6uh697" 0] [:fixed "0v993l9lu93zrb4" 0]
+ ["yzem873iw6uh697" 1] [:fixed "lgii8aqy7d0e8lg" 0]
+ ["yzem873iw6uh697" 2] [:fixed "gwiza4tcnjx43th" 0]}
+ :nodes
+{"0v993l9lu93zrb4" 
+{:inputs []
+ :label "(engine freq width shape) = arg"
+ :outputs ["engine" "freq" "width" "shape"]
+ :parsed "arg"
+ :pos [-514 -2]
+ }
+ "2q8g1xuctho4mzp" 
+{:inputs ["sig"]
+ :label "Gen:Signal($sig)"
+ :outputs [""]
+ :parsed [:fn "Gen:Signal" [:tuple [:free-var "sig"]]]
+ :pos [-511 -136]
+ }
+ "39m4vfjjo3ml1nr" 
+{:inputs ["sig"]
+ :label "Interval-of($sig)"
+ :outputs [""]
+ :parsed [:fn "Interval-of" [:tuple [:free-var "sig"]]]
+ :pos [-386 -136]
+ }
+ "4vsbunvcp129gj" 
+{:inputs ["a" "b" "more..."]
+ :label "+"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
+ :pos [390 104]
+ }
+ "9z617c34ij2j3t3" 
+{:inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [302 204]
+ }
+ "c6z6xdas21z9bzq" 
+{:inputs ["a"]
+ :label "* #0.5"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:invariant "0.5"]]
+ :pos [491 129]
+ }
+ "dafe8dourjlpn4v" 
+{:inputs []
+ :label "0"
+ :outputs [""]
+ :parsed [:float "0"]
+ :pos [-597 -136]
+ }
+ "gwiza4tcnjx43th" 
+{:inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [-294 -71]
+ }
+ "jvgvk4bue2vi67d" 
+{:ephemeral-inputs #{"arg" "arg2"}
+ :inputs ["fn" "arg" "arg2" "arg..."]
+ :label "Eval($fn $arg...)"
+ :outputs [""]
+ :parsed [:fn "Eval" [:tuple [:free-var "fn"] [:free-var "arg"] [:free-var "arg2"] [:free-var "arg..."]]]
+ :pos [107 122]
+ :selected true}
+ "lgii8aqy7d0e8lg" 
+{:inputs ["inc"]
+ :label "phasor($inc)"
+ :outputs [""]
+ :parsed [:fn "phasor" [:tuple [:free-var "inc"]]]
+ :pos [-129 11]
+ }
+ "quxe9rfl5fv5262" 
+{:inputs ["a" "b" "more..."]
+ :label "+"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
+ :pos [-258 201]
+ }
+ "ttvfwceioxw4ekz" 
+{:inputs ["x"]
+ :label "Fraction($x)"
+ :outputs [""]
+ :parsed [:fn "Fraction" [:tuple [:free-var "x"]]]
+ :pos [-140 198]
+ }
+ "yzem873iw6uh697" 
+{:ephemeral-inputs #{"arg" "arg2"}
+ :inputs ["fn" "arg" "arg2" "arg..."]
+ :label "Eval($fn $arg...)"
+ :outputs [""]
+ :parsed [:fn "Eval" [:tuple [:free-var "fn"] [:free-var "arg"] [:free-var "arg2"] [:free-var "arg..."]]]
+ :pos [104 -51]
+ }}
+ :scale 1
+ :scroll [0 0]}}

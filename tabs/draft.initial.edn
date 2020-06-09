@@ -10,20 +10,18 @@
  :label "0.1"
  :outputs [""]
  :parsed [:float "0.1"]
- :pos [-137 -152]
- }
+ :pos [-137 -152]}
  "gcgpau135qs5uu" 
 {:inputs []
  :label "20 ---o--- 2000"
  :outputs [""]
  :parsed [:slider [:float "20"] [:number-widget :float "-gbwna4" "1259" ""] "3geelo" :linear 7 0.37371802696814904]
- :pos [-178 14]
- }
+ :pos [-178 14]}
  "vr3pz9q6plh3j2" 
 {:inputs ["freq" "width"]
  :label "Dual-Saw($freq $width 1)"
  :outputs [""]
- :parsed [:fn "Dual-Saw" [:tuple [:free-var "freq"] [:free-var "width"] [:float "1"]]]
+ :parsed [:fn "BLEP-Osc" [:tuple [:free-var "freq"] [:free-var "width"] [:float "1"]]]
  :pos [79 101]
  :selected true}
  "z5g6omrswabswqq" 
@@ -31,7 +29,6 @@
  :label "Gen:Sin($freq)"
  :outputs [""]
  :parsed [:fn "Gen:Sin" [:tuple [:free-var "freq"]]]
- :pos [31 -134]
- }}
+ :pos [31 -134]}}
  :scale 1
  :scroll [0 0]}}

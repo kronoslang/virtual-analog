@@ -1,6 +1,6 @@
 {:assets 
 {}
- :current-tab 6
+ :current-tab 2
  
  :manifest 
 {:dependencies 
@@ -14,4 +14,4 @@
  :parents ["6cfc8017426227dfa49437b8ff34abc21dc5908c"]
  :service "bitbucket"
  :slug "kronoslang/virtual-analog"}
- :tabs ("tabs/draft.initial.edn" "tabs/Dual-Saw.seuv3n1sz1xedc4.edn" "tabs/Poly-BLEP.fepa5oxq64fhr40.edn" "tabs/phasor.6bfpogbbccsmarc.edn" "tabs/clamp.jb9u646ttja5kdb.edn" "tabs/draft.6289p9xp76q2z6.edn" "tabs/DSF.s8dqx59u34bt1i6.edn" "tabs/DSFSin.eu6j3pz1r7vq522.edn")}
+ :tabs ("tabs/draft.initial.edn" "tabs/BLEP-Osc.seuv3n1sz1xedc4.edn" "tabs/BLIT-Osc.lr5vev4qamgsbcc.edn" "tabs/Dual-Saw.vzdipxam0izx6br.edn" "tabs/Poly-BLEP.fepa5oxq64fhr40.edn" "tabs/DSF.s8dqx59u34bt1i6.edn" "tabs/DSFSin.eu6j3pz1r7vq522.edn" "tabs/phasor.6bfpogbbccsmarc.edn" "tabs/clamp.jb9u646ttja5kdb.edn" "tabs/draft.6289p9xp76q2z6.edn")}

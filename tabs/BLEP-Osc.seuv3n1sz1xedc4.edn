@@ -1,0 +1,32 @@
+{:documentation "Synthesizes two phase-offset, band-limited sawtooth waves from a shared phasor with 'freq'uency. The 'width' determines the phase offset relative to the waveform period. 'waveform' is the gain coefficient for the offset sawtooth; use 1 for dual saw and -1 for variable width pulse. Polynomial band-limited step is used for alias supression.\n"
+ :draft-argument "440 Gen:Sin(0.5) -1"
+ :identifier "BLEP-Osc"
+ :identity "seuv3n1sz1xedc4"
+ :patch
+{:cables
+{["zxb7k0beezz7hk7" 0] [:fixed "u8q4rufog1bgjw7" 0]
+ ["zxb7k0beezz7hk7" 1] [:fixed "rclehe8v73xu2fe" 0]
+ ["zxb7k0beezz7hk7" 2] [:fixed "rclehe8v73xu2fe" 1]
+ ["zxb7k0beezz7hk7" 3] [:fixed "rclehe8v73xu2fe" 2]}
+ :nodes
+{"rclehe8v73xu2fe" 
+{:inputs []
+ :label "(freq width waveform) = arg"
+ :outputs ["freq" "width" "waveform"]
+ :parsed "arg"
+ :pos [-523 -100]
+ }
+ "u8q4rufog1bgjw7" 
+{:inputs ["phase" "rate"]
+ :label "Poly-BLEP($phase $rate)"
+ :outputs [""]
+ :parsed [:fn "Poly-BLEP" [:tuple [:free-var "phase"] [:free-var "rate"]]]
+ :pos [-432 2]
+ }
+ "zxb7k0beezz7hk7" 
+{:inputs ["engine" "freq" "width" "shape"]
+ :label "Dual-Saw($engine $freq $width $shape)"
+ :outputs [""]
+ :parsed [:fn "Dual-Saw" [:tuple [:free-var "engine"] [:free-var "freq"] [:free-var "width"] [:free-var "shape"]]]
+ :pos [-180 4]
+ :selected true}}}}
